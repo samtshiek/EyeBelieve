@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         OVRInput.Update();
-        GameObject oVRCameraRig = GameObject.Find("CenterEyeAnchor");
+        GameObject oVRCameraRig = GameObject.Find("OVRCameraRig");
+        GameObject centerEyeAnchor = GameObject.Find("CenterEyeAnchor");
         GameObject textobject = GameObject.Find("MyText");
         Text text = (Text)textobject.GetComponent("Text");
 
@@ -41,7 +42,8 @@ public class PlayerController : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickUp))
         {
 ;
-            text.text = "Forward: " + oVRCameraRig.transform.localPosition;
+            text.text = "Forward: " + oVRCameraRig.transform.forward;
+            oVRCameraRig.transform.position += new Vector3(centerEyeAnchor.transform.forward.x/50, 0, centerEyeAnchor.transform.forward.z/50);
         }
 
         //Right Thumbstick pushed down
