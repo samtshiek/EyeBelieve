@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    bool _secondaryThumbStickUp = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +20,26 @@ public class PlayerController : MonoBehaviour
         OVRInput.Update();
         GameObject oVRCameraRig = GameObject.Find("OVRCameraRig");
         GameObject centerEyeAnchor = GameObject.Find("CenterEyeAnchor");
+        CharacterController charController = GetComponent<CharacterController>();
         GameObject textobject = GameObject.Find("MyText");
         Text text = (Text)textobject.GetComponent("Text");
+        GameObject textobject2 = GameObject.Find("MyText2");
+        Text text2 = (Text)textobject2.GetComponent("Text");
+        text.text = "P: " + centerEyeAnchor.transform.position;
+        text2.text = "CCLP: " + charController.transform.localPosition;
+        
+        //centerEyeAnchor.transform.localPosition = new Vector3(0, centerEyeAnchor.transform.position.y, 0);
 
         //Button A pressed
         if (OVRInput.Get(OVRInput.Button.One))
         {
             text.text = "'A' button.";
             GameObject rawImageObject = GameObject.Find("RawImage");
-            rawImageObject.active = true;
+            RawImage rawImage = rawImageObject.GetComponent<RawImage>();
+            rawImage.material.mainTexture = Resources.Load<Texture>("kof");
+            
+            //rawImageObject.SetActive(true);
+            
         }
 
         //Button B pressed
@@ -35,16 +47,18 @@ public class PlayerController : MonoBehaviour
         {
             text.text = "'B' button.";
             GameObject rawImageObject = GameObject.Find("RawImage");
-            rawImageObject.active = false;
+            rawImageObject.SetActive(false);
         }
 
         //Right Thumbstick pushed up
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickUp))
         {
-;
-            text.text = "Forward: " + oVRCameraRig.transform.forward;
-            oVRCameraRig.transform.position += new Vector3(centerEyeAnchor.transform.forward.x/50, 0, centerEyeAnchor.transform.forward.z/50);
+            _secondaryThumbStickUp = true;
+            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / 50, 0, centerEyeAnchor.transform.forward.z / 50));
+            //oVRCameraRig.transform.position += new Vector3(centerEyeAnchor.transform.forward.x/50, 0, centerEyeAnchor.transform.forward.z/50);
+            _secondaryThumbStickUp = false;
         }
+
 
         //Right Thumbstick pushed down
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickDown))

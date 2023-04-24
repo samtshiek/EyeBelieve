@@ -131,7 +131,8 @@ namespace StarterAssets
             // get a reference to our main camera
             if (_mainCamera == null)
             {
-                _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+                _mainCamera = GameObject.Find("CenterEyeAnchor");
+                //_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
         }
 
@@ -157,7 +158,16 @@ namespace StarterAssets
 
         private void Update()
         {
+            OVRInput.Update();
             _hasAnimator = TryGetComponent(out _animator);
+
+            if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickUp))
+            {
+
+                _input.move = new Vector2(_mainCamera.transform.forward.x / 50, _mainCamera.transform.forward.z / 50);
+                
+
+            }
 
             JumpAndGravity();
             GroundedCheck();
@@ -165,6 +175,7 @@ namespace StarterAssets
 
             if(Input.GetKeyDown(KeyCode.Equals))
             {
+                UAP_AccessibilityManager.EnableAccessibility(true, false);
                 UAP_AccessibilityManager.Say("Hello there");
                 Debug.Log("Is text to speech enabled? " + UAP_AccessibilityManager.IsEnabled());
             }
