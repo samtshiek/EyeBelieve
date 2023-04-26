@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     bool _secondaryThumbStickUp = false;
+    float gravity = 9.8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,8 @@ public class PlayerController : MonoBehaviour
         Text text = (Text)textobject.GetComponent("Text");
         GameObject textobject2 = GameObject.Find("MyText2");
         Text text2 = (Text)textobject2.GetComponent("Text");
-        text.text = "P: " + centerEyeAnchor.transform.position;
-        text2.text = "CCLP: " + charController.transform.localPosition;
+        //text.text = "P: " + centerEyeAnchor.transform.position;
+        //text2.text = "CCLP: " + charController.transform.localPosition;
         
         //centerEyeAnchor.transform.localPosition = new Vector3(0, centerEyeAnchor.transform.position.y, 0);
 
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
         //Right Thumbstick pushed down
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickDown))
         {
-            text.text = "Rotation: " + oVRCameraRig.transform.rotation;
+            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / (-50), (-gravity * Time.deltaTime), centerEyeAnchor.transform.forward.z / (-50)));
         }
 
 
