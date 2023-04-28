@@ -7,11 +7,21 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    bool _secondaryThumbStickUp = false;
+    bool secondaryThumbStick = false;
     float gravity = 9.8f;
+    public AudioSource audioSource;
+    AccessibleUIGroupRoot accessibleUIGroupRoot;
+    AccessibleTextEdit accessibleTextEdit;
+    
     // Start is called before the first frame update
     void Start()
     {
+        GameObject canvasObject = GameObject.Find("Canvas");
+        accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
+
+        UAP_AccessibilityManager.EnableAccessibility(true);
+        
+        
         
     }
 
@@ -26,21 +36,34 @@ public class PlayerController : MonoBehaviour
         Text text = (Text)textobject.GetComponent("Text");
         GameObject textobject2 = GameObject.Find("MyText2");
         Text text2 = (Text)textobject2.GetComponent("Text");
-        //text.text = "P: " + centerEyeAnchor.transform.position;
-        //text2.text = "CCLP: " + charController.transform.localPosition;
-        
-        //centerEyeAnchor.transform.localPosition = new Vector3(0, centerEyeAnchor.transform.position.y, 0);
+        text.text = "EyeA: " + centerEyeAnchor.transform.localPosition;
+        text2.text = "Cntrlr: " + charController.center;
+
 
         //Button A pressed
         if (OVRInput.Get(OVRInput.Button.One))
         {
-            text.text = "'A' button.";
+            //text.text = "'A' button.";
             GameObject rawImageObject = GameObject.Find("RawImage");
             RawImage rawImage = rawImageObject.GetComponent<RawImage>();
             rawImage.material.mainTexture = Resources.Load<Texture>("kof");
-            
-            //rawImageObject.SetActive(true);
-            
+            accessibleTextEdit.enabled = true;
+            accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
+            accessibleTextEdit.SetCustomText("Come on, work now!");
+
+            if (accessibleTextEdit == null)
+            {
+                text.text = "Dog bark: ";
+                audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
+            }
+            else
+            {
+                text.text = "TextAcc: " + accessibleTextEdit.GetCurrentValueAsText();
+                accessibleTextEdit.SelectItem(true);
+                audioSource.PlayOneShot(accessibleTextEdit.GetCurrentValueAsAudio());
+            }
+
+
         }
 
         //Button B pressed
@@ -54,10 +77,10 @@ public class PlayerController : MonoBehaviour
         //Right Thumbstick pushed up
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickUp))
         {
-            _secondaryThumbStickUp = true;
+            secondaryThumbStick = true;
             charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / 50, 0, centerEyeAnchor.transform.forward.z / 50));
             //oVRCameraRig.transform.position += new Vector3(centerEyeAnchor.transform.forward.x/50, 0, centerEyeAnchor.transform.forward.z/50);
-            _secondaryThumbStickUp = false;
+            secondaryThumbStick = false;
         }
 
 
@@ -76,6 +99,23 @@ public class PlayerController : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.PrimaryThumbstickDown))
         {
             text.text = "P Thumbstick DOWN' button.";
+        }
+
+        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.0)
+        {
+            UAP_AccessibilityManager.EnableAccessibility(true);
+
+            UAP_AccessibilityManager.Say("Hello there.");
+
+            
+            //AccessibleUIGroupRoot.Accessible_UIElement element
+            
+        }
+
+        if(Input.GetKeyDown(KeyCode.Equals))
+        {
+            UAP_AccessibilityManager.EnableAccessibility(true);
+            UAP_AccessibilityManager.Say("Hello there.");
         }
 
         /*GameObject ttsObject = GameObject.Find("TTSSpeaker");
