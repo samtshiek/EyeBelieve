@@ -137,16 +137,16 @@ AnimatorStateMachine:
     m_Position: {x: 388.49365, y: 72.56738, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2942975813822364119}
-    m_Position: {x: 398.49365, y: 82.56738, z: 0}
+    m_Position: {x: 400, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5436775561351309432}
-    m_Position: {x: 408.49365, y: 92.56738, z: 0}
+    m_Position: {x: 410, y: 90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -633101717485815567}
     m_Position: {x: 418.49365, y: 102.56738, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1863624351649970186}
-    m_Position: {x: 428.49365, y: 112.56738, z: 0}
+    m_Position: {x: 430, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1417961770551744655}
     m_Position: {x: 438.49365, y: 122.56738, z: 0}
@@ -203,7 +203,7 @@ AnimatorStateMachine:
     m_Position: {x: 608.49365, y: 292.56738, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -184191906434547664}
-    m_Position: {x: 618.49365, y: 302.56738, z: 0}
+    m_Position: {x: 620, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7754991807491750305}
     m_Position: {x: 330, y: 490, z: 0}
@@ -212,7 +212,7 @@ AnimatorStateMachine:
     m_Position: {x: 638.49365, y: 322.56738, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6534136176794981967}
-    m_Position: {x: 648.49365, y: 332.56738, z: 0}
+    m_Position: {x: 430, y: 390, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5265762737026893754}
     m_Position: {x: 658.49365, y: 342.56738, z: 0}
@@ -293,7 +293,7 @@ AnimatorStateMachine:
     m_Position: {x: 908.49365, y: 592.5674, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1077810167895958729}
-    m_Position: {x: 918.49365, y: 602.5674, z: 0}
+    m_Position: {x: 920, y: 610, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2190126759841189040}
     m_Position: {x: 928.49365, y: 612.5674, z: 0}
@@ -305,7 +305,7 @@ AnimatorStateMachine:
     m_Position: {x: 948.49365, y: 632.5674, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8283604953042868625}
-    m_Position: {x: 958.49365, y: 642.5674, z: 0}
+    m_Position: {x: 960, y: 640, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4218604762560189957}
     m_Position: {x: 968.49365, y: 652.5674, z: 0}
@@ -365,11 +365,12 @@ AnimatorStateMachine:
     m_Position: {x: 1148.4937, y: 832.5674, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
-  m_EntryTransitions: []
+  m_EntryTransitions:
+  - {fileID: 4252991811330470227}
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
-  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_EntryPosition: {x: 90, y: 140, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -7754991807491750305}
@@ -1510,7 +1511,13 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Puppy_Labrador_AContr_Demo
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: handIsOver
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -2009,6 +2016,23 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1109 &4252991811330470227
+AnimatorTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: handIsOver
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 6534136176794981967}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 1
 --- !u!1102 &4332449296124874870
 AnimatorState:
   serializedVersion: 6
