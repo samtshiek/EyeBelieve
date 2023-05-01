@@ -267,6 +267,7 @@
     <Compile Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Scripts\OVROverlayCanvas.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportOrientationHandler360.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimHandler.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_AccessibilityManager.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleTextEdit.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\FingerTipPokeToolView.cs" />

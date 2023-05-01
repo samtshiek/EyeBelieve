@@ -14,12 +14,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/EBHike.unity
     guid: 7f98afa87758a87479ebfef135719624
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EBExperience.unity
     guid: e028969453741734b81cbad4498797a8
   - enabled: 0
     path: Assets/Oculus/Voice/Lib/Wit.ai/Features/TTS/Samples/Scenes/TTSSample.unity
     guid: 79647fe399cbd69458a2728d01b2f739
+  - enabled: 1
+    path: Assets/Scenes/NewMenu.unity
+    guid: 0796d9daf2caea94f93c7c96a5e2f06c
+  - enabled: 0
+    path: Assets/Oculus/Interaction/Samples/Scenes/Examples/RayExamples.unity
+    guid: 1b2d3f90c0f50b94cb910c66c773d00d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ddc20c6d9eeab1a41a78510263ecfd33,
       type: 2}
