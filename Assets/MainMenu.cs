@@ -6,18 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource audioSource;
     public void StartLhon ()
     {
-        SceneManager.LoadScene(1);
+        audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
+        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene("EBExperience");
     }
 
     public void StartHike()
     {
-        SceneManager.LoadScene(2);
+        audioSource.PlayOneShot(Resources.Load<AudioClip>("harpChimes"));
+        //SceneManager.LoadScene(2);
+        SceneManager.LoadScene("EBHike");
     }
 
     public void Quit ()
     {
+        audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
         Application.Quit();         
     }
 }
