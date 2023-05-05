@@ -1,13 +1,19 @@
-using Meta.WitAi.TTS.Utilities;
-using Meta.WitAi.TTS.Data;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    bool secondaryThumbStick = false;
+    GameObject dog;
+    NavMeshAgent dogAgent;
+    GameObject canvasObject;
+    GameObject oVRCameraRig;
+    GameObject centerEyeAnchor;
+    CharacterController charController;
+    GameObject textobject;
+    Text text;
+    GameObject textobject2;
+    Text text2;
     float gravity = 9.8f;
     public AudioSource audioSource;
     AccessibleUIGroupRoot accessibleUIGroupRoot;
@@ -16,12 +22,18 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject canvasObject = GameObject.Find("Canvas");
-        accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
+        dog = GameObject.Find("Puppy_Labrador_IP");
+        dogAgent = dog.GetComponent<NavMeshAgent>();
+        canvasObject = GameObject.Find("Canvas");
+        oVRCameraRig = GameObject.Find("OVRCameraRig");
+        centerEyeAnchor = GameObject.Find("CenterEyeAnchor");
+        charController = GetComponent<CharacterController>();
+        textobject = GameObject.Find("MyText");
+        text = (Text)textobject.GetComponent("Text");
+        textobject2 = GameObject.Find("MyText2");
+        text2 = (Text)textobject2.GetComponent("Text");
 
-        UAP_AccessibilityManager.EnableAccessibility(true);
-        
-        
+        accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
         
     }
 
@@ -29,36 +41,34 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         OVRInput.Update();
-        GameObject oVRCameraRig = GameObject.Find("OVRCameraRig");
-        GameObject centerEyeAnchor = GameObject.Find("CenterEyeAnchor");
-        CharacterController charController = GetComponent<CharacterController>();
-        GameObject textobject = GameObject.Find("MyText");
-        Text text = (Text)textobject.GetComponent("Text");
-        GameObject textobject2 = GameObject.Find("MyText2");
-        Text text2 = (Text)textobject2.GetComponent("Text");
-        text.text = "EyeA: " + centerEyeAnchor.transform.localPosition;
-        text2.text = "Cntrlr: " + charController.center;
+        
+        //text.text = "EyeA: " + centerEyeAnchor.transform.localPosition;
+        //text2.text = "Char: " + charController.transform.position;
 
 
         //Button A pressed
         if (OVRInput.Get(OVRInput.Button.One))
         {
             //text.text = "'A' button.";
-            GameObject rawImageObject = GameObject.Find("RawImage");
+            /*GameObject rawImageObject = GameObject.Find("RawImage");
+            rawImageObject.SetActive(true);
             RawImage rawImage = rawImageObject.GetComponent<RawImage>();
-            rawImage.material.mainTexture = Resources.Load<Texture>("kof");
-            accessibleTextEdit.enabled = true;
-            accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
-            accessibleTextEdit.SetCustomText("Come on, work now!");
+            rawImage.material.mainTexture = Resources.Load<Texture>("kof");*/
+            //accessibleTextEdit.enabled = true;
+            //accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
+            //accessibleTextEdit.SetCustomText("Come on, work now!");
 
             if (accessibleTextEdit == null)
             {
-                text.text = "Dog bark: ";
+                UAP_AccessibilityManager.EnableAccessibility(true);
+                
+                text.text = "Is enabled?: " + UAP_AccessibilityManager.IsEnabled();
+                text2.text = "Is Active?: " + UAP_AccessibilityManager.IsActive();
                 audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             }
             else
             {
-                text.text = "TextAcc: " + accessibleTextEdit.GetCurrentValueAsText();
+                text.text = "TextAcc: " + UAP_AccessibilityManager.IsActive();
                 accessibleTextEdit.SelectItem(true);
                 audioSource.PlayOneShot(accessibleTextEdit.GetCurrentValueAsAudio());
             }
@@ -77,10 +87,8 @@ public class PlayerController : MonoBehaviour
         //Right Thumbstick pushed up
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickUp))
         {
-            secondaryThumbStick = true;
-            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / 50, 0, centerEyeAnchor.transform.forward.z / 50));
-            //oVRCameraRig.transform.position += new Vector3(centerEyeAnchor.transform.forward.x/50, 0, centerEyeAnchor.transform.forward.z/50);
-            secondaryThumbStick = false;
+            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / 50, (-gravity * Time.deltaTime), centerEyeAnchor.transform.forward.z / 50));
+            
         }
 
 
@@ -112,65 +120,23 @@ public class PlayerController : MonoBehaviour
             
         }
 
+        //Right hand trigger pushed
+        if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0.0)
+        {
+            text.text = "Dog Moving: " + dogAgent.transform.position;
+            dogAgent.SetDestination(charController.transform.position);
+        }
+
         if(Input.GetKeyDown(KeyCode.Equals))
         {
             UAP_AccessibilityManager.EnableAccessibility(true);
+            Debug.Log("UAP ENABLED? :" + UAP_AccessibilityManager.IsEnabled());
+            Debug.Log("UAP ACTIVE? :" + UAP_AccessibilityManager.IsActive());
+
             UAP_AccessibilityManager.Say("Hello there.");
         }
 
-        /*GameObject ttsObject = GameObject.Find("TTSSpeaker");
-
-        GameObject oVRCameraRig = GameObject.Find("OVRCameraRig");
         
-        
-        if (OVRInput.Get(OVRInput.Button.PrimaryThumbstickUp))
-        {
-            UAP_AccessibilityManager.UseAndroidTTS();
-            UAP_AccessibilityManager.EnableAccessibility(true, false);
-            UAP_AccessibilityManager.Say("Executed!");
-
-            Transform transform = (Transform)oVRCameraRig.GetComponent("Transform");
-            transform.localPosition += new Vector3(0, 0, transform.localPosition.y + 1);
-            text.text = "forward: " + transform.position.y;
-
-        }
-
-        if (OVRInput.Get(OVRInput.Button.PrimaryThumbstickDown))
-        {
-            UAP_AccessibilityManager.EnableAccessibility(true, false);
-            UAP_AccessibilityManager.UseAndroidTTS();
-            UAP_AccessibilityManager.Say("Working.");
-            Transform transform = (Transform)oVRCameraRig.GetComponent("Transform");
-            transform.localPosition += new Vector3(0, 0, transform.localPosition.y - 1);
-            text.text = "backwards: " + transform.position.y;
-
-        }
-
-        if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).magnitude != 0)
-        {
-            text.text = "Primary Thumbstick: " + OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).magnitude;
-        }
-
-        if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).magnitude != 0)
-        {
-            text.text = "Secondary Thumbstick: " + OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).magnitude;
-        }
-
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.0) 
-        {
-            text.text = "PrimaryIndexTrigger";
-         
-        }
-
-        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.0)
-        {
-
-            TTSSpeaker tTSSpeaker = (TTSSpeaker)ttsObject.GetComponent("TTSSpeaker");
-            tTSSpeaker.Speak("Hello, finally");
-            tTSSpeaker.SpeakAsync("Hello there");
-
-            text.text = "SecondaryIndexTrigger";
-        }*/
 
     }
 

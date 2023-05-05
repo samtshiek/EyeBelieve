@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Oculus\Spatializer\Plugins\x86_64\AudioPluginOculusSpatializer.dll" />
+    <None Include="Assets\Oculus\Spatializer\Plugins\AudioPluginOculusSpatializer.bundle\Contents\_CodeSignature\CodeResources.xml" />
     <None Include="Assets\Oculus\Spatializer\Plugins\x86\AudioPluginOculusSpatializer.dll" />
     <None Include="Assets\Oculus\Spatializer\Oculus.Spatializer.asmdef" />
   </ItemGroup>
