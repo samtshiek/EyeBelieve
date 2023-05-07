@@ -15,7 +15,7 @@ public class DogController : MonoBehaviour
     bool Ewalking = false;
     bool Etrotting = false;
     bool Erunning = false;
-
+    private GameObject leftHand, rightHand;
 
     // Start is called before the first frame update
     void Start()
