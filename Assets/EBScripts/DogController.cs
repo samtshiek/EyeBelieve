@@ -15,7 +15,9 @@ public class DogController : MonoBehaviour
     bool Ewalking = false;
     bool Etrotting = false;
     bool Erunning = false;
-    private GameObject leftHand, rightHand;
+    public AudioSource audioSource;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,11 +37,11 @@ public class DogController : MonoBehaviour
     {
         if (animator == null)
         {
-            text.text = "Animator variable is null!";
+        //    text.text = "Animator variable is null!";
         }
 
-        text.text = "Vel" + dogAgent.velocity.magnitude;
-        text2.text = "Steer: " + dogAgent.transform.rotation;
+     //   text.text = "Vel" + dogAgent.velocity.magnitude;
+       // text2.text = "Steer: " + dogAgent.transform.rotation;
 
         if (dogAgent.velocity.magnitude == 0 && Eidle == false)
         {
@@ -73,27 +75,43 @@ public class DogController : MonoBehaviour
 
     }
 
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        //if (other.gameObject.name == "OVRCameraRig")
+        //{
+        //    text.text = "Entered Trigger!";
+        //    text2.text = "TRG: " + other.gameObject.name;
+        //}
+        //if (other.gameObject.name == "RightHandAnchor" || other.gameObject.name == "LeftHandAnchor")
+        if (other.gameObject.name == "RightHandAnchor")
         {
             text.text = "Entered Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
+           // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             animator.SetBool("handIsOver", true);
         }
-        
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        //if (other.gameObject.name == "OVRCameraRig")
+        //{
+        //    text.text = "Exited Trigger";
+        //    text2.text = "TRG: " + other.gameObject.name;
+        //    Debug.Log("An object left.");
+        //    animator.SetBool("handIsOver", false);
+        //}
+        if (other.gameObject.name == "RightHandAnchor")
         {
-            text.text = "Exited Trigger";
+            text.text = "Exited Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
-            Debug.Log("An object left.");
-            animator.SetBool("handIsOver", false);
+            Debug.Log("An object entered.");
+            animator.SetBool("handIsOver",false);
         }
-        
+
     }
 }

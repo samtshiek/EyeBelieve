@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
+
 public class PlayerController : MonoBehaviour
 {
     GameObject dog;

@@ -10,6 +10,8 @@ public class PuppyController : MonoBehaviour
     Text text;
     Text text2;
     //Bool handIsOver;
+
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,8 @@ public class PuppyController : MonoBehaviour
         animator = GetComponent<Animator>();
 
     }
+
+
 
     // Update is called once per frame
     void Update()
