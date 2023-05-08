@@ -11,12 +11,12 @@ public class DogController : MonoBehaviour
     Animator animator;
     GameObject dog;
     NavMeshAgent dogAgent;
-    //E in front of variable stands for "Entered"
-    bool Eidle = false;
-    bool Ewalking = false;
-    bool Etrotting = false;
-    bool Erunning = false;
+    bool idle = false;
+    bool walking = false;
+    bool trotting = false;
+    bool running = false;
     public AudioSource audioSource;
+    int runningCount = 0;
 
 
 
@@ -46,12 +46,14 @@ public class DogController : MonoBehaviour
         //    text.text = "Animator variable is null!";
         }
 
-        text.text = "Vel" + dogAgent.velocity.magnitude;
+        text.text = "Vel: " + dogAgent.velocity.magnitude;
+        text2.text = "State: " + animator.GetCurrentAnimatorStateInfo(0);
 
         if (animator.GetBool("walking") == true)
         {
             text2.text = "walking";
         }
+
         else
         {
             text2.text = "idle";
@@ -67,17 +69,19 @@ public class DogController : MonoBehaviour
             text2.text = "running";
         }
 
-
-        if (dogAgent.velocity.magnitude == 0.0)
+        if (dogAgent.velocity.magnitude == 0.0 && idle == false)
         {
             //animator.GetCurrentAnimatorStateInfo(0);
             animator.SetBool("walking", false);
             animator.SetBool("trotting", false);
             animator.SetBool("running", false);
+            idle = true;
+            walking = false;
+            trotting = false;
+            running = false;
         }
 
-
-        if (dogAgent.velocity.magnitude > 0.0 && dogAgent.velocity.magnitude < 0.3)
+        if (dogAgent.velocity.magnitude > 0.0 && dogAgent.velocity.magnitude < 0.3 && walking == false)
         {
             if (animator.GetBool("walking") == false)
             {
@@ -85,11 +89,16 @@ public class DogController : MonoBehaviour
             }
             else
             {
-                animator.SetBool("trotting", false);
                 animator.SetBool("running", false);
+                animator.SetBool("trotting", false);
             }
+
+            idle = false;
+            walking = true;
+            trotting = false;
+            running = false;
         }
-        if (dogAgent.velocity.magnitude >= 0.3 && dogAgent.velocity.magnitude < 0.5)
+        if (dogAgent.velocity.magnitude >= 0.3 && dogAgent.velocity.magnitude < 0.5 && trotting == false)
         {
             if (animator.GetBool("trotting") == false)
             {
@@ -100,18 +109,79 @@ public class DogController : MonoBehaviour
             {
                 animator.SetBool("running", false);
             }
+
+            idle = false;
+            walking = false;
+            trotting = true;
+            running = false;
         }
 
-        if (dogAgent.velocity.magnitude >= 0.5)
+        if (dogAgent.velocity.magnitude >= 0.5 && running == false)
         {
             if (animator.GetBool("running") == false)
             {
                 animator.SetBool("walking", true);
                 animator.SetBool("trotting", true);
                 animator.SetBool("running", true);
-                ++ERunningCount;
+            }
+
+            idle = false;
+            walking = false;
+            trotting = false;
+            running = true;
+            ++runningCount;
+        }
+
+        /*if (dogAgent.velocity.magnitude == 0.0)
+        {
+            //animator.GetCurrentAnimatorStateInfo(0);
+            if (walking)
+            {
+                animator.SetTrigger("Walk to Idle");
+                idle = true;
+                walking = false;
             }
         }
+
+        if (dogAgent.velocity.magnitude > 0.0 && dogAgent.velocity.magnitude < 0.3)
+        {
+            if (trotting)
+            {
+                animator.SetTrigger("Trot to Walk");
+                walking = true;
+                trotting = false;
+            }
+
+            else
+            {
+                animator.SetTrigger("Idle to Walk");
+                walking = true;
+                idle = false;
+            }
+            
+        }
+
+        if (dogAgent.velocity.magnitude >= 0.3 && dogAgent.velocity.magnitude < 0.5)
+        {
+            if (running)
+            {
+                animator.SetTrigger("Run to Trot");
+                running = false;
+            }
+            else
+            {
+                animator.SetTrigger("Walk to Trot");
+                trotting = true;
+                walking = false;
+            }
+        }
+
+        if (dogAgent.velocity.magnitude >= 0.5)
+        {
+            animator.SetTrigger("Trot to Run");
+            running = true;
+            trotting = false;
+        }*/
     }
 
 
