@@ -11,10 +11,12 @@ public class DogController : MonoBehaviour
     Animator animator;
     GameObject dog;
     NavMeshAgent dogAgent;
+    //E in front of variable stands for "Entered"
     bool Eidle = false;
     bool Ewalking = false;
     bool Etrotting = false;
     bool Erunning = false;
+    int ERunningCount = 0;
 
 
     // Start is called before the first frame update
@@ -33,44 +35,82 @@ public class DogController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void FixedUpdate()
+    {
         if (animator == null)
         {
             text.text = "Animator variable is null!";
         }
 
         text.text = "Vel" + dogAgent.velocity.magnitude;
-        text2.text = "Steer: " + dogAgent.transform.rotation;
 
-        if (dogAgent.velocity.magnitude == 0 && Eidle == false)
+        if (animator.GetBool("walking") == true)
         {
-            Eidle = true;
+            text2.text = "walking";
+        }
+        else
+        {
+            text2.text = "idle";
+        }
+
+        if (animator.GetBool("trotting") == true)
+        {
+            text2.text = "trotting";
+        }
+
+        if (animator.GetBool("running") == true)
+        {
+            text2.text = "running";
+        }
+
+
+        if (dogAgent.velocity.magnitude == 0.0)
+        {
+            //animator.GetCurrentAnimatorStateInfo(0);
             animator.SetBool("walking", false);
-        }
-
-        if (dogAgent.velocity.magnitude > 0 && dogAgent.velocity.magnitude < 1 && Ewalking == false)
-        {
-            Eidle = false;
-            Ewalking = true;
-            animator.SetBool("walking", true);
             animator.SetBool("trotting", false);
-        }
-
-        if (dogAgent.velocity.magnitude >= 1 && dogAgent.velocity.magnitude < 1.5 && Etrotting == false)
-        {
-            Ewalking = false;
-            Etrotting = true;
-            Erunning = false;
-            animator.SetBool("trotting", true);
             animator.SetBool("running", false);
         }
 
-        if (dogAgent.velocity.magnitude >= 1.5 && Erunning == false)
+
+        if (dogAgent.velocity.magnitude > 0.0 && dogAgent.velocity.magnitude < 0.3)
         {
-            Etrotting = false;
-            Erunning = true;
-            animator.SetBool("running", true);
+            if (animator.GetBool("walking") == false)
+            {
+                animator.SetBool("walking", true);
+            }
+            else
+            {
+                animator.SetBool("trotting", false);
+                animator.SetBool("running", false);
+            }
+        }
+        if (dogAgent.velocity.magnitude >= 0.3 && dogAgent.velocity.magnitude < 0.5)
+        {
+            if (animator.GetBool("trotting") == false)
+            {
+                animator.SetBool("walking", true);
+                animator.SetBool("trotting", true);
+            }
+            else
+            {
+                animator.SetBool("running", false);
+            }
         }
 
+        if (dogAgent.velocity.magnitude >= 0.5)
+        {
+            if (animator.GetBool("running") == false)
+            {
+                animator.SetBool("walking", true);
+                animator.SetBool("trotting", true);
+                animator.SetBool("running", true);
+                ++ERunningCount;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

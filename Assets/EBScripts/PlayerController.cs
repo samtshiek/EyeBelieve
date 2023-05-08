@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     Text text2;
     float gravity = 9.8f;
     public AudioSource audioSource;
+    GameObject rawImageObject;
+    RawImage rawImage;
+    
     AccessibleUIGroupRoot accessibleUIGroupRoot;
     AccessibleTextEdit accessibleTextEdit;
     
@@ -32,6 +35,8 @@ public class PlayerController : MonoBehaviour
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
+        rawImageObject = GameObject.Find("RawImage");
+        rawImage = rawImageObject.GetComponent<RawImage>();
 
         accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
         
@@ -50,14 +55,11 @@ public class PlayerController : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.One))
         {
             //text.text = "'A' button.";
-            /*GameObject rawImageObject = GameObject.Find("RawImage");
-            rawImageObject.SetActive(true);
-            RawImage rawImage = rawImageObject.GetComponent<RawImage>();
-            rawImage.material.mainTexture = Resources.Load<Texture>("kof");*/
             //accessibleTextEdit.enabled = true;
             //accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
             //accessibleTextEdit.SetCustomText("Come on, work now!");
-
+            //rawImage.material.mainTexture = Resources.Load<Texture>("kof");
+            rawImageObject.SetActive(true);
             if (accessibleTextEdit == null)
             {
                 UAP_AccessibilityManager.EnableAccessibility(true);
@@ -73,6 +75,7 @@ public class PlayerController : MonoBehaviour
                 audioSource.PlayOneShot(accessibleTextEdit.GetCurrentValueAsAudio());
             }
 
+            
 
         }
 
@@ -80,7 +83,6 @@ public class PlayerController : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.Two))
         {
             text.text = "'B' button.";
-            GameObject rawImageObject = GameObject.Find("RawImage");
             rawImageObject.SetActive(false);
         }
 
@@ -143,28 +145,7 @@ public class PlayerController : MonoBehaviour
   /*  private void FixedUpdate()
     {
         OVRInput.FixedUpdate();
-        GameObject oVRCameraRig = GameObject.Find("OVRCameraRig");
-        GameObject textobject = GameObject.Find("MyText");
-        Text text = (Text)textobject.GetComponent("Text");
-        text.text = "Rig location: " + oVRCameraRig.transform.localPosition.y;
-
-        if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickUp))
-        {
-            UAP_AccessibilityManager.EnableAccessibility(true, false);
-            UAP_AccessibilityManager.Say("WORKIN!");
-            oVRCameraRig.transform.position += new Vector3(0, 0, transform.localPosition.y + 1);
-            text.text = "forward: " + transform.position.y;
-
-        }
-
-        if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickDown))
-        {
-            UAP_AccessibilityManager.EnableAccessibility(true, false);
-            UAP_AccessibilityManager.Say("WORKIN!");
-            oVRCameraRig.transform.position += new Vector3(0, 0, transform.localPosition.y - 1);
-            text.text = "backwards: " + transform.position.y;
-
-        }
+        
     }*/
 
 
