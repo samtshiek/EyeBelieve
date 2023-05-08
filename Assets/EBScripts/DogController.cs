@@ -16,7 +16,8 @@ public class DogController : MonoBehaviour
     bool Ewalking = false;
     bool Etrotting = false;
     bool Erunning = false;
-    int ERunningCount = 0;
+    public AudioSource audioSource;
+
 
 
     // Start is called before the first frame update
@@ -42,7 +43,7 @@ public class DogController : MonoBehaviour
     {
         if (animator == null)
         {
-            text.text = "Animator variable is null!";
+        //    text.text = "Animator variable is null!";
         }
 
         text.text = "Vel" + dogAgent.velocity.magnitude;
@@ -113,27 +114,43 @@ public class DogController : MonoBehaviour
         }
     }
 
+
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        //if (other.gameObject.name == "OVRCameraRig")
+        //{
+        //    text.text = "Entered Trigger!";
+        //    text2.text = "TRG: " + other.gameObject.name;
+        //}
+        //if (other.gameObject.name == "RightHandAnchor" || other.gameObject.name == "LeftHandAnchor")
+        if (other.gameObject.name == "RightHandAnchor")
         {
             text.text = "Entered Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
+           // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             animator.SetBool("handIsOver", true);
         }
-        
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        //if (other.gameObject.name == "OVRCameraRig")
+        //{
+        //    text.text = "Exited Trigger";
+        //    text2.text = "TRG: " + other.gameObject.name;
+        //    Debug.Log("An object left.");
+        //    animator.SetBool("handIsOver", false);
+        //}
+        if (other.gameObject.name == "RightHandAnchor")
         {
-            text.text = "Exited Trigger";
+            text.text = "Exited Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
-            Debug.Log("An object left.");
-            animator.SetBool("handIsOver", false);
+            Debug.Log("An object entered.");
+            animator.SetBool("handIsOver",false);
         }
-        
+
     }
 }
