@@ -46,8 +46,8 @@ public class DogController : MonoBehaviour
         //    text.text = "Animator variable is null!";
         }
 
-        text.text = "Vel: " + dogAgent.velocity.magnitude;
-        text2.text = "State: " + animator.GetCurrentAnimatorStateInfo(0);
+     //   text.text = "Vel: " + dogAgent.velocity.magnitude;
+     //   text2.text = "State: " + animator.GetCurrentAnimatorStateInfo(0);
 
         if (animator.GetBool("walking") == true)
         {
@@ -184,26 +184,38 @@ public class DogController : MonoBehaviour
         }*/
     }
 
-
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        //if (other.gameObject.name == "OVRCameraRig")
-        //{
-        //    text.text = "Entered Trigger!";
-        //    text2.text = "TRG: " + other.gameObject.name;
-        //}
-        //if (other.gameObject.name == "RightHandAnchor" || other.gameObject.name == "LeftHandAnchor")
+
         if (other.gameObject.name == "RightHandAnchor")
         {
             text.text = "Entered Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
-           // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
+            // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             animator.SetBool("handIsOver", true);
         }
-
     }
+
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    //if (other.gameObject.name == "OVRCameraRig")
+    //    //{
+    //    //    text.text = "Entered Trigger!";
+    //    //    text2.text = "TRG: " + other.gameObject.name;
+    //    //}
+    //    //if (other.gameObject.name == "RightHandAnchor" || other.gameObject.name == "LeftHandAnchor")
+    //    if (other.gameObject.name == "RightHandAnchor")
+    //    {
+    //        text.text = "Entered Trigger!";
+    //        text2.text = "TRG: " + other.gameObject.name;
+    //        Debug.Log("An object entered.");
+    //       // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
+    //        animator.SetBool("handIsOver", true);
+    //    }
+
+    //}
 
     private void OnTriggerExit(Collider other)
     {
@@ -219,7 +231,7 @@ public class DogController : MonoBehaviour
             text.text = "Exited Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
-            animator.SetBool("handIsOver",false);
+            animator.SetBool("handIsOver", false);
         }
 
     }
