@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     GameObject rawImageObject;
     RawImage rawImage;
     GameObject pee;
+    GameObject dogPee;
+    float shapeWeight = 0;
 
     AccessibleUIGroupRoot accessibleUIGroupRoot;
     AccessibleTextEdit accessibleTextEdit;
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
+        accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
         text2 = (Text)textobject2.GetComponent("Text");
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
@@ -60,24 +63,33 @@ public class PlayerController : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.One))
         {
             //text.text = "'A' button.";
-            //accessibleTextEdit.enabled = true;
-            //accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
-            //accessibleTextEdit.SetCustomText("Come on, work now!");
+            accessibleTextEdit.enabled = true;
+            accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
+            accessibleTextEdit.SetCustomText("Come on, work now!");
             //rawImage.material.mainTexture = Resources.Load<Texture>("kof");
-            rawImageObject.SetActive(true);
+            //rawImageObject.SetActive(true);
             if (accessibleTextEdit == null)
             {
                 UAP_AccessibilityManager.EnableAccessibility(true);
                 
                 text.text = "Is enabled?: " + UAP_AccessibilityManager.IsEnabled();
                 text2.text = "Is Active?: " + UAP_AccessibilityManager.IsActive();
-                audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
+
+                UAP_AccessibilityManager.Say("Welcome back?");
+                
+                //audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             }
             else
             {
-                text.text = "TextAcc: " + UAP_AccessibilityManager.IsActive();
-                accessibleTextEdit.SelectItem(true);
-                audioSource.PlayOneShot(accessibleTextEdit.GetCurrentValueAsAudio());
+                UAP_AccessibilityManager.EnableAccessibility(true);
+
+                text.text = "Is enabled?: " + UAP_AccessibilityManager.IsEnabled();
+                text2.text = "Is Active?: " + UAP_AccessibilityManager.IsActive();
+                //accessibleTextEdit.SelectItem(true);
+                
+                
+                //UAP_AccessibilityManager.Say("Welcome back?");
+                audioSource.PlayOneShot(accessibleTextEdit.m_TextAsAudio);
             }
 
             

@@ -145,6 +145,7 @@
     <Compile Include="Assets\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTransitionInstant.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_AudioQueue.cs" />
+    <Compile Include="Assets\EBScripts\dogPController.cs" />
     <Compile Include="Assets\BoxScript.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleButton_3D.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\OverlayPassthrough.cs" />
@@ -289,6 +290,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\Hidden.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\Wall.shader" />
+    <None Include="Assets\Red_Deer\Dogs\Labrador\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\ButtonGlow.shader" />
     <None Include="Assets\UAP\Plugins\x86\WindowsTTS.dll" />
@@ -302,6 +304,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage_Snow.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
+    <None Include="Assets\Assets\Puddles Set\Shaders\PuddleShader.shader" />
     <None Include="Assets\UAP\Resources\UAP_InternalLocalization.txt" />
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\GradientSkybox.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
@@ -370,6 +373,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_02.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\GlassMask.shader" />
+    <None Include="Assets\Assets\Puddles Set\Shaders\PuddleShader_Unity5.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_DiffBump.shader" />
     <None Include="Assets\UAP\Plugins\x86\nvdaControllerClient.dll" />
     <None Include="Assets\NatureManufactureAssets\Dynamic Nature - Mountain Tree Pack\Readme about resolution.txt" />
