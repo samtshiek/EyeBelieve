@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSource;
     GameObject rawImageObject;
     RawImage rawImage;
+    GameObject dogPee;
+    float shapeWeight = 0;
     
     AccessibleUIGroupRoot accessibleUIGroupRoot;
     AccessibleTextEdit accessibleTextEdit;
@@ -47,6 +49,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         OVRInput.Update();
+        
         
         //text.text = "EyeA: " + centerEyeAnchor.transform.localPosition;
         //text2.text = "Char: " + charController.transform.position;
@@ -79,6 +82,32 @@ public class PlayerController : MonoBehaviour
             
 
         }
+
+        //Button X pressed
+        if (OVRInput.Get(OVRInput.Button.Three))
+        {
+            text.text = "'X' button.";
+            dogPee = GameObject.Find("DogPee");
+        }
+
+        if (dogPee != null)
+        {
+            SkinnedMeshRenderer skinnedMeshRenderer = dogPee.GetComponent<SkinnedMeshRenderer>();
+            if (shapeWeight < 100.0)
+            {
+                shapeWeight += 1f;
+                text.text = "shapeWight: " + shapeWeight;
+                skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
+            }
+        }
+
+        //Button Y pressed
+        if (OVRInput.Get(OVRInput.Button.Four))
+        {
+            text.text = "'Y' button.";
+        }
+
+
 
         //Button B pressed
         if (OVRInput.Get(OVRInput.Button.Two))
@@ -130,7 +159,15 @@ public class PlayerController : MonoBehaviour
             dogAgent.SetDestination(charController.transform.position);
         }
 
-        if(Input.GetKeyDown(KeyCode.Equals))
+        //Left hand trigger pushed
+        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0.0)
+        {
+            GameObject dogInteractObject = GameObject.Find("Stick");
+            text.text = "Dog Moving to Stick";
+            dogAgent.SetDestination(dogInteractObject.transform.position);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Equals))
         {
             UAP_AccessibilityManager.EnableAccessibility(true);
             Debug.Log("UAP ENABLED? :" + UAP_AccessibilityManager.IsEnabled());

@@ -49,7 +49,7 @@ public class DogController : MonoBehaviour
      //   text.text = "Vel: " + dogAgent.velocity.magnitude;
      //   text2.text = "State: " + animator.GetCurrentAnimatorStateInfo(0);
 
-        if (animator.GetBool("walking") == true)
+       /* if (animator.GetBool("walking") == true)
         {
             text2.text = "walking";
         }
@@ -67,7 +67,7 @@ public class DogController : MonoBehaviour
         if (animator.GetBool("running") == true)
         {
             text2.text = "running";
-        }
+        } */
 
         if (dogAgent.velocity.magnitude == 0.0 && idle == false)
         {
