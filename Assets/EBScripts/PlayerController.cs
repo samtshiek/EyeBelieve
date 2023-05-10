@@ -19,9 +19,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSource;
     GameObject rawImageObject;
     RawImage rawImage;
-    GameObject dogPee;
-    float shapeWeight = 0;
-    
+    GameObject pee;
+
     AccessibleUIGroupRoot accessibleUIGroupRoot;
     AccessibleTextEdit accessibleTextEdit;
     
@@ -40,6 +39,8 @@ public class PlayerController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
+        pee = GameObject.Find("Pee");
+        pee.GetComponent<Renderer>().enabled = false;
 
         accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
         

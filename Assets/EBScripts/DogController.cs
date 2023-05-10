@@ -17,6 +17,9 @@ public class DogController : MonoBehaviour
     bool running = false;
     public AudioSource audioSource;
     int runningCount = 0;
+    GameObject pee;
+   
+
 
 
 
@@ -24,6 +27,7 @@ public class DogController : MonoBehaviour
     void Start()
     {
         dog = gameObject;
+        pee = GameObject.Find("Pee");
         dogAgent = GetComponent<NavMeshAgent>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
@@ -51,17 +55,17 @@ public class DogController : MonoBehaviour
 
        /* if (animator.GetBool("walking") == true)
         {
-            text2.text = "walking";
+       //     text2.text = "walking";
         }
 
         else
         {
-            text2.text = "idle";
+      //      text2.text = "idle";
         }
 
         if (animator.GetBool("trotting") == true)
         {
-            text2.text = "trotting";
+     //       text2.text = "trotting";
         }
 
         if (animator.GetBool("running") == true)
@@ -186,6 +190,8 @@ public class DogController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        text.text = "Entered Trigger!";
+        text2.text = "TRG: " + other.gameObject.name;
 
         if (other.gameObject.name == "RightHandAnchor")
         {
@@ -195,6 +201,23 @@ public class DogController : MonoBehaviour
             // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             animator.SetBool("handIsOver", true);
         }
+
+
+        if (other.gameObject.name == "Pee_Cube")
+        {
+            text.text = "Entered Trigger!";
+            text2.text = "TRG: " + other.gameObject.name;
+            Debug.Log("An object entered.");
+            animator.SetBool("goPee", true);
+            Invoke("renderPee", 5);
+        }
+
+    }
+
+    private void renderPee()
+    {
+        pee.GetComponent<Renderer>().enabled = true;
+
     }
 
 
@@ -232,6 +255,22 @@ public class DogController : MonoBehaviour
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             animator.SetBool("handIsOver", false);
+        }
+
+        if (other.gameObject.name == "Pee_Cube")
+        {
+            text.text = "Exited Trigger!";
+            text2.text = "TRG: " + other.gameObject.name;
+            Debug.Log("An object entered.");
+            animator.SetBool("goPee", false);
+        }
+
+        if (other.gameObject.name == "OVRCameraRig")
+        {
+            text.text = "Exited Trigger!";
+            text2.text = "TRG: " + other.gameObject.name;
+            Debug.Log("An object entered.");
+           // animator.SetBool("handIsOver", false);
         }
 
     }
