@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSource;
     GameObject rawImageObject;
     RawImage rawImage;
-    GameObject pee;
-    GameObject dogPee;
+   // GameObject pee;
+   // GameObject dogPee;
     float shapeWeight = 0;
 
     AccessibleUIGroupRoot accessibleUIGroupRoot;
@@ -42,8 +42,8 @@ public class PlayerController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
-        pee = GameObject.Find("Pee");
-        pee.GetComponent<Renderer>().enabled = false;
+      //  pee = GameObject.Find("DogPee");
+      //  pee.GetComponent<Renderer>().enabled = false;
 
         accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
         
@@ -97,22 +97,22 @@ public class PlayerController : MonoBehaviour
         }
 
         //Button X pressed
-        if (OVRInput.Get(OVRInput.Button.Three))
-        {
-            text.text = "'X' button.";
-            dogPee = GameObject.Find("DogPee");
-        }
+        //if (OVRInput.Get(OVRInput.Button.Three))
+        //{
+        //    text.text = "'X' button.";
+        //    dogPee = GameObject.Find("DogPee");
+        //}
 
-        if (dogPee != null)
-        {
-            SkinnedMeshRenderer skinnedMeshRenderer = dogPee.GetComponent<SkinnedMeshRenderer>();
-            if (shapeWeight < 100.0)
-            {
-                shapeWeight += 1f;
-                text.text = "shapeWight: " + shapeWeight;
-                skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
-            }
-        }
+        //if (dogPee != null)
+        //{
+        //    SkinnedMeshRenderer skinnedMeshRenderer = dogPee.GetComponent<SkinnedMeshRenderer>();
+        //    if (shapeWeight < 100.0)
+        //    {
+        //        shapeWeight += 1f;
+        //        text.text = "shapeWight: " + shapeWeight;
+        //        skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
+        //    }
+        //}
 
         //Button Y pressed
         if (OVRInput.Get(OVRInput.Button.Four))

@@ -84,7 +84,7 @@ public class FeedController : MonoBehaviour
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             dogFood.GetComponent<Renderer>().enabled = true;
-            dogAgent.SetDestination(dogBowl.transform.position);
+            dogAgent.SetDestination(dogBowl.transform.position + new Vector3(0,0,0.26f));
             Invoke("dogEat", 4);
         }
 
