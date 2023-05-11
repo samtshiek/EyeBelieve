@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
-using static System.Net.Mime.MediaTypeNames;
+using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class FeedController : MonoBehaviour
 {
@@ -22,10 +22,10 @@ public class FeedController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dog = GameObject.find("Puppy_Labrador_IP");
-        dogFood = GameObject.find("Food_1");
+        dog = GameObject.Find("Puppy_Labrador_IP");
+        dogFood = GameObject.Find("Food_1");
         dogFood.GetComponent<Renderer>().enabled = false;
-        dogAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        dogAgent = GetComponent<NavMeshAgent>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
@@ -66,11 +66,11 @@ public class FeedController : MonoBehaviour
         */
     }
 
-    private void renderPee()
+    /*private void renderPee()
     {
         pee.GetComponent<Renderer>().enabled = true;
 
-    }
+    }*/
 
     private void OnTriggerExit(Collider other)
     {
@@ -93,7 +93,7 @@ public class FeedController : MonoBehaviour
         {
             text.text = "Exited Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
-            Debug.Log("An object entered.");
+            UnityEngine.Debug.Log("An object entered.");
             animator.SetBool("goPee", false);
         }
 
