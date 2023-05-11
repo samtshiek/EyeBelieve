@@ -13,8 +13,9 @@ public class FeedController : MonoBehaviour
     Text text2;
     Animator animator;
     GameObject dog;
-    UnityEngine.AI.NavMeshAgent dogAgent;
+    NavMeshAgent dogAgent;
     GameObject dogFood;
+    GameObject dogBowl;
     Animator dogAnimator;
     bool closeToBowl;
 
@@ -23,17 +24,18 @@ public class FeedController : MonoBehaviour
     void Start()
     {
         dog = GameObject.Find("Puppy_Labrador_IP");
+        dogAnimator = dog.GetComponent<Animator>();
+        dogAnimator.enabled = true;
+        dogBowl = GameObject.Find("Bowl_2_food_1");
         dogFood = GameObject.Find("Food_1");
         dogFood.GetComponent<Renderer>().enabled = false;
-        dogAgent = GetComponent<NavMeshAgent>();
+        dogAgent = dog.GetComponent<NavMeshAgent>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
         animator = GetComponent<Animator>();
         animator.enabled = true;
-        dogAnimator = dog.GetComponent<Animator>();
-        dogAnimator.enabled = true;
     }
 
 
@@ -51,8 +53,16 @@ public class FeedController : MonoBehaviour
     {
         if (closeToBowl) 
         {
-            dogAnimator.SetBool("dogEating", true);
-            Invoke("doneEating", 4);
+            if (dogAnimator == null)
+            {
+                Debug.Log("DOG ANIMATOR NULL!!!!!!!!!");
+            }
+            else
+            {
+                dogAnimator.SetBool("dogEating", true);
+                Invoke("doneEating", 4);
+            }
+            
         }
 
     }
@@ -60,9 +70,10 @@ public class FeedController : MonoBehaviour
     private void doneEating()
     {
         dogFood.GetComponent<Renderer>().enabled = false;
+        dogAnimator.SetBool("dogEating", false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         //text.text = "Entered Trigger!";
         //text2.text = "TRG: " + other.gameObject.name;
@@ -73,8 +84,8 @@ public class FeedController : MonoBehaviour
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             dogFood.GetComponent<Renderer>().enabled = true;
-            dogAgent.SetDestination(dogFood.transform.position);
-            Invoke("dogEat", 5);
+            dogAgent.SetDestination(dogBowl.transform.position);
+            Invoke("dogEat", 4);
         }
 
         /* Dog pee trigger with delay
@@ -88,6 +99,8 @@ public class FeedController : MonoBehaviour
         }
         */
     }
+
+    
 
     /*private void renderPee()
     {
