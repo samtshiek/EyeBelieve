@@ -15,8 +15,8 @@ public class FeedController : MonoBehaviour
     GameObject dog;
     UnityEngine.AI.NavMeshAgent dogAgent;
     GameObject dogFood;
-
-
+    Animator dogAnimator;
+    bool closeToBowl;
 
 
     // Start is called before the first frame update
@@ -32,15 +32,37 @@ public class FeedController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         animator = GetComponent<Animator>();
         animator.enabled = true;
+        dogAnimator = dog.GetComponent<Animator>();
+        dogAnimator.enabled = true;
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        text.text = "D: " + dogAgent.remainingDistance;
+        if (dogAgent.remainingDistance < 0.5)
+        {
+            closeToBowl = true;          
+        }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void dogEat()
+    {
+        if (closeToBowl) 
+        {
+            dogAnimator.SetBool("dogEating", true);
+            Invoke("doneEating", 4);
+        }
+
+    }
+
+    private void doneEating()
+    {
+        dogFood.GetComponent<Renderer>().enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
     {
         //text.text = "Entered Trigger!";
         //text2.text = "TRG: " + other.gameObject.name;
@@ -50,8 +72,9 @@ public class FeedController : MonoBehaviour
             text.text = "Entered Food Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
-            // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
-            //animator.SetBool("handIsOver", true);
+            dogFood.GetComponent<Renderer>().enabled = true;
+            dogAgent.SetDestination(dogFood.transform.position);
+            Invoke("dogEat", 5);
         }
 
         /* Dog pee trigger with delay
@@ -86,15 +109,14 @@ public class FeedController : MonoBehaviour
             text.text = "Exited Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
-            animator.SetBool("handIsOver", false);
+            dogAnimator.SetBool("dogEating", false);
         }
 
         if (other.gameObject.name == "Pee_Cube")
         {
             text.text = "Exited Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
-            UnityEngine.Debug.Log("An object entered.");
-            animator.SetBool("goPee", false);
+            UnityEngine.Debug.Log("An object entered.");           
         }
 
         if (other.gameObject.name == "OVRCameraRig")
