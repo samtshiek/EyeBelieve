@@ -18,8 +18,8 @@ public class DogController : MonoBehaviour
     public AudioSource audioSource;
     int runningCount = 0;
     GameObject pee;
-   
-
+    public float rotationSpeed;
+    public float speed;
 
 
 
@@ -27,7 +27,7 @@ public class DogController : MonoBehaviour
     void Start()
     {
         dog = gameObject;
-        pee = GameObject.Find("Pee");
+        pee = GameObject.Find("DogPee");
         dogAgent = GetComponent<NavMeshAgent>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
@@ -35,12 +35,29 @@ public class DogController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         animator = GetComponent<Animator>();
         animator.enabled = true;
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        movementDirection.Normalize();
+
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -205,11 +222,11 @@ public class DogController : MonoBehaviour
 
         if (other.gameObject.name == "Pee_Cube")
         {
-            text.text = "Entered Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
+            text.text = "Dog Entered Entered!";
+            text2.text = "Dog Pee TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             animator.SetBool("goPee", true);
-            Invoke("renderPee", 5);
+           // Invoke("renderPee", 5);
         }
 
     }
@@ -217,6 +234,7 @@ public class DogController : MonoBehaviour
     private void renderPee()
     {
         pee.GetComponent<Renderer>().enabled = true;
+        animator.SetBool("goPee", false);
 
     }
 
