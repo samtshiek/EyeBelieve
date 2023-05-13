@@ -41,7 +41,7 @@ public class StoryScript : MonoBehaviour
             if (dayIncrement == 3)
             {
                 rawImageObject.SetActive(true);
-                rawImage.material.mainTexture = Resources.Load<Texture>("kof");
+                rawImage.material.mainTexture = Resources.Load<Texture>("LHON2");
             }
         }
     }

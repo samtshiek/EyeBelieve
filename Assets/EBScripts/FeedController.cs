@@ -42,7 +42,7 @@ public class FeedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "D: " + dogAgent.remainingDistance;
+        //text.text = "D: " + dogAgent.remainingDistance;
         if (dogAgent.remainingDistance < 0.5)
         {
             closeToBowl = true;          

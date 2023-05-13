@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
-
+using Oculus.Interaction.HandGrab;
 
 public class PlayerController : MonoBehaviour
 {
@@ -22,6 +22,14 @@ public class PlayerController : MonoBehaviour
     GameObject pee;
     GameObject dogPee;
     float shapeWeight = 0;
+    GameObject handGrab;
+    HandGrabInteractor handGrabInteractor;
+    HandGrabInteractable grabbedObjectR = null;
+    bool shouldFetch = false;
+    bool returnToThrower_b = false;
+    bool startedNavigating = false;
+    int handEmptyR = 0;
+    
 
     AccessibleUIGroupRoot accessibleUIGroupRoot;
     AccessibleTextEdit accessibleTextEdit;
@@ -29,6 +37,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        handGrab = GameObject.Find("HandGrabInteractorR");
+        handGrabInteractor = handGrab.GetComponent<HandGrabInteractor>();
         dog = GameObject.Find("Puppy_Labrador_IP");
         dogAgent = dog.GetComponent<NavMeshAgent>();
         canvasObject = GameObject.Find("Canvas");
@@ -53,10 +63,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         OVRInput.Update();
+
         
-        
-        //text.text = "EyeA: " + centerEyeAnchor.transform.localPosition;
-        //text2.text = "Char: " + charController.transform.position;
+        text.text = "Dist: " + dogAgent.remainingDistance;
+        text2.text = "Hand: " + OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+
 
 
         //Button A pressed
@@ -158,7 +169,7 @@ public class PlayerController : MonoBehaviour
         {
             UAP_AccessibilityManager.EnableAccessibility(true);
 
-            UAP_AccessibilityManager.Say("Hello there.");
+            //UAP_AccessibilityManager.Say("Hello there.");
 
             
             //AccessibleUIGroupRoot.Accessible_UIElement element
@@ -173,12 +184,12 @@ public class PlayerController : MonoBehaviour
         }
 
         //Left hand trigger pushed
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0.0)
+        /*if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > 0.0)
         {
             GameObject dogInteractObject = GameObject.Find("Stick");
             text.text = "Dog Moving to Stick";
             dogAgent.SetDestination(dogInteractObject.transform.position);
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.Equals))
         {
@@ -193,11 +204,77 @@ public class PlayerController : MonoBehaviour
 
     }
 
-  /*  private void FixedUpdate()
+    private void FixedUpdate()
     {
         OVRInput.FixedUpdate();
+
+        if (handGrabInteractor.SelectedInteractable != null)
+        {
+            handEmptyR = 0;
+            grabbedObjectR = handGrabInteractor.SelectedInteractable;
+        }
         
-    }*/
+        if (grabbedObjectR != null && handGrabInteractor.SelectedInteractable == null)
+        {
+            if(handEmptyR == 0)
+            {
+                shouldFetch = true;
+            }
+            ++handEmptyR;
+        }
+
+        //Dog fetches thrown object
+        dogFetch();
+        //Dog returns object to thrower
+        returnToThrower();
+
+    }
+
+    public void dogFetch()
+    {
+        if (shouldFetch)
+        {
+
+            if (dogAgent.remainingDistance < 0.3f && startedNavigating)
+            {
+                shouldFetch = false;
+                startedNavigating = false;
+                GameObject tongue = GameObject.Find("tongue_3");
+                grabbedObjectR.Rigidbody.isKinematic = true;
+                grabbedObjectR.GetComponent<BoxCollider>().enabled = false;
+                grabbedObjectR.transform.position = tongue.transform.position;
+                grabbedObjectR.transform.SetParent(tongue.transform);
+                returnToThrower_b = true;
+            }
+            else
+            {
+                dogAgent.SetDestination(grabbedObjectR.transform.position);
+                dogAgent.stoppingDistance = 0.3f;
+                startedNavigating = true;
+            }
+        }
+    }
+
+    public void returnToThrower()
+    {
+        if(returnToThrower_b)
+        {
+            if (dogAgent.remainingDistance < 0.3f && startedNavigating)
+            {
+                returnToThrower_b = false;
+                startedNavigating = false;
+                grabbedObjectR.Rigidbody.isKinematic = false;
+                grabbedObjectR.GetComponent<BoxCollider>().enabled = true;
+                grabbedObjectR.transform.SetParent(null);
+            }
+            else
+            {
+                dogAgent.SetDestination(charController.transform.position);
+                dogAgent.stoppingDistance = 0.3f;
+                startedNavigating = true;
+            }
+        }
+    }
 
 
 }
