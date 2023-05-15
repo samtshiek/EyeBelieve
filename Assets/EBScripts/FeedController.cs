@@ -18,11 +18,15 @@ public class FeedController : MonoBehaviour
     GameObject dogBowl;
     Animator dogAnimator;
     bool closeToBowl;
+    GameObject bedObject;
+    StoryScript storyScript;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        bedObject = GameObject.Find("PFB_Bed");
+        storyScript = bedObject.GetComponent<StoryScript>();
         dog = GameObject.Find("Puppy_Labrador_IP");
         dogAnimator = dog.GetComponent<Animator>();
         dogAnimator.enabled = true;
@@ -60,7 +64,7 @@ public class FeedController : MonoBehaviour
             else
             {
                 dogAnimator.SetBool("dogEating", true);
-                Invoke("doneEating", 4);
+                Invoke("doneEating", 5);
             }
             
         }
@@ -71,6 +75,7 @@ public class FeedController : MonoBehaviour
     {
         dogFood.GetComponent<Renderer>().enabled = false;
         dogAnimator.SetBool("dogEating", false);
+        storyScript.setFeed(true);
     }
 
     private void OnTriggerStay(Collider other)

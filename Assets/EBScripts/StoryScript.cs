@@ -9,6 +9,12 @@ public class StoryScript : MonoBehaviour
     int dayIncrement = 1;
     GameObject rawImageObject;
     RawImage rawImage;
+    GameObject textobject2;
+    Text text2;
+    bool fetch = false;
+    bool feed = false;
+    bool pet = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +23,8 @@ public class StoryScript : MonoBehaviour
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
         rawImageObject.SetActive(false);
+        textobject2 = GameObject.Find("MyText2");
+        text2 = (Text)textobject2.GetComponent("Text");
     }
 
     // Update is called once per frame
@@ -27,9 +35,12 @@ public class StoryScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        if (other.gameObject.name == "OVRCameraRig" && activitiesComplete())
         {
             ++dayIncrement;
+            fetch = false;
+            feed = false;
+            pet = false;
             dayText.text = "Day " + dayIncrement;
 
             if (dayIncrement == 2)
@@ -44,5 +55,36 @@ public class StoryScript : MonoBehaviour
                 rawImage.material.mainTexture = Resources.Load<Texture>("LHON2");
             }
         }
+    }
+
+    public bool activitiesComplete()
+    {
+        if (feed == true && fetch == true && pet == true)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+
+    public void setFetch(bool fetched)
+    {
+        fetch = fetched;
+        text2.text = "Fetched: " + fetch;
+    }
+
+    public void setFeed(bool fed)
+    {
+        feed = fed;
+        text2.text = "Fed: " + feed;
+    }
+
+    public void setPet(bool petted)
+    {
+        pet = petted;
+        text2.text = "Petted: " + pet;
     }
 }

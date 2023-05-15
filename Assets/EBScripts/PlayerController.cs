@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
    // GameObject pee;
    // GameObject dogPee;
     float shapeWeight = 0;
+    GameObject bedObject;
+    StoryScript storyScript;
     GameObject handGrab;
     HandGrabInteractor handGrabInteractor;
     HandGrabInteractable grabbedObjectR = null;
@@ -37,6 +39,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bedObject = GameObject.Find("PFB_Bed");
+        storyScript = bedObject.GetComponent<StoryScript>();
         handGrab = GameObject.Find("HandGrabInteractorR");
         handGrabInteractor = handGrab.GetComponent<HandGrabInteractor>();
         dog = GameObject.Find("Puppy_Labrador_IP");
@@ -66,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
         
         text.text = "Dist: " + dogAgent.remainingDistance;
-        text2.text = "Hand: " + OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+        //text2.text = "Hand: " + OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
 
 
 
@@ -266,6 +270,7 @@ public class PlayerController : MonoBehaviour
                 grabbedObjectR.Rigidbody.isKinematic = false;
                 grabbedObjectR.GetComponent<BoxCollider>().enabled = true;
                 grabbedObjectR.transform.SetParent(null);
+                storyScript.setFetch(true);
             }
             else
             {

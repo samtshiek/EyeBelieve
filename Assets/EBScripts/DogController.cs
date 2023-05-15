@@ -20,12 +20,14 @@ public class DogController : MonoBehaviour
     GameObject pee;
     public float rotationSpeed;
     public float speed;
-
-
+    GameObject bedObject;
+    StoryScript storyScript;
 
     // Start is called before the first frame update
     void Start()
     {
+        bedObject = GameObject.Find("PFB_Bed");
+        storyScript = bedObject.GetComponent<StoryScript>();
         dog = gameObject;
         pee = GameObject.Find("DogPee");
         dogAgent = GetComponent<NavMeshAgent>();
@@ -62,37 +64,9 @@ public class DogController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (animator == null)
-        {
-        //    text.text = "Animator variable is null!";
-        }
-
-     //   text.text = "Vel: " + dogAgent.velocity.magnitude;
-     //   text2.text = "State: " + animator.GetCurrentAnimatorStateInfo(0);
-
-       /* if (animator.GetBool("walking") == true)
-        {
-       //     text2.text = "walking";
-        }
-
-        else
-        {
-      //      text2.text = "idle";
-        }
-
-        if (animator.GetBool("trotting") == true)
-        {
-     //       text2.text = "trotting";
-        }
-
-        if (animator.GetBool("running") == true)
-        {
-            text2.text = "running";
-        } */
 
         if (dogAgent.velocity.magnitude == 0.0 && idle == false)
         {
-            //animator.GetCurrentAnimatorStateInfo(0);
             animator.SetBool("walking", false);
             animator.SetBool("trotting", false);
             animator.SetBool("running", false);
@@ -153,67 +127,17 @@ public class DogController : MonoBehaviour
             ++runningCount;
         }
 
-        /*if (dogAgent.velocity.magnitude == 0.0)
-        {
-            //animator.GetCurrentAnimatorStateInfo(0);
-            if (walking)
-            {
-                animator.SetTrigger("Walk to Idle");
-                idle = true;
-                walking = false;
-            }
-        }
-
-        if (dogAgent.velocity.magnitude > 0.0 && dogAgent.velocity.magnitude < 0.3)
-        {
-            if (trotting)
-            {
-                animator.SetTrigger("Trot to Walk");
-                walking = true;
-                trotting = false;
-            }
-
-            else
-            {
-                animator.SetTrigger("Idle to Walk");
-                walking = true;
-                idle = false;
-            }
-            
-        }
-
-        if (dogAgent.velocity.magnitude >= 0.3 && dogAgent.velocity.magnitude < 0.5)
-        {
-            if (running)
-            {
-                animator.SetTrigger("Run to Trot");
-                running = false;
-            }
-            else
-            {
-                animator.SetTrigger("Walk to Trot");
-                trotting = true;
-                walking = false;
-            }
-        }
-
-        if (dogAgent.velocity.magnitude >= 0.5)
-        {
-            animator.SetTrigger("Trot to Run");
-            running = true;
-            trotting = false;
-        }*/
     }
 
     private void OnTriggerStay(Collider other)
     {
         text.text = "Entered Trigger!";
-        text2.text = "TRG: " + other.gameObject.name;
+        //text2.text = "TRG: " + other.gameObject.name;
 
         if (other.gameObject.name == "RightHandAnchor")
         {
-            text.text = "Entered Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
+            //text.text = "Entered Trigger!";
+            //text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             animator.SetBool("handIsOver", true);
@@ -273,6 +197,7 @@ public class DogController : MonoBehaviour
             text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             animator.SetBool("handIsOver", false);
+            storyScript.setPet(true);
         }
 
         if (other.gameObject.name == "Pee_Cube")
