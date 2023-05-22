@@ -131,7 +131,7 @@ public class DogController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        text.text = "Entered Trigger!";
+        //text.text = "Entered Trigger!";
         //text2.text = "TRG: " + other.gameObject.name;
 
         if (other.gameObject.name == "RightHandAnchor")
@@ -193,8 +193,8 @@ public class DogController : MonoBehaviour
         //}
         if (other.gameObject.name == "RightHandAnchor")
         {
-            text.text = "Exited Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
+            //text.text = "Exited Trigger!";
+            //text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             animator.SetBool("handIsOver", false);
             storyScript.setPet(true);
@@ -202,17 +202,17 @@ public class DogController : MonoBehaviour
 
         if (other.gameObject.name == "Pee_Cube")
         {
-            text.text = "Exited Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
-            Debug.Log("An object entered.");
+            //text.text = "Exited Trigger!";
+            //text2.text = "TRG: " + other.gameObject.name;
+            //Debug.Log("An object entered.");
             animator.SetBool("goPee", false);
         }
 
         if (other.gameObject.name == "OVRCameraRig")
         {
-            text.text = "Exited Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
-            Debug.Log("An object entered.");
+            //text.text = "Exited Trigger!";
+            //text2.text = "TRG: " + other.gameObject.name;
+            //Debug.Log("An object entered.");
            // animator.SetBool("handIsOver", false);
         }
 

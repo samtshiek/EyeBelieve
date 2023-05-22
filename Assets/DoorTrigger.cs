@@ -38,8 +38,8 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.name == "OVRCameraRig")
         {
-            text.text = "Entered Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
+            //text.text = "Entered Trigger!";
+            //text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             animator.enabled = true;
             animator.SetBool("isOpen_Obj_1", true);
@@ -57,8 +57,8 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.gameObject.name == "OVRCameraRig")
         {
-            text.text = "Exited Trigger";
-            text2.text = "TRG: " + other.gameObject.name;
+            //text.text = "Exited Trigger";
+            //text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object left.");
             animator.SetBool("isOpen_Obj_1", false);
         }

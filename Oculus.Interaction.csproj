@@ -188,8 +188,8 @@
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Movements\AutoMoveTowardsTargetProvider.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\PoseDetection\Debug\FingerFeatureDebugVisual.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Grab\FingerRawPinchInjector.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Core\InteractorActiveState.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Unity\Input\InputKey.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Core\InteractorActiveState.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Core\ControllerActiveState.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Models\Locomotion\ILocomotionEventBroadcaster.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Pointable\VirtualPointable.cs" />

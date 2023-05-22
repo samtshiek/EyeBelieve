@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using Oculus.Interaction.HandGrab;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
     bool returnToThrower_b = false;
     bool startedNavigating = false;
     int handEmptyR = 0;
+    int overlayCount = 0;
     
 
     AccessibleUIGroupRoot accessibleUIGroupRoot;
@@ -56,8 +58,9 @@ public class PlayerController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
-      //  pee = GameObject.Find("DogPee");
-      //  pee.GetComponent<Renderer>().enabled = false;
+        //rawImageObject.SetActive(false);
+        //  pee = GameObject.Find("DogPee");
+        //  pee.GetComponent<Renderer>().enabled = false;
 
         accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
         
@@ -69,7 +72,7 @@ public class PlayerController : MonoBehaviour
         OVRInput.Update();
 
         
-        text.text = "Dist: " + dogAgent.remainingDistance;
+        text.text = "Dist: " + Vector3.Distance(centerEyeAnchor.transform.position, dog.transform.position);
         //text2.text = "Hand: " + OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
 
 
@@ -81,8 +84,28 @@ public class PlayerController : MonoBehaviour
             accessibleTextEdit.enabled = true;
             accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
             accessibleTextEdit.SetCustomText("Come on, work now!");
-            //rawImage.material.mainTexture = Resources.Load<Texture>("kof");
+            //rawImage.material.mainTexture = Resources.Load<Texture>("LHON2Recent");
             //rawImageObject.SetActive(true);
+            //rawImage.material= Resources.Load<Material>("LHONmat");
+            //rawImageObject.SetActive(true);
+            switch (overlayCount)
+            {
+                case 1:
+                    rawImage.material.mainTexture = Resources.Load<Texture>("LHON");
+                    rawImageObject.SetActive(true);
+                    break;
+
+                case 2:
+                    rawImage.material.mainTexture = Resources.Load<Texture>("LHON2Recent");
+                    rawImageObject.SetActive(true);
+                    overlayCount = 0;
+                    break;
+            }
+
+            rawImageObject.SetActive(true);
+            //rawImage.material = Resources.Load<Material>("KofMat");
+            //rawImage.material.mainTexture = Resources.Load<Texture>("kof");
+            audioSource.PlayOneShot(accessibleTextEdit.m_TextAsAudio);
             if (accessibleTextEdit == null)
             {
                 UAP_AccessibilityManager.EnableAccessibility(true);
@@ -94,6 +117,7 @@ public class PlayerController : MonoBehaviour
                 
                 //audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             }
+
             else
             {
                 UAP_AccessibilityManager.EnableAccessibility(true);
@@ -107,8 +131,8 @@ public class PlayerController : MonoBehaviour
                 audioSource.PlayOneShot(accessibleTextEdit.m_TextAsAudio);
             }
 
-            
 
+            ++overlayCount;
         }
 
         //Button X pressed
@@ -147,7 +171,7 @@ public class PlayerController : MonoBehaviour
         //Right Thumbstick pushed up
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickUp))
         {
-            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / 50, (-gravity * Time.deltaTime), centerEyeAnchor.transform.forward.z / 50));
+            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / 30, (-gravity * Time.deltaTime), centerEyeAnchor.transform.forward.z / 50));
             
         }
 
@@ -155,7 +179,7 @@ public class PlayerController : MonoBehaviour
         //Right Thumbstick pushed down
         if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickDown))
         {
-            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / (-50), (-gravity * Time.deltaTime), centerEyeAnchor.transform.forward.z / (-50)));
+            charController.Move(new Vector3(centerEyeAnchor.transform.forward.x / (-30), (-gravity * Time.deltaTime), centerEyeAnchor.transform.forward.z / (-50)));
         }
 
 
@@ -228,18 +252,18 @@ public class PlayerController : MonoBehaviour
         }
 
         //Dog fetches thrown object
+        
         dogFetch();
         //Dog returns object to thrower
         returnToThrower();
-
     }
 
-    public void dogFetch()
+    void dogFetch()
     {
         if (shouldFetch)
         {
 
-            if (dogAgent.remainingDistance < 0.3f && startedNavigating)
+            if (Vector3.Distance(dog.transform.position, grabbedObjectR.transform.position) < 0.7f && startedNavigating)
             {
                 shouldFetch = false;
                 startedNavigating = false;
@@ -252,24 +276,32 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                dogAgent.SetDestination(grabbedObjectR.transform.position);
-                dogAgent.stoppingDistance = 0.3f;
-                startedNavigating = true;
+                if (handEmptyR == 1)
+                {
+                    Invoke("goToThrownObject", 0.5f);
+                }
             }
         }
+    }
+
+    public void goToThrownObject()
+    {
+        dogAgent.SetDestination(grabbedObjectR.transform.position);
+        dogAgent.stoppingDistance = 0.0f;
+        startedNavigating = true;
     }
 
     public void returnToThrower()
     {
         if(returnToThrower_b)
         {
-            if (dogAgent.remainingDistance < 0.3f && startedNavigating)
+            if (Vector3.Distance(charController.transform.position, dog.transform.position) < 0.7f && startedNavigating)
             {
                 returnToThrower_b = false;
                 startedNavigating = false;
-                grabbedObjectR.Rigidbody.isKinematic = false;
-                grabbedObjectR.GetComponent<BoxCollider>().enabled = true;
                 grabbedObjectR.transform.SetParent(null);
+                grabbedObjectR.GetComponent<BoxCollider>().enabled = true;
+                grabbedObjectR.Rigidbody.isKinematic = false;
                 storyScript.setFetch(true);
             }
             else
@@ -280,6 +312,4 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
-
 }

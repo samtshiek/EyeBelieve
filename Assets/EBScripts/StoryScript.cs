@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 public class StoryScript : MonoBehaviour
 {
     GameObject dayTextObject;
@@ -10,7 +11,7 @@ public class StoryScript : MonoBehaviour
     GameObject rawImageObject;
     RawImage rawImage;
     GameObject textobject2;
-    Text text2;
+    public Text text2;
     bool fetch = false;
     bool feed = false;
     bool pet = false;
@@ -22,7 +23,7 @@ public class StoryScript : MonoBehaviour
         dayText = dayTextObject.GetComponent<Text>();
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
-        rawImageObject.SetActive(false);
+        //rawImageObject.SetActive(false);
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
     }
@@ -30,7 +31,7 @@ public class StoryScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)

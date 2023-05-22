@@ -71,11 +71,17 @@
     <Compile Include="Assets\Oculus\SampleFramework\Editor\BuildAssetPackages.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Editor\AndroidVideoEditorUtil.cs" />
     <Compile Include="Assets\UAP\Editor\Accessibility_Label_3D_Inspector.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Editor\LakePolygonEditor.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Editor\LakePolygonProfileEditor.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Editor\BuildSamples.cs" />
     <Compile Include="Assets\UAP\Editor\Accessibility_TextEdit_Inspector.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\Editor\MeshColoringRamEditor.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\Editor\RamBackgroundEditor.cs" />
     <Compile Include="Assets\UAP\Editor\Accessibility_Label_Inspector.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Gradle\Editor\Utils.cs" />
     <Compile Include="Assets\UAP\Editor\Accessibility_PluginToggle_Inspector.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\Editor\RamSplineEditor.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\Additional Tools\Scripts\Editor\VertexPainter.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Firebase\Editor\FirebaseEnabler.cs" />
     <Compile Include="Assets\UAP\Editor\Accessibility_Inspector.cs" />
     <Compile Include="Assets\UAP\Editor\Accessibility_GameObjectEnabler_Inspector.cs" />
@@ -83,6 +89,7 @@
     <Compile Include="Assets\UAP\Editor\Accessibility_Slider_Inspector.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\Editor\TeleportTransitionWarpInspector.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Editor\MediaPlayerImageEditor.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\Editor\SplineProfileEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UAP\Editor\UAP_Version.txt" />
