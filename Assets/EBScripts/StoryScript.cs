@@ -11,8 +11,10 @@ public class StoryScript : MonoBehaviour
     GameObject rawImageObject;
     RawImage rawImage;
     GameObject textobject2;
-    GameObject centerEyeAnchor;
+    GameObject ovrCameraRig;
     GameObject cineCamera;
+    GameObject ebCutscene;
+    GameObject vcamPlayer;
     public Text text2;
     bool fetch = false;
     bool feed = false;
@@ -28,8 +30,14 @@ public class StoryScript : MonoBehaviour
         //rawImageObject.SetActive(false);
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
-        centerEyeAnchor = GameObject.Find("CenterEyeAnchor");
+        ovrCameraRig = GameObject.Find("OVRCameraRig");
+        vcamPlayer = GameObject.Find("vcamPlayer");
+        vcamPlayer.SetActive(false);
         cineCamera = GameObject.Find("CineCamera");
+        cineCamera.SetActive(false);
+        ebCutscene = GameObject.Find("EBCutscene");
+        ebCutscene.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -40,7 +48,7 @@ public class StoryScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig" && activitiesComplete())
+        if (other.gameObject.name == "OVRCameraRig" /*&& activitiesComplete()*/)
         {
             ++dayIncrement;
             fetch = false;
@@ -51,16 +59,17 @@ public class StoryScript : MonoBehaviour
             if (dayIncrement == 2)
             {
                 rawImageObject.SetActive(true);
-                rawImage.material.mainTexture = Resources.Load<Texture>("LHON");
-                centerEyeAnchor.SetActive(false);
+                rawImage.material = Resources.Load<Material>("LHONmat2");
+                ovrCameraRig.SetActive(false);
                 cineCamera.SetActive(true);
-
+                vcamPlayer.SetActive(true);
+                ebCutscene.SetActive(true);
             }
 
             if (dayIncrement == 3)
             {
                 rawImageObject.SetActive(true);
-                rawImage.material.mainTexture = Resources.Load<Texture>("LHON2");
+                rawImage.material = Resources.Load<Material>("LHONmat3");
             }
         }
     }

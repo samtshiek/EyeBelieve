@@ -31,7 +31,6 @@ public class MeetFriendScript : MonoBehaviour
         storyScript.text2.text = "Moving? " + friendAnimator.GetBool("moving") + " D: " + friendAgent.remainingDistance;
 
         DayOneMeetingFriend();
-
     }
 
     private void DayOneMeetingFriend()

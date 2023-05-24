@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 101938556}
   - component: {fileID: 101938555}
   m_Layer: 0
-  m_Name: CM vcamPlayer
+  m_Name: vcamPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2824,7 +2824,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 0}
   m_Rotation: {x: 0, y: 0, z: 0}
   m_Scale: {x: 1, y: 1}
-  m_SyncScale: 1
+  m_SyncScale: 0
   m_MuteCamera: 0
   m_SplitView: 0
   m_RenderMode: 0
@@ -4276,7 +4276,7 @@ GameObject:
   - component: {fileID: 712137659}
   - component: {fileID: 712137658}
   m_Layer: 0
-  m_Name: EBTimeline
+  m_Name: EBCutscene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7036,13 +7036,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455100308}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.15581295, y: 0.06776084, z: -0.022265019, w: -0.98520815}
+  m_LocalPosition: {x: 502.56265, y: 2.282873, z: 482.4342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2031971034}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: -2.568, y: -119.384, z: -3.351}
 --- !u!114 &1455100314
 MonoBehaviour:
@@ -9064,7 +9064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: _monoscopic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: maxRenderScale

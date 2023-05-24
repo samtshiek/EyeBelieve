@@ -91,12 +91,12 @@ public class PlayerController : MonoBehaviour
             switch (overlayCount)
             {
                 case 1:
-                    rawImage.material = Resources.Load<Material>("LHONmat");
+                    rawImage.material = Resources.Load<Material>("LHONmat2");
                     rawImageObject.SetActive(true);
                     break;
 
                 case 2:
-                    rawImage.material = Resources.Load<Material>("LHONmat2");
+                    rawImage.material = Resources.Load<Material>("LHONmat3");
                     rawImageObject.SetActive(true);
                     overlayCount = 0;
                     break;
