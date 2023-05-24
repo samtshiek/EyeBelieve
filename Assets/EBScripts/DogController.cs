@@ -22,6 +22,8 @@ public class DogController : MonoBehaviour
     public float speed;
     GameObject bedObject;
     StoryScript storyScript;
+    float shapeWeight = 0;
+    bool hasPeed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -129,7 +131,7 @@ public class DogController : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         //text.text = "Entered Trigger!";
         //text2.text = "TRG: " + other.gameObject.name;
@@ -149,18 +151,51 @@ public class DogController : MonoBehaviour
             text.text = "Dog Entered Entered!";
             text2.text = "Dog Pee TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
-            animator.SetBool("goPee", true);
-           // Invoke("renderPee", 5);
+            if(!hasPeed)
+            {
+                dogAgent.isStopped = true;
+                animator.SetBool("timetoPee", true);
+                Invoke("goPee", 5);
+            }
+            
         }
 
     }
 
+    private void goPee()
+    {
+        animator.SetBool("goPee", true);
+        Invoke("renderPee", 5);
+    }
+
     private void renderPee()
     {
-        pee.GetComponent<Renderer>().enabled = true;
+        GameObject leg = GameObject.Find("Helper_foot_b.R");
+        pee.transform.position = leg.transform.position;
+
+        if (pee != null)
+        {
+            SkinnedMeshRenderer skinnedMeshRenderer = pee.GetComponent<SkinnedMeshRenderer>();
+            if (shapeWeight < 100.0)
+            {
+                shapeWeight += 5f;
+                text.text = "shapeWeight: " + shapeWeight;
+                skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
+
+                Debug.Log("This code ran.");
+            }
+        }
+        hasPeed = true;
+        Vector3 loc = dogAgent.transform.position;
+
+         dogAgent.isStopped = false;
+        dogAgent.SetDestination(loc);
         animator.SetBool("goPee", false);
+        animator.SetBool("timetoPee",false);
 
     }
+
+    
 
 
     //private void OnTriggerEnter(Collider other)

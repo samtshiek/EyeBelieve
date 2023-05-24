@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSource;
     GameObject rawImageObject;
     RawImage rawImage;
-   // GameObject pee;
+  //  GameObject pee;
    // GameObject dogPee;
     float shapeWeight = 0;
     GameObject bedObject;
@@ -59,8 +59,8 @@ public class PlayerController : MonoBehaviour
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
         //rawImageObject.SetActive(false);
-        //  pee = GameObject.Find("DogPee");
-        //  pee.GetComponent<Renderer>().enabled = false;
+       //  pee = GameObject.Find("DogPee");
+       //  pee.GetComponent<Renderer>().enabled = false;
 
         accessibleUIGroupRoot = canvasObject.GetComponent<AccessibleUIGroupRoot>();
         
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         OVRInput.Update();
 
         
-        text.text = "Dist: " + Vector3.Distance(centerEyeAnchor.transform.position, dog.transform.position);
+       // text.text = "Dist: " + Vector3.Distance(centerEyeAnchor.transform.position, dog.transform.position);
         //text2.text = "Hand: " + OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
 
 
