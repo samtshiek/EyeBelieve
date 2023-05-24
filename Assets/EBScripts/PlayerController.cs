@@ -91,12 +91,12 @@ public class PlayerController : MonoBehaviour
             switch (overlayCount)
             {
                 case 1:
-                    rawImage.material.mainTexture = Resources.Load<Texture>("LHON");
+                    rawImage.material = Resources.Load<Material>("LHONmat");
                     rawImageObject.SetActive(true);
                     break;
 
                 case 2:
-                    rawImage.material.mainTexture = Resources.Load<Texture>("LHON2Recent");
+                    rawImage.material = Resources.Load<Material>("LHONmat2");
                     rawImageObject.SetActive(true);
                     overlayCount = 0;
                     break;
@@ -227,9 +227,6 @@ public class PlayerController : MonoBehaviour
 
             UAP_AccessibilityManager.Say("Hello there.");
         }
-
-        
-
     }
 
     private void FixedUpdate()

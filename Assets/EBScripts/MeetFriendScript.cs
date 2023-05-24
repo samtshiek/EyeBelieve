@@ -11,6 +11,8 @@ public class MeetFriendScript : MonoBehaviour
     Animator friendAnimator;
     GameObject bedObject;
     FriendScript friendScript;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,27 +30,42 @@ public class MeetFriendScript : MonoBehaviour
     {
         storyScript.text2.text = "Moving? " + friendAnimator.GetBool("moving") + " D: " + friendAgent.remainingDistance;
 
-        if (friendAnimator.GetBool("moving") && friendAgent.remainingDistance < 0.2)
-        {
-            friendScript.shouldRotate = true;
-        }
+        DayOneMeetingFriend();
 
-        if (friendScript.shouldRotate)
-        {
-            storyScript.text2.text = "Time to rotate!! " + friend.transform.rotation.eulerAngles.y;
-            friend.transform.rotation = Quaternion.RotateTowards(friend.transform.rotation, Quaternion.Euler(new Vector3(0, 90, 0)), 70f * Time.deltaTime);
+    }
 
-            if (friend.transform.rotation.eulerAngles.y >= 87.0 || friend.transform.rotation.eulerAngles.y <= 92.0)
+    private void DayOneMeetingFriend()
+    {
+        if (storyScript.dayIncrement == 1)
+        {
+            if (friendAnimator.GetBool("moving") && friendAgent.remainingDistance < 0.2)
             {
-                friendScript.shouldRotate = false;
-                friendScript.shouldSit = true;
+                friendScript.shouldRotate = true;
             }
-        }
 
-        if (friendScript.shouldSit)
-        {
-            friendAnimator.SetBool("sitting", true);
-            friendScript.shouldSit = false;
+            if (friendScript.shouldRotate)
+            {
+                storyScript.text2.text = "Time to rotate!! " + friend.transform.rotation.eulerAngles.y;
+                friend.transform.rotation = Quaternion.RotateTowards(friend.transform.rotation, Quaternion.Euler(new Vector3(0, 90, 0)), 70f * Time.deltaTime);
+
+                if (friend.transform.rotation.eulerAngles.y >= 87.0 || friend.transform.rotation.eulerAngles.y <= 92.0)
+                {
+                    friendScript.shouldRotate = false;
+                    friendScript.shouldSit = true;
+                }
+            }
+
+            if (friendScript.shouldSit)
+            {
+                friendAnimator.SetBool("sitting", true);
+                friendScript.shouldSit = false;
+            }
+
+            if (friendScript.shouldPlayControllersSitting)
+            {
+                friendAnimator.SetBool("usecontrollersSitting", true);
+                friendScript.shouldPlayControllersSitting = false;
+            }
         }
 
     }

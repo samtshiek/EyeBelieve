@@ -7,10 +7,12 @@ public class StoryScript : MonoBehaviour
 {
     GameObject dayTextObject;
     Text dayText;
-    int dayIncrement = 1;
+    public int dayIncrement = 1;
     GameObject rawImageObject;
     RawImage rawImage;
     GameObject textobject2;
+    GameObject centerEyeAnchor;
+    GameObject cineCamera;
     public Text text2;
     bool fetch = false;
     bool feed = false;
@@ -26,6 +28,8 @@ public class StoryScript : MonoBehaviour
         //rawImageObject.SetActive(false);
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
+        centerEyeAnchor = GameObject.Find("CenterEyeAnchor");
+        cineCamera = GameObject.Find("CineCamera");
     }
 
     // Update is called once per frame
@@ -48,6 +52,9 @@ public class StoryScript : MonoBehaviour
             {
                 rawImageObject.SetActive(true);
                 rawImage.material.mainTexture = Resources.Load<Texture>("LHON");
+                centerEyeAnchor.SetActive(false);
+                cineCamera.SetActive(true);
+
             }
 
             if (dayIncrement == 3)
