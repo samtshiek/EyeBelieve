@@ -47,6 +47,7 @@ public class FeedController : MonoBehaviour
     void Update()
     {
         //text.text = "D: " + dogAgent.remainingDistance;
+        dogAgent.stoppingDistance = 0.5f;
         if (dogAgent.remainingDistance < 0.5)
         {
             closeToBowl = true;          
@@ -76,6 +77,7 @@ public class FeedController : MonoBehaviour
         dogFood.GetComponent<Renderer>().enabled = false;
         dogAnimator.SetBool("dogEating", false);
         storyScript.setFeed(true);
+        dogAgent.stoppingDistance = 2f;
     }
 
     private void OnTriggerStay(Collider other)
