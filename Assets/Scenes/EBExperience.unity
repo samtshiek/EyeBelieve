@@ -4304,6 +4304,7 @@ PlayableDirector:
   m_ExposedReferences:
     m_References:
     - 26428570126920344ac9b65f95e37c05: {fileID: 494936647}
+    - 37ff75e4ece5a9c4bbda415ce5d829b0: {fileID: 101938555}
     - ef70e5152678c9943afb66e551a39c7c: {fileID: 494936647}
     - e9ccb83fe243f3e4cb72379ff0edd1d4: {fileID: 101938555}
     - a8c148523e1b0da45a187fceaa5ac42a: {fileID: 20647416}
@@ -7057,8 +7058,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Events:
-    m_Signals: []
-    m_Events: []
+    m_Signals:
+    - {fileID: 11400000, guid: 245d52be813774040b832924757ea3f0, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1699244328}
+          m_TargetAssemblyTypeName: StoryScript, Assembly-CSharp
+          m_MethodName: custsceneDeactivate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1456393159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2601670983972683359, guid: 84ab4d4bdebff6b4eb809250890511b8,
@@ -9064,7 +9080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: _monoscopic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: maxRenderScale

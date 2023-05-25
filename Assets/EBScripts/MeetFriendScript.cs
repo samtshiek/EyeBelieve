@@ -63,6 +63,7 @@ public class MeetFriendScript : MonoBehaviour
             if (friendScript.shouldPlayControllersSitting)
             {
                 friendAnimator.SetBool("usecontrollersSitting", true);
+                friendScript.attachControllersToHands();
                 friendScript.shouldPlayControllersSitting = false;
             }
         }

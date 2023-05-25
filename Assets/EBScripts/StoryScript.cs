@@ -60,10 +60,10 @@ public class StoryScript : MonoBehaviour
             {
                 rawImageObject.SetActive(true);
                 rawImage.material = Resources.Load<Material>("LHONmat2");
-                ovrCameraRig.SetActive(false);
                 cineCamera.SetActive(true);
                 vcamPlayer.SetActive(true);
                 ebCutscene.SetActive(true);
+                ovrCameraRig.SetActive(false);
             }
 
             if (dayIncrement == 3)
@@ -103,5 +103,13 @@ public class StoryScript : MonoBehaviour
     {
         pet = petted;
         text2.text = "Petted: " + pet;
+    }
+
+    public void custsceneDeactivate()
+    {
+        ovrCameraRig.SetActive(true);
+        cineCamera.SetActive(false);
+        vcamPlayer.SetActive(false);
+        ebCutscene.SetActive(false);
     }
 }
