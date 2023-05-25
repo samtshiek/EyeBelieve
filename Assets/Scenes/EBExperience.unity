@@ -1594,7 +1594,7 @@ GameObject:
   - component: {fileID: 322823234}
   - component: {fileID: 322823233}
   - component: {fileID: 322823232}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 1
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 890.6194}
-  m_ScreenMatchMode: 1
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -2569,8 +2569,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_Camera: {fileID: 1491009977}
+  m_PlaneDistance: 0.12
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2744,7 +2744,7 @@ GameObject:
   - component: {fileID: 629587974}
   - component: {fileID: 629587973}
   - component: {fileID: 629587975}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FadeCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2828,7 +2828,7 @@ MonoBehaviour:
   m_MuteCamera: 0
   m_SplitView: 0
   m_RenderMode: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_PlaneDistance: 100
 --- !u!1 &630655710
 GameObject:
@@ -4297,8 +4297,6 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: 51429476601460176, guid: 94fd61f6b2a5e9f4c96f0761ead285f5, type: 2}
-    value: {fileID: 1455100309}
   - key: {fileID: -3686684975533475953, guid: 94fd61f6b2a5e9f4c96f0761ead285f5, type: 2}
     value: {fileID: 1455100309}
   m_ExposedReferences:
@@ -7060,12 +7058,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 245d52be813774040b832924757ea3f0, type: 2}
+    - {fileID: 11400000, guid: 5466c13c038e20c46b32a07b5f63b05e, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1699244328}
           m_TargetAssemblyTypeName: StoryScript, Assembly-CSharp
           m_MethodName: custsceneDeactivate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1699244328}
+          m_TargetAssemblyTypeName: StoryScript, Assembly-CSharp
+          m_MethodName: changeOverlay
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7129,6 +7142,12 @@ MonoBehaviour:
 --- !u!4 &1491009976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 126d619cf4daa52469682f85c1378b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2031971032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1491009977 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a,
     type: 3}
   m_PrefabInstance: {fileID: 2031971032}
   m_PrefabAsset: {fileID: 0}
@@ -9059,8 +9078,12 @@ PrefabInstance:
       value: -3.179
       objectReference: {fileID: 0}
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
-      propertyPath: m_Enabled
+      propertyPath: m_Depth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: orthographic
@@ -9073,6 +9096,10 @@ PrefabInstance:
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_FocalLength
       value: 10.995975
+      objectReference: {fileID: 0}
+    - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2037080, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_projectionMatrixMode
@@ -9291,16 +9318,16 @@ RectTransform:
   m_GameObject: {fileID: 2093015093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25624895, y: 0.4521, z: 0.4521}
+  m_LocalScale: {x: 0.5230695, y: 0.92285156, z: 0.92285156}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 575235572}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -728.19, y: -183}
-  m_SizeDelta: {x: 2048, y: 1024}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 336, y: 31}
+  m_SizeDelta: {x: 6, y: 10}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &2093015095
 MonoBehaviour:

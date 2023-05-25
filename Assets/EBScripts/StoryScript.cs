@@ -19,6 +19,7 @@ public class StoryScript : MonoBehaviour
     bool fetch = false;
     bool feed = false;
     bool pet = false;
+    bool inTrigger = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,30 +49,22 @@ public class StoryScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig" /*&& activitiesComplete()*/)
+        if (other.gameObject.name == "OVRCameraRig" && !inTrigger /*&& activitiesComplete()*/)
         {
+            inTrigger = true;
             ++dayIncrement;
             fetch = false;
             feed = false;
             pet = false;
             dayText.text = "Day " + dayIncrement;
 
-            if (dayIncrement == 2)
-            {
-                rawImageObject.SetActive(true);
-                rawImage.material = Resources.Load<Material>("LHONmat2");
-                cineCamera.SetActive(true);
-                vcamPlayer.SetActive(true);
-                ebCutscene.SetActive(true);
-                ovrCameraRig.SetActive(false);
-            }
-
-            if (dayIncrement == 3)
-            {
-                rawImageObject.SetActive(true);
-                rawImage.material = Resources.Load<Material>("LHONmat3");
-            }
+            switchToCutsceneCamera();
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        inTrigger = false;
     }
 
     public bool activitiesComplete()
@@ -105,11 +98,34 @@ public class StoryScript : MonoBehaviour
         text2.text = "Petted: " + pet;
     }
 
+    public void switchToCutsceneCamera()
+    {
+        cineCamera.SetActive(true);
+        vcamPlayer.SetActive(true);
+        ebCutscene.SetActive(true);
+        ovrCameraRig.SetActive(false);
+    }
+
     public void custsceneDeactivate()
     {
         ovrCameraRig.SetActive(true);
         cineCamera.SetActive(false);
         vcamPlayer.SetActive(false);
         ebCutscene.SetActive(false);
+    }
+
+    public void changeOverlay()
+    {
+        if (dayIncrement == 2)
+        {
+            rawImageObject.SetActive(true);
+            rawImage.material = Resources.Load<Material>("LHONmat2");
+        }
+
+        if (dayIncrement == 3)
+        {
+            rawImageObject.SetActive(true);
+            rawImage.material = Resources.Load<Material>("LHONmat3");
+        }
     }
 }
