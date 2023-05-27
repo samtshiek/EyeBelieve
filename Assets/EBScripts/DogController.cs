@@ -176,12 +176,12 @@ public class DogController : MonoBehaviour
         if (pee != null)
         {
             SkinnedMeshRenderer skinnedMeshRenderer = pee.GetComponent<SkinnedMeshRenderer>();
-            if (shapeWeight < 100.0)
+            while (shapeWeight < 300.0)
             {
-                shapeWeight += 5f;
+                shapeWeight += 1f;
                 text.text = "shapeWeight: " + shapeWeight;
                 skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
-
+                shapeWeight++;
                 Debug.Log("This code ran.");
             }
         }

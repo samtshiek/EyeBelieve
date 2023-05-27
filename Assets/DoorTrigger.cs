@@ -36,7 +36,7 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        if (other.gameObject.name == "OVRCameraRig" || other.gameObject.name == "Puppy_Labrador_IP")
         {
             //text.text = "Entered Trigger!";
             //text2.text = "TRG: " + other.gameObject.name;
@@ -55,7 +55,7 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        if (other.gameObject.name == "OVRCameraRig" || other.gameObject.name == "Puppy_Labrador_IP")
         {
             //text.text = "Exited Trigger";
             //text2.text = "TRG: " + other.gameObject.name;
