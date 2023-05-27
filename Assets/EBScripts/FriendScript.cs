@@ -31,10 +31,10 @@ public class FriendScript : MonoBehaviour
     {
         if(attachControllersToHand)
         {
-            controllerL.transform.rotation = Quaternion.RotateTowards(controllerL.transform.rotation, Quaternion.Euler(new Vector3(-156.002f, -150.7f, -62.28f)), 70f * Time.deltaTime);
+            controllerL.transform.rotation = Quaternion.RotateTowards(controllerL.transform.rotation, Quaternion.Euler(new Vector3(270f, 35f, -330f)), 70f * Time.deltaTime);
             controllerL.transform.position = leftHand.transform.position;
             controllerL.transform.SetParent(leftHand.transform);
-            controllerR.transform.rotation = Quaternion.RotateTowards(controllerR.transform.rotation, Quaternion.Euler(new Vector3(0, -37.73f, -122.8f)), 70f * Time.deltaTime);
+            controllerR.transform.rotation = Quaternion.RotateTowards(controllerR.transform.rotation, Quaternion.Euler(new Vector3(305f, 135f, 305f)), 70f * Time.deltaTime);
             controllerR.transform.position = rightHand.transform.position;
             controllerR.transform.SetParent(rightHand.transform);
         }
