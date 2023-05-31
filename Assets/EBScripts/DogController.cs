@@ -32,6 +32,7 @@ public class DogController : MonoBehaviour
         storyScript = bedObject.GetComponent<StoryScript>();
         dog = gameObject;
         pee = GameObject.Find("DogPee");
+       pee.GetComponent<Renderer>().enabled = false;
         dogAgent = GetComponent<NavMeshAgent>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
@@ -172,11 +173,12 @@ public class DogController : MonoBehaviour
     {
         GameObject leg = GameObject.Find("Helper_foot_b.R");
         pee.transform.position = leg.transform.position;
+        pee.GetComponent<Renderer>().enabled = true;
 
         if (pee != null)
         {
             SkinnedMeshRenderer skinnedMeshRenderer = pee.GetComponent<SkinnedMeshRenderer>();
-            while (shapeWeight < 300.0)
+            while (shapeWeight < 100.0)
             {
                 shapeWeight += 1f;
                 text.text = "shapeWeight: " + shapeWeight;
