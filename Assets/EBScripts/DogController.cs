@@ -156,6 +156,7 @@ public class DogController : MonoBehaviour
             {
                 dogAgent.isStopped = true;
                 animator.SetBool("timetoPee", true);
+                hasPeed = true;
                 Invoke("goPee", 5);
             }
             
@@ -172,7 +173,7 @@ public class DogController : MonoBehaviour
     private void renderPee()
     {
         GameObject leg = GameObject.Find("Helper_foot_b.R");
-        pee.transform.position = leg.transform.position;
+        //pee.transform.position = leg.transform.position;
         pee.GetComponent<Renderer>().enabled = true;
 
         if (pee != null)

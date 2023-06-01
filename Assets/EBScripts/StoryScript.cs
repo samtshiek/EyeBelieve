@@ -18,11 +18,16 @@ public class StoryScript : MonoBehaviour
     GameObject outOfBedCutscene;
     GameObject vcamPlayer;
     GameObject ovrInteraction;
+    GameObject pee;
     public Text text2;
     bool fetch = false;
     bool feed = false;
     bool pet = false;
     bool inTrigger = false;
+    GameObject dog;
+    NavMeshAgent dogAgent;
+    GameObject adultDog;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,8 +48,12 @@ public class StoryScript : MonoBehaviour
         sleepWakeCutscene = GameObject.Find("SleepWakeCutscene");
         sleepWakeCutscene.SetActive(false);
         outOfBedCutscene = GameObject.Find("OutOfBedCutscene");
+        pee = GameObject.Find("DogPee");
+        dog = GameObject.Find("Puppy_Labrador_IP");
+        adultDog = GameObject.Find("Labrador_Adult");
+        adultDog.GetComponent<Renderer>().enabled = false;
         //outOfBedCutscene.SetActive(false);
-        
+
     }
 
     // Update is called once per frame
@@ -134,12 +143,23 @@ public class StoryScript : MonoBehaviour
         {
             rawImageObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat2");
+            pee.GetComponent<Renderer>().enabled = false;
+
         }
 
         if (dayIncrement == 3)
         {
             rawImageObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat3");
+            adultDog.transform.position = dog.transform.position;
+            dog.SetActive(false);
+            dog = adultDog;
+            adultDog.GetComponent<Renderer>().enabled = true ;
+            dogAgent = dog.GetComponent<NavMeshAgent>();
+            
+            dog.SetActive(true);
+
+
         }
     }
 }
