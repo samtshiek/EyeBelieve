@@ -13,7 +13,7 @@ public class StoryScript : MonoBehaviour
     GameObject textobject2;
     GameObject ovrCameraRig;
     GameObject cineCamera;
-    GameObject sleepCutscene;
+    GameObject sleepWakeCutscene;
     GameObject outOfBedCutscene;
     GameObject vcamPlayer;
     GameObject ovrInteraction;
@@ -33,18 +33,16 @@ public class StoryScript : MonoBehaviour
         //rawImageObject.SetActive(false);
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
-        ovrCameraRig = GameObject.Find("OVRCameraRig");
-        //ovrInteraction = GameObject.Find("OVRInteraction");
-        //ovrInteraction.SetActive(false);
-        ovrCameraRig.SetActive(false);
         vcamPlayer = GameObject.Find("vcamPlayer");
         //vcamPlayer.SetActive(false);
+        ovrCameraRig = GameObject.Find("OVRCameraRig");
+        ovrCameraRig.SetActive(false);
         cineCamera = GameObject.Find("CineCamera");
         //cineCamera.SetActive(false);
-        sleepCutscene = GameObject.Find("SleepCutscene");
-        sleepCutscene.SetActive(false);
+        sleepWakeCutscene = GameObject.Find("SleepWakeCutscene");
+        sleepWakeCutscene.SetActive(false);
         outOfBedCutscene = GameObject.Find("OutOfBedCutscene");
-        outOfBedCutscene.SetActive(true);
+        //outOfBedCutscene.SetActive(false);
         
     }
 
@@ -109,17 +107,19 @@ public class StoryScript : MonoBehaviour
     {
         cineCamera.SetActive(true);
         vcamPlayer.SetActive(true);
-        sleepCutscene.SetActive(true);
+        outOfBedCutscene.SetActive(false);
+        sleepWakeCutscene.SetActive(true);
         ovrCameraRig.SetActive(false);
     }
 
     public void custsceneDeactivate()
     {
         ovrCameraRig.SetActive(true);
-        //ovrInteraction.SetActive(true);
         cineCamera.SetActive(false);
         vcamPlayer.SetActive(false);
-        sleepCutscene.SetActive(false);
+        sleepWakeCutscene.SetActive(false);
+        outOfBedCutscene.SetActive(false);
+        Debug.Log("CUTSCENE DEACTIVATE CALLED");
     }
 
     public void activateOVRCam()

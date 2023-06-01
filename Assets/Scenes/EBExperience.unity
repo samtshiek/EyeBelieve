@@ -378,7 +378,7 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 0
-  m_StandbyUpdate: 1
+  m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
@@ -6926,41 +6926,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712137659}
-  - component: {fileID: 712137658}
+  - component: {fileID: 712137660}
   m_Layer: 0
-  m_Name: SleepCutscene
+  m_Name: SleepWakeCutscene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!320 &712137658
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712137657}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 94fd61f6b2a5e9f4c96f0761ead285f5, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: -3686684975533475953, guid: 94fd61f6b2a5e9f4c96f0761ead285f5, type: 2}
-    value: {fileID: 1455100309}
-  m_ExposedReferences:
-    m_References:
-    - 26428570126920344ac9b65f95e37c05: {fileID: 494936647}
-    - 37ff75e4ece5a9c4bbda415ce5d829b0: {fileID: 101938555}
-    - ef70e5152678c9943afb66e551a39c7c: {fileID: 494936647}
-    - e9ccb83fe243f3e4cb72379ff0edd1d4: {fileID: 101938555}
-    - a8c148523e1b0da45a187fceaa5ac42a: {fileID: 20647416}
-    - be927b982347cab4982f778433d130ae: {fileID: 494936647}
-    - a241d0212f0e171469a09847a60a625b: {fileID: 20647416}
-    - bfbe72947d91c1e42be7aa2b76ed51d3: {fileID: 629587973}
 --- !u!4 &712137659
 Transform:
   m_ObjectHideFlags: 0
@@ -6979,6 +6952,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &712137660
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712137657}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 90a23670b31588f4fb0781282c362251, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -4804320017065196246, guid: 90a23670b31588f4fb0781282c362251, type: 2}
+    value: {fileID: 1455100309}
+  m_ExposedReferences:
+    m_References:
+    - c5ace011aa8dc524da951b8c136a018d: {fileID: 494936647}
+    - 1d583656b0bab3644be798a3f6a2bd2d: {fileID: 494936647}
+    - bb706ced71d00a34fa8e9785f8b5cdb0: {fileID: 101938555}
+    - ede85d92075a73348bb58c82bff003ee: {fileID: 101938555}
+    - affd3324197335742a7a751fed304063: {fileID: 629587973}
 --- !u!4 &712235705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 673046377791947777, guid: 0e646aab3db1c0a488ef5d36ad40f6a8,
@@ -11684,8 +11681,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455100308}
-  m_LocalRotation: {x: 0.15581295, y: 0.06776084, z: -0.022265019, w: -0.98520815}
-  m_LocalPosition: {x: 502.56265, y: 2.282873, z: 482.4342}
+  m_LocalRotation: {x: 0.029586058, y: 0.93360496, z: -0.08169912, w: 0.34760863}
+  m_LocalPosition: {x: 501.48868, y: 2.451873, z: 484.15222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

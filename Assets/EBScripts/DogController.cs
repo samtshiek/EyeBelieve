@@ -30,15 +30,15 @@ public class DogController : MonoBehaviour
     {
         bedObject = GameObject.Find("PFB_Bed");
         storyScript = bedObject.GetComponent<StoryScript>();
-        dog = gameObject;
+        dog = GameObject.Find("Puppy_Labrador_IP");
         pee = GameObject.Find("DogPee");
        pee.GetComponent<Renderer>().enabled = false;
-        dogAgent = GetComponent<NavMeshAgent>();
+        dogAgent = dog.GetComponent<NavMeshAgent>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
-        animator = GetComponent<Animator>();
+        animator = dog.GetComponent<Animator>();
         animator.enabled = true;
 
 
