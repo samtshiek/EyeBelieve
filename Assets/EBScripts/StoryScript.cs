@@ -150,13 +150,13 @@ public class StoryScript : MonoBehaviour
         {
             rawImageObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat3");
-            adultDog.transform.position = dog.transform.position;
-            dog.SetActive(false);
-            dog = adultDog;
-            adultDog.GetComponent<Renderer>().enabled = true ;
-            dogAgent = dog.GetComponent<NavMeshAgent>();
+          //  adultDog.transform.position = dog.transform.position;
+          //  dog.SetActive(false);
+           // dog = adultDog;
+           // adultDog.GetComponent<Renderer>().enabled = true ;
+           // dogAgent = dog.GetComponent<NavMeshAgent>();
             
-            dog.SetActive(true);
+           // dog.SetActive(true);
 
 
         }
