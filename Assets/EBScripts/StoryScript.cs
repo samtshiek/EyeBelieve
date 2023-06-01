@@ -34,8 +34,8 @@ public class StoryScript : MonoBehaviour
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
         ovrCameraRig = GameObject.Find("OVRCameraRig");
-        ovrInteraction = GameObject.Find("OVRInteraction");
-        ovrInteraction.SetActive(false);
+        //ovrInteraction = GameObject.Find("OVRInteraction");
+        //ovrInteraction.SetActive(false);
         ovrCameraRig.SetActive(false);
         vcamPlayer = GameObject.Find("vcamPlayer");
         //vcamPlayer.SetActive(false);
@@ -116,7 +116,7 @@ public class StoryScript : MonoBehaviour
     public void custsceneDeactivate()
     {
         ovrCameraRig.SetActive(true);
-        ovrInteraction.SetActive(true);
+        //ovrInteraction.SetActive(true);
         cineCamera.SetActive(false);
         vcamPlayer.SetActive(false);
         sleepCutscene.SetActive(false);
