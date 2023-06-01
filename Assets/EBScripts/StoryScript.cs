@@ -7,6 +7,7 @@ public class StoryScript : MonoBehaviour
 {
     GameObject dayTextObject;
     Text dayText;
+    public bool meetFriend = true;
     public int dayIncrement = 1;
     GameObject rawImageObject;
     RawImage rawImage;
