@@ -11,7 +11,8 @@ public class MeetFriendScript : MonoBehaviour
     Animator friendAnimator;
     GameObject bedObject;
     FriendScript friendScript;
-    
+    GameObject meetFriendCutscene;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class MeetFriendScript : MonoBehaviour
         friendAnimator = friend.GetComponent<Animator>();
         bedObject = GameObject.Find("PFB_Bed");
         storyScript = bedObject.GetComponent<StoryScript>();
+        meetFriendCutscene = GameObject.Find("MeetFriendCutscene");
+        meetFriendCutscene.SetActive(false);
         
     }
 
@@ -72,13 +75,25 @@ public class MeetFriendScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        storyScript.text2.text = "Meeting freiend overlap";
-        if (other.gameObject.name == "OVRCameraRig")
+        storyScript.text2.text = "Meeting friend overlap";
+        if (other.gameObject.name == "OVRCameraRig" && storyScript.meetFriend)
         {
-            Vector3 sofaSit = new Vector3(500.827f, 1.908356f, 493.224f);
-            friendAgent.SetDestination(sofaSit);
-            friendAnimator.SetBool("moving", true);
-            storyScript.text2.text = "Meeting Friend Trigger";
+            //MoveToSofa();
+            meetFriendCutscene.SetActive(true);
+            storyScript.meetFriend = false;
         }
+    }
+
+    public void setIntroAnim()
+    {
+        friendAnimator.SetBool("intro", true);
+    }
+
+    public void MoveToSofa()
+    {
+        Vector3 sofaSit = new Vector3(500.827f, 1.908356f, 493.224f);
+        friendAgent.SetDestination(sofaSit);
+        friendAnimator.SetBool("moving", true);
+        storyScript.text2.text = "Meeting Friend Trigger";
     }
 }
