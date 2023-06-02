@@ -5,10 +5,10 @@ using System.Threading;
 
 public class DogController : MonoBehaviour
 {
-    GameObject textobject;
-    Text text;
-    GameObject textobject2;
-    Text text2;
+   // GameObject textobject;
+   // Text text;
+  //  GameObject textobject2;
+  //  Text text2;
     Animator animator;
     GameObject dog;
     NavMeshAgent dogAgent;
@@ -37,10 +37,10 @@ public class DogController : MonoBehaviour
         pee = GameObject.Find("DogPee");
        pee.GetComponent<Renderer>().enabled = false;
         dogAgent = dog.GetComponent<NavMeshAgent>();
-        textobject = GameObject.Find("MyText");
-        text = (Text)textobject.GetComponent("Text");
-        textobject2 = GameObject.Find("MyText2");
-        text2 = (Text)textobject2.GetComponent("Text");
+      //  textobject = GameObject.Find("MyText");
+      //  text = (Text)textobject.GetComponent("Text");
+       // textobject2 = GameObject.Find("MyText2");
+      //  text2 = (Text)textobject2.GetComponent("Text");
         animator = dog.GetComponent<Animator>();
         animator.enabled = true;
         audioSource = dog.GetComponent<AudioSource>();
@@ -74,7 +74,7 @@ public class DogController : MonoBehaviour
                 if (shapeWeight < 100.0)
             {
                 shapeWeight += 1f;
-                text.text = "shapeWight: " + shapeWeight;
+             //   text.text = "shapeWight: " + shapeWeight;
                 skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
                 if(shapeWeight == 100)
                     {
@@ -174,8 +174,8 @@ public class DogController : MonoBehaviour
         {
             audioSource.clip = Resources.Load<AudioClip>("whining-dog");
             audioSource.Play();
-            text.text = "Dog Entered Entered!";
-            text2.text = "Dog Pee TRG: " + other.gameObject.name;
+         //   text.text = "Dog Entered Entered!";
+          //  text2.text = "Dog Pee TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             if(!hasPeed)
             {

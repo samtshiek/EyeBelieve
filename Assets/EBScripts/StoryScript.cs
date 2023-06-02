@@ -5,13 +5,13 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 public class StoryScript : MonoBehaviour
 {
-    GameObject dayTextObject;
-    Text dayText;
+    //GameObject dayTextObject;
+  //  Text dayText;
     public bool meetFriend = true;
     public int dayIncrement = 1;
     GameObject rawImageObject;
     RawImage rawImage;
-    GameObject textobject2;
+  //  GameObject textobject2;
     GameObject ovrCameraRig;
     GameObject cineCamera;
     GameObject sleepWakeCutscene;
@@ -19,7 +19,7 @@ public class StoryScript : MonoBehaviour
     GameObject vcamPlayer;
     GameObject ovrInteraction;
     GameObject pee;
-    public Text text2;
+  //  public Text text2;
     bool fetch = false;
     bool feed = false;
     bool pet = false;
@@ -31,20 +31,21 @@ public class StoryScript : MonoBehaviour
     Animator adultDogAnimator;
     PlayerController playerController;
     FeedController feedController;
-   // GameObject externalDog;
+    GameObject canvasObject;
+    // GameObject externalDog;
 
 
     // Start is called before the first frame update
     void Start()
     {
        
-        dayTextObject = GameObject.Find("DayText");
-        dayText = dayTextObject.GetComponent<Text>();
+       // dayTextObject = GameObject.Find("DayText");
+       // dayText = dayTextObject.GetComponent<Text>();
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
-        //rawImageObject.SetActive(false);
-        textobject2 = GameObject.Find("MyText2");
-        text2 = (Text)textobject2.GetComponent("Text");
+        rawImageObject.SetActive(false);
+      //  textobject2 = GameObject.Find("MyText2");
+      //  text2 = (Text)textobject2.GetComponent("Text");
         vcamPlayer = GameObject.Find("vcamPlayer");
         //vcamPlayer.SetActive(false);
         ovrCameraRig = GameObject.Find("OVRCameraRig");
@@ -63,7 +64,9 @@ public class StoryScript : MonoBehaviour
         adultDogAgent = adultDog.GetComponent<NavMeshAgent>();
         adultDogAnimator = adultDog.GetComponent<Animator>();
         feedController = GameObject.Find("dog_food_02").GetComponent<FeedController>();
-       
+        canvasObject = GameObject.Find("Canvas");
+        canvasObject.SetActive(false);
+
         // externalDog = dog;
         // playerController = externalDog.GetComponent<PlayerController>();
         //
@@ -90,7 +93,7 @@ public class StoryScript : MonoBehaviour
             fetch = false;
             feed = false;
             pet = false;
-            dayText.text = "Day " + dayIncrement;
+           // dayText.text = "Day " + dayIncrement;
 
             switchToCutsceneCamera();
         }
@@ -117,7 +120,7 @@ public class StoryScript : MonoBehaviour
     public void setFetch(bool fetched)
     {
         fetch = fetched;
-        text2.text = "Fetched: " + fetch;
+       // text2.text = "Fetched: " + fetch;
     }
 
     public bool getFetch()
@@ -128,7 +131,7 @@ public class StoryScript : MonoBehaviour
     public void setFeed(bool fed)
     {
         feed = fed;
-        text2.text = "Fed: " + feed;
+       // text2.text = "Fed: " + feed;
     }
 
     public bool getFeed()
@@ -139,7 +142,7 @@ public class StoryScript : MonoBehaviour
     public void setPet(bool petted)
     {
         pet = petted;
-        text2.text = "Petted: " + pet;
+       // text2.text = "Petted: " + pet;
     }
 
     public bool getPet()
@@ -175,6 +178,7 @@ public class StoryScript : MonoBehaviour
     {
         if (dayIncrement == 2)
         {
+            canvasObject.SetActive(true);
             rawImageObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat1");
             pee.GetComponent<Renderer>().enabled = false;
@@ -206,7 +210,7 @@ public class StoryScript : MonoBehaviour
             feedController.dog = adultDog;
             feedController.dogAnimator = adultDogAnimator;
             dog.SetActive(true);
-
+            canvasObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat2");
             rawImageObject.SetActive(true);
         }

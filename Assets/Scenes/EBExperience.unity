@@ -773,17 +773,17 @@ PrefabInstance:
     - target: {fileID: 6976742629446178579, guid: 5ba9eee3c83157941bcd358a57eda61f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 496.00916
+      value: 496.288
       objectReference: {fileID: 0}
     - target: {fileID: 6976742629446178579, guid: 5ba9eee3c83157941bcd358a57eda61f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 1.881
       objectReference: {fileID: 0}
     - target: {fileID: 6976742629446178579, guid: 5ba9eee3c83157941bcd358a57eda61f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 501.232
+      value: 497.847
       objectReference: {fileID: 0}
     - target: {fileID: 6976742629446178579, guid: 5ba9eee3c83157941bcd358a57eda61f,
         type: 3}
@@ -9954,7 +9954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1161430666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14564,7 +14564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meetFriend: 1
   dayIncrement: 1
-  text2: {fileID: 0}
 --- !u!65 &1699244329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15170,7 +15169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1806200210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15235,15 +15234,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 8b83018900d13bb4f8e0ad895cb004e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 500.827
+      value: 500.443
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 8b83018900d13bb4f8e0ad895cb004e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9083563
+      value: 1.929
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 8b83018900d13bb4f8e0ad895cb004e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 493.224
+      value: 493.138
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: 8b83018900d13bb4f8e0ad895cb004e5, type: 3}
       propertyPath: m_LocalRotation.w

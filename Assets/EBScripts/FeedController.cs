@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class FeedController : MonoBehaviour
 {
 
-    GameObject textobject;
-    Text text;
-    GameObject textobject2;
-    Text text2;
+   // GameObject textobject;
+  //  Text text;
+   // GameObject textobject2;
+  //  Text text2;
     Animator animator;
     public GameObject dog;
     public NavMeshAgent dogAgent;
@@ -35,10 +35,10 @@ public class FeedController : MonoBehaviour
         dogFood = GameObject.Find("Food_1");
         dogFood.GetComponent<Renderer>().enabled = false;
         dogAgent = dog.GetComponent<NavMeshAgent>();
-        textobject = GameObject.Find("MyText");
-        text = (Text)textobject.GetComponent("Text");
-        textobject2 = GameObject.Find("MyText2");
-        text2 = (Text)textobject2.GetComponent("Text");
+      //  textobject = GameObject.Find("MyText");
+      //  text = (Text)textobject.GetComponent("Text");
+      //  textobject2 = GameObject.Find("MyText2");
+     //   text2 = (Text)textobject2.GetComponent("Text");
         animator = dog.GetComponent<Animator>();
         animator.enabled = true;
         audioSource = dogBowl.GetComponent<AudioSource>();
@@ -97,8 +97,8 @@ public class FeedController : MonoBehaviour
 
         if (other.gameObject.name == "Bowl_2_food_1" /*"RightHandAnchor"*/)
         {
-            text.text = "Entered Food Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
+          //  text.text = "Entered Food Trigger!";
+          //  text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             dogFood.GetComponent<Renderer>().enabled = true;
             dogAgent.SetDestination(dogBowl.transform.position + new Vector3(0,0,0.26f));
@@ -136,24 +136,24 @@ public class FeedController : MonoBehaviour
         //}
         if (other.gameObject.name == "RightHandAnchor")
         {
-            text.text = "Exited Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
+          //  text.text = "Exited Trigger!";
+          //  text2.text = "TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             dogAnimator.SetBool("dogEating", false);
         }
 
         if (other.gameObject.name == "Pee_Cube")
         {
-            text.text = "Exited Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
+          //  text.text = "Exited Trigger!";
+         //   text2.text = "TRG: " + other.gameObject.name;
             UnityEngine.Debug.Log("An object entered.");           
         }
 
         if (other.gameObject.name == "OVRCameraRig")
         {
-            text.text = "Exited Trigger!";
-            text2.text = "TRG: " + other.gameObject.name;
-            Debug.Log("An object entered.");
+         //   text.text = "Exited Trigger!";
+         //   text2.text = "TRG: " + other.gameObject.name;
+         //   Debug.Log("An object entered.");
             // animator.SetBool("handIsOver", false);
         }
 

@@ -47,7 +47,7 @@ public class MeetFriendScript : MonoBehaviour
 
             if (friendScript.shouldRotate)
             {
-                storyScript.text2.text = "Time to rotate!! " + friend.transform.rotation.eulerAngles.y;
+               // storyScript.text2.text = "Time to rotate!! " + friend.transform.rotation.eulerAngles.y;
                 friend.transform.rotation = Quaternion.RotateTowards(friend.transform.rotation, Quaternion.Euler(new Vector3(0, 90, 0)), 70f * Time.deltaTime);
 
                 if (friend.transform.rotation.eulerAngles.y >= 87.0 || friend.transform.rotation.eulerAngles.y <= 92.0)
@@ -75,7 +75,7 @@ public class MeetFriendScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        storyScript.text2.text = "Meeting friend overlap";
+       // storyScript.text2.text = "Meeting friend overlap";
         if (other.gameObject.name == "OVRCameraRig" && storyScript.meetFriend)
         {
             //MoveToSofa();
@@ -94,6 +94,6 @@ public class MeetFriendScript : MonoBehaviour
         Vector3 sofaSit = new Vector3(500.827f, 1.908356f, 493.224f);
         friendAgent.SetDestination(sofaSit);
         friendAnimator.SetBool("moving", true);
-        storyScript.text2.text = "Meeting Friend Trigger";
+      //  storyScript.text2.text = "Meeting Friend Trigger";
     }
 }
