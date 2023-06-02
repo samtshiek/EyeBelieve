@@ -779,6 +779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca48201319ee3eb46bb2624b906090c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dog: {fileID: 0}
+  dogAgent: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!1 &874605735
 GameObject:
