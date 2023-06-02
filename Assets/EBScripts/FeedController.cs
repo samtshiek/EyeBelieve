@@ -20,6 +20,7 @@ public class FeedController : MonoBehaviour
     bool closeToBowl;
     GameObject bedObject;
     StoryScript storyScript;
+    AudioSource audioSource;
 
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class FeedController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         animator = dog.GetComponent<Animator>();
         animator.enabled = true;
+        audioSource = dogBowl.GetComponent<AudioSource>();
     }
 
 
@@ -80,12 +82,20 @@ public class FeedController : MonoBehaviour
         dogAgent.stoppingDistance = 2f;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Bowl_2_food_1" /*"RightHandAnchor"*/)
+        {
+            audioSource.Play();
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         //text.text = "Entered Trigger!";
         //text2.text = "TRG: " + other.gameObject.name;
 
-        if (other.gameObject.name == "RightHandAnchor")
+        if (other.gameObject.name == "Bowl_2_food_1" /*"RightHandAnchor"*/)
         {
             text.text = "Entered Food Trigger!";
             text2.text = "TRG: " + other.gameObject.name;
