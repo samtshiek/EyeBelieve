@@ -51,7 +51,7 @@ public class StoryScript : MonoBehaviour
         pee = GameObject.Find("DogPee");
         dog = GameObject.Find("Puppy_Labrador_IP");
         adultDog = GameObject.Find("Labrador_Adult");
-        adultDog.GetComponent<Renderer>().enabled = false;
+        //adultDog.GetComponent<Renderer>().enabled = false;
         //outOfBedCutscene.SetActive(false);
 
     }
