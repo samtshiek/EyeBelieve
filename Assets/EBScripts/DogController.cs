@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using System.Threading;
 
 public class DogController : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class DogController : MonoBehaviour
     StoryScript storyScript;
     float shapeWeight = 0;
     bool hasPeed = false;
+    int count = 0;
+    bool renderthePee = false;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,27 @@ public class DogController : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
+        if(renderthePee)
+        {
+            pee.GetComponent<Renderer>().enabled = true;
+
+            if (pee != null)
+            {
+                SkinnedMeshRenderer skinnedMeshRenderer = pee.GetComponent<SkinnedMeshRenderer>();
+                if (shapeWeight < 100.0)
+            {
+                shapeWeight += 1f;
+                text.text = "shapeWight: " + shapeWeight;
+                skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
+                if(shapeWeight == 100)
+                    {
+                        renderthePee = false;
+                    }
+            }
+            }
+
+            
+        }
 
     }
 
@@ -172,29 +196,19 @@ public class DogController : MonoBehaviour
 
     private void renderPee()
     {
-        GameObject leg = GameObject.Find("Helper_foot_b.R");
-        //pee.transform.position = leg.transform.position;
+       // GameObject leg = GameObject.Find("Helper_foot_b.R");
+        pee.transform.position = dog.transform.position;
         pee.GetComponent<Renderer>().enabled = true;
 
-        if (pee != null)
-        {
-            SkinnedMeshRenderer skinnedMeshRenderer = pee.GetComponent<SkinnedMeshRenderer>();
-            while (shapeWeight < 100.0)
-            {
-                shapeWeight += 1f;
-                text.text = "shapeWeight: " + shapeWeight;
-                skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
-                shapeWeight++;
-                Debug.Log("This code ran.");
-            }
-        }
+        renderthePee = true;
         hasPeed = true;
         Vector3 loc = dogAgent.transform.position;
 
-         dogAgent.isStopped = false;
+        dogAgent.isStopped = false;
         dogAgent.SetDestination(loc);
         animator.SetBool("goPee", false);
         animator.SetBool("timetoPee",false);
+        
 
     }
 

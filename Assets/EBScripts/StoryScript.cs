@@ -26,12 +26,16 @@ public class StoryScript : MonoBehaviour
     bool inTrigger = false;
     GameObject dog;
     NavMeshAgent dogAgent;
+    NavMeshAgent adultDogAgent;
     GameObject adultDog;
+    PlayerController playerController;
+   // GameObject externalDog;
 
 
     // Start is called before the first frame update
     void Start()
     {
+       
         dayTextObject = GameObject.Find("DayText");
         dayText = dayTextObject.GetComponent<Text>();
         rawImageObject = GameObject.Find("RawImage");
@@ -51,7 +55,16 @@ public class StoryScript : MonoBehaviour
         pee = GameObject.Find("DogPee");
         dog = GameObject.Find("Puppy_Labrador_IP");
         adultDog = GameObject.Find("Labrador_Adult");
-        //adultDog.GetComponent<Renderer>().enabled = false;
+        playerController = GetComponent<PlayerController>();
+        dogAgent = dog.GetComponent<NavMeshAgent>();
+        adultDogAgent = adultDog.GetComponent<NavMeshAgent>();
+        // externalDog = dog;
+        // playerController = externalDog.GetComponent<PlayerController>();
+        //
+        //externalDog = playerController.GetComponent<PlayerController>().dog;
+
+        // adultDog.SetActive(false);
+        // adultDog.GetComponent<Renderer>().enabled = false;
         //outOfBedCutscene.SetActive(false);
 
     }
@@ -145,6 +158,16 @@ public class StoryScript : MonoBehaviour
             rawImage.material = Resources.Load<Material>("LHONmat2");
             pee.GetComponent<Renderer>().enabled = false;
 
+            //  adultDog.transform.position = dog.transform.position;
+            dog.SetActive(false);
+
+            dog = null;
+            dog = adultDog;
+            dog.SetActive(true);
+            dogAgent = null;
+            dogAgent = adultDogAgent;
+            //playerController.setGrownUp();
+
         }
 
         if (dayIncrement == 3)
@@ -152,12 +175,13 @@ public class StoryScript : MonoBehaviour
             rawImageObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat3");
           //  adultDog.transform.position = dog.transform.position;
-          //  dog.SetActive(false);
-           // dog = adultDog;
+           // dog.SetActive(false);
+
+          //  dog = adultDog;
            // adultDog.GetComponent<Renderer>().enabled = true ;
            // dogAgent = dog.GetComponent<NavMeshAgent>();
             
-           // dog.SetActive(true);
+          //  dog.SetActive(true);
 
 
         }
