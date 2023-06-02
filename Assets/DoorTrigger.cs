@@ -11,11 +11,15 @@ public class DoorTrigger : MonoBehaviour
     Text text2;
     GameObject doubleDoors;
     Animator animator;
+    StoryScript storyScript;
+    GameObject bedObject;
     
     
     // Start is called before the first frame update
     void Start()
     {
+        bedObject = GameObject.Find("PFB_Bed");
+        storyScript = bedObject.GetComponent<StoryScript>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
@@ -36,7 +40,7 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig" || other.gameObject.name == "Puppy_Labrador_IP")
+        if (other.gameObject.name == "OVRCameraRig" || (other.gameObject.name == "Puppy_Labrador_IP" && storyScript.meetFriend == false))
         {
             //text.text = "Entered Trigger!";
             //text2.text = "TRG: " + other.gameObject.name;
@@ -46,12 +50,14 @@ public class DoorTrigger : MonoBehaviour
         }
     }
 
-    /*private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        text.text = "Inside Trigger";
-        text2.text = "TRG: " + other.gameObject.name;
-        Debug.Log("An object is still inside of the trigger");
-    }*/
+        if (other.gameObject.name == "Puppy_Labrador_IP" && storyScript.meetFriend == false)
+        {
+            animator.enabled = true;
+            animator.SetBool("isOpen_Obj_1", true);
+        }  
+    }
 
     private void OnTriggerExit(Collider other)
     {

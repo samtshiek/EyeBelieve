@@ -30,15 +30,15 @@ public class DogController : MonoBehaviour
     {
         bedObject = GameObject.Find("PFB_Bed");
         storyScript = bedObject.GetComponent<StoryScript>();
-        dog = gameObject;
+        dog = GameObject.Find("Puppy_Labrador_IP");
         pee = GameObject.Find("DogPee");
        pee.GetComponent<Renderer>().enabled = false;
-        dogAgent = GetComponent<NavMeshAgent>();
+        dogAgent = dog.GetComponent<NavMeshAgent>();
         textobject = GameObject.Find("MyText");
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
-        animator = GetComponent<Animator>();
+        animator = dog.GetComponent<Animator>();
         animator.enabled = true;
 
 
@@ -156,6 +156,7 @@ public class DogController : MonoBehaviour
             {
                 dogAgent.isStopped = true;
                 animator.SetBool("timetoPee", true);
+                hasPeed = true;
                 Invoke("goPee", 5);
             }
             
@@ -172,7 +173,7 @@ public class DogController : MonoBehaviour
     private void renderPee()
     {
         GameObject leg = GameObject.Find("Helper_foot_b.R");
-        pee.transform.position = leg.transform.position;
+        //pee.transform.position = leg.transform.position;
         pee.GetComponent<Renderer>().enabled = true;
 
         if (pee != null)

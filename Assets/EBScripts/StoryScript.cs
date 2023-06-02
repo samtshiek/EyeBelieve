@@ -7,21 +7,27 @@ public class StoryScript : MonoBehaviour
 {
     GameObject dayTextObject;
     Text dayText;
+    public bool meetFriend = true;
     public int dayIncrement = 1;
     GameObject rawImageObject;
     RawImage rawImage;
     GameObject textobject2;
     GameObject ovrCameraRig;
     GameObject cineCamera;
-    GameObject sleepCutscene;
+    GameObject sleepWakeCutscene;
     GameObject outOfBedCutscene;
     GameObject vcamPlayer;
     GameObject ovrInteraction;
+    GameObject pee;
     public Text text2;
     bool fetch = false;
     bool feed = false;
     bool pet = false;
     bool inTrigger = false;
+    GameObject dog;
+    NavMeshAgent dogAgent;
+    GameObject adultDog;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,19 +39,21 @@ public class StoryScript : MonoBehaviour
         //rawImageObject.SetActive(false);
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
-        ovrCameraRig = GameObject.Find("OVRCameraRig");
-        //ovrInteraction = GameObject.Find("OVRInteraction");
-        //ovrInteraction.SetActive(false);
-        ovrCameraRig.SetActive(false);
         vcamPlayer = GameObject.Find("vcamPlayer");
         //vcamPlayer.SetActive(false);
+        ovrCameraRig = GameObject.Find("OVRCameraRig");
+        ovrCameraRig.SetActive(false);
         cineCamera = GameObject.Find("CineCamera");
         //cineCamera.SetActive(false);
-        sleepCutscene = GameObject.Find("SleepCutscene");
-        sleepCutscene.SetActive(false);
+        sleepWakeCutscene = GameObject.Find("SleepWakeCutscene");
+        sleepWakeCutscene.SetActive(false);
         outOfBedCutscene = GameObject.Find("OutOfBedCutscene");
-        outOfBedCutscene.SetActive(true);
-        
+        pee = GameObject.Find("DogPee");
+        dog = GameObject.Find("Puppy_Labrador_IP");
+        adultDog = GameObject.Find("Labrador_Adult");
+        adultDog.GetComponent<Renderer>().enabled = false;
+        //outOfBedCutscene.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -109,17 +117,19 @@ public class StoryScript : MonoBehaviour
     {
         cineCamera.SetActive(true);
         vcamPlayer.SetActive(true);
-        sleepCutscene.SetActive(true);
+        outOfBedCutscene.SetActive(false);
+        sleepWakeCutscene.SetActive(true);
         ovrCameraRig.SetActive(false);
     }
 
     public void custsceneDeactivate()
     {
         ovrCameraRig.SetActive(true);
-        //ovrInteraction.SetActive(true);
         cineCamera.SetActive(false);
         vcamPlayer.SetActive(false);
-        sleepCutscene.SetActive(false);
+        sleepWakeCutscene.SetActive(false);
+        outOfBedCutscene.SetActive(false);
+        Debug.Log("CUTSCENE DEACTIVATE CALLED");
     }
 
     public void activateOVRCam()
@@ -133,12 +143,23 @@ public class StoryScript : MonoBehaviour
         {
             rawImageObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat2");
+            pee.GetComponent<Renderer>().enabled = false;
+
         }
 
         if (dayIncrement == 3)
         {
             rawImageObject.SetActive(true);
             rawImage.material = Resources.Load<Material>("LHONmat3");
+          //  adultDog.transform.position = dog.transform.position;
+          //  dog.SetActive(false);
+           // dog = adultDog;
+           // adultDog.GetComponent<Renderer>().enabled = true ;
+           // dogAgent = dog.GetComponent<NavMeshAgent>();
+            
+           // dog.SetActive(true);
+
+
         }
     }
 }

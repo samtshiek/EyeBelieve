@@ -38,7 +38,7 @@ public class FeedController : MonoBehaviour
         text = (Text)textobject.GetComponent("Text");
         textobject2 = GameObject.Find("MyText2");
         text2 = (Text)textobject2.GetComponent("Text");
-        animator = GetComponent<Animator>();
+        animator = dog.GetComponent<Animator>();
         animator.enabled = true;
     }
 

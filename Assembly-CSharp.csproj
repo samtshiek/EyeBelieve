@@ -241,6 +241,7 @@
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\gameplay.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\EnableUnpremultipliedAlpha.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Logging\LogItem.cs" />
+    <Compile Include="Assets\DoorBellScript.cs" />
     <Compile Include="Assets\UAP\Examples\UI Navigation Example\Scripts\PlatformTextSwitcher.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\instructions.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimVisualLaser.cs" />
