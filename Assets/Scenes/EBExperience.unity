@@ -13163,7 +13163,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c4e0a8314e4c2a84c993b855fe6dbbe4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -14828,6 +14828,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9011045937501004275, guid: 19dd823e849d61143ab9dc15312ea160,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011045937501004275, guid: 19dd823e849d61143ab9dc15312ea160,
+        type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9999995
       objectReference: {fileID: 0}
@@ -14845,11 +14850,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.14881964
-      objectReference: {fileID: 0}
-    - target: {fileID: 9011045937501004275, guid: 19dd823e849d61143ab9dc15312ea160,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9011045937501004275, guid: 19dd823e849d61143ab9dc15312ea160,
         type: 3}
@@ -18053,7 +18053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca48201319ee3eb46bb2624b906090c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dog: {fileID: 0}
   audioSource: {fileID: 1390511836}
 --- !u!136 &2031971039
 CapsuleCollider:
@@ -18232,7 +18231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 509c61d1b7110f24f88caf20b289185b, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
