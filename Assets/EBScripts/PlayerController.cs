@@ -12,10 +12,10 @@ public class PlayerController : MonoBehaviour
     GameObject oVRCameraRig;
     GameObject centerEyeAnchor;
     CharacterController charController;
-    GameObject textobject;
-    Text text;
-    GameObject textobject2;
-    Text text2;
+   // GameObject textobject;
+   // Text text;
+  //  GameObject textobject2;
+  //  Text text2;
     float gravity = 9.8f;
     public AudioSource audioSource;
     GameObject rawImageObject;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     
 
     AccessibleUIGroupRoot accessibleUIGroupRoot;
-    AccessibleTextEdit accessibleTextEdit;
+   // AccessibleTextEdit accessibleTextEdit;
     
     // Start is called before the first frame update
     void Start()
@@ -51,14 +51,14 @@ public class PlayerController : MonoBehaviour
         oVRCameraRig = GameObject.Find("OVRCameraRig");
         centerEyeAnchor = GameObject.Find("CenterEyeAnchor");
         charController = GetComponent<CharacterController>();
-        textobject = GameObject.Find("MyText");
-        text = (Text)textobject.GetComponent("Text");
-        textobject2 = GameObject.Find("MyText2");
-        accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
-        text2 = (Text)textobject2.GetComponent("Text");
+      //  textobject = GameObject.Find("MyText");
+      //  text = (Text)textobject.GetComponent("Text");
+       // textobject2 = GameObject.Find("MyText2");
+      //  accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
+      //  text2 = (Text)textobject2.GetComponent("Text");
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
-        rawImageObject.SetActive(false);
+        //rawImageObject.SetActive(false);
        //  pee = GameObject.Find("DogPee");
        //  pee.GetComponent<Renderer>().enabled = false;
 
@@ -81,9 +81,9 @@ public class PlayerController : MonoBehaviour
         if (OVRInput.Get(OVRInput.Button.One))
         {
             //text.text = "'A' button.";
-            accessibleTextEdit.enabled = true;
-            accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
-            accessibleTextEdit.SetCustomText("Come on, work now!");
+           // accessibleTextEdit.enabled = true;
+           // accessibleTextEdit = textobject2.GetComponent<AccessibleTextEdit>();
+          //  accessibleTextEdit.SetCustomText("Come on, work now!");
             //rawImage.material.mainTexture = Resources.Load<Texture>("LHON2Recent");
             //rawImageObject.SetActive(true);
             //rawImage.material= Resources.Load<Material>("LHONmat");
@@ -105,31 +105,31 @@ public class PlayerController : MonoBehaviour
             rawImageObject.SetActive(true);
             //rawImage.material = Resources.Load<Material>("KofMat");
             //rawImage.material.mainTexture = Resources.Load<Texture>("kof");
-            audioSource.PlayOneShot(accessibleTextEdit.m_TextAsAudio);
-            if (accessibleTextEdit == null)
-            {
-                UAP_AccessibilityManager.EnableAccessibility(true);
+          //  audioSource.PlayOneShot(accessibleTextEdit.m_TextAsAudio);
+         //   if (accessibleTextEdit == null)
+         //   {
+          //      UAP_AccessibilityManager.EnableAccessibility(true);
                 
-                text.text = "Is enabled?: " + UAP_AccessibilityManager.IsEnabled();
-                text2.text = "Is Active?: " + UAP_AccessibilityManager.IsActive();
+             //   text.text = "Is enabled?: " + UAP_AccessibilityManager.IsEnabled();
+             //   text2.text = "Is Active?: " + UAP_AccessibilityManager.IsActive();
 
-                UAP_AccessibilityManager.Say("Welcome back?");
+            //    UAP_AccessibilityManager.Say("Welcome back?");
                 
                 //audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
-            }
+          //  }
 
-            else
-            {
-                UAP_AccessibilityManager.EnableAccessibility(true);
+           // else
+          //  {
+              //  UAP_AccessibilityManager.EnableAccessibility(true);
 
-                text.text = "Is enabled?: " + UAP_AccessibilityManager.IsEnabled();
-                text2.text = "Is Active?: " + UAP_AccessibilityManager.IsActive();
+               // text.text = "Is enabled?: " + UAP_AccessibilityManager.IsEnabled();
+               // text2.text = "Is Active?: " + UAP_AccessibilityManager.IsActive();
                 //accessibleTextEdit.SelectItem(true);
                 
                 
                 //UAP_AccessibilityManager.Say("Welcome back?");
-                audioSource.PlayOneShot(accessibleTextEdit.m_TextAsAudio);
-            }
+              //  audioSource.PlayOneShot(accessibleTextEdit.m_TextAsAudio);
+           // }
 
 
             ++overlayCount;
@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
         //Button Y pressed
         if (OVRInput.Get(OVRInput.Button.Four))
         {
-            text.text = "'Y' button.";
+           // text.text = "'Y' button.";
         }
 
 
@@ -164,7 +164,7 @@ public class PlayerController : MonoBehaviour
         //Button B pressed
         if (OVRInput.Get(OVRInput.Button.Two))
         {
-            text.text = "'B' button.";
+          //  text.text = "'B' button.";
             rawImageObject.SetActive(false);
         }
 
@@ -185,12 +185,12 @@ public class PlayerController : MonoBehaviour
 
         if (OVRInput.Get(OVRInput.Button.PrimaryThumbstickUp))
         {
-            text.text = "P Thumbstick UP' button.";
+           // text.text = "P Thumbstick UP' button.";
         }
 
         if (OVRInput.Get(OVRInput.Button.PrimaryThumbstickDown))
         {
-            text.text = "P Thumbstick DOWN' button.";
+           // text.text = "P Thumbstick DOWN' button.";
         }
 
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.0)
@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
         //Right hand trigger pushed
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0.0)
         {
-            text.text = "Dog Moving: " + dogAgent.transform.position;
+           // text.text = "Dog Moving: " + dogAgent.transform.position;
             dogAgent.SetDestination(charController.transform.position);
         }
 

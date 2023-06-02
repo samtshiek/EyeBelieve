@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class DoorTrigger : MonoBehaviour
 {
-    GameObject textobject;
-    Text text;
-    GameObject textobject2;
-    Text text2;
+  //  GameObject textobject;
+    //Text text;
+   // GameObject textobject2;
+   // Text text2;
     GameObject doubleDoors;
     Animator animator;
     StoryScript storyScript;
@@ -20,10 +20,10 @@ public class DoorTrigger : MonoBehaviour
     {
         bedObject = GameObject.Find("PFB_Bed");
         storyScript = bedObject.GetComponent<StoryScript>();
-        textobject = GameObject.Find("MyText");
-        text = (Text)textobject.GetComponent("Text");
-        textobject2 = GameObject.Find("MyText2");
-        text2 = (Text)textobject2.GetComponent("Text");
+       // textobject = GameObject.Find("MyText");
+     //   text = (Text)textobject.GetComponent("Text");
+      //  textobject2 = GameObject.Find("MyText2");
+      //  text2 = (Text)textobject2.GetComponent("Text");
         doubleDoors = GameObject.Find("PFB_DoorDouble");
         animator = GetComponent<Animator>();
 
@@ -34,7 +34,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (animator == null)
         {
-            text.text = "Animator variable is null!";
+            //text.text = "Animator variable is null!";
         }
     }
 

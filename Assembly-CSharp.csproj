@@ -81,6 +81,7 @@
     <Compile Include="Assets\NatureManufactureAssets\Mountain Environment\Particles\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\AugmentedObject.cs" />
+    <Compile Include="Assets\EBScripts\Guide.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\InteractableRegistry.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\PassthroughPlayInEditor.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Algorithm\Dwyer.cs" />
@@ -384,7 +385,6 @@
     <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\AnchorUIManager.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\gridpanel.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\PolygonValidator.cs" />
-    <Compile Include="Assets\EBScripts\Guide.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />

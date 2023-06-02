@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoorBellScript : MonoBehaviour
 {
     public AudioSource audioSource;
+    bool hasTriggered;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,11 @@ public class DoorBellScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "OVRCameraRig")
+        if (other.gameObject.name == "OVRCameraRig" && !hasTriggered)
         {
             audioSource.Play();
+            hasTriggered = true;
+
         }
     }
 }

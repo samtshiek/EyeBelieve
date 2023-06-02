@@ -4,10 +4,10 @@ using UnityEngine.AI;
 
 public class AdultDogController : MonoBehaviour
 {
-    GameObject textobject;
-    Text text;
-    GameObject textobject2;
-    Text text2;
+   // GameObject textobject;
+   // Text text;
+   // GameObject textobject2;
+  //  Text text2;
     Animator animator;
     GameObject dog;
     NavMeshAgent dogAgent;
@@ -34,10 +34,10 @@ public class AdultDogController : MonoBehaviour
         pee = GameObject.Find("DogPee");
        pee.GetComponent<Renderer>().enabled = false;
         dogAgent = GetComponent<NavMeshAgent>();
-        textobject = GameObject.Find("MyText");
-        text = (Text)textobject.GetComponent("Text");
-        textobject2 = GameObject.Find("MyText2");
-        text2 = (Text)textobject2.GetComponent("Text");
+       // textobject = GameObject.Find("MyText");
+      //  text = (Text)textobject.GetComponent("Text");
+       // textobject2 = GameObject.Find("MyText2");
+      //  text2 = (Text)textobject2.GetComponent("Text");
         animator = GetComponent<Animator>();
         animator.enabled = true;
      //   dog.GetComponent<Renderer>().enabled = false;
@@ -150,8 +150,8 @@ public class AdultDogController : MonoBehaviour
 
         if (other.gameObject.name == "Pee_Cube")
         {
-            text.text = "Dog Entered Entered!";
-            text2.text = "Dog Pee TRG: " + other.gameObject.name;
+          //  text.text = "Dog Entered Entered!";
+          //  text2.text = "Dog Pee TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
             if(!hasPeed)
             {
@@ -182,7 +182,7 @@ public class AdultDogController : MonoBehaviour
             while (shapeWeight < 100.0)
             {
                 shapeWeight += 1f;
-                text.text = "shapeWeight: " + shapeWeight;
+              //  text.text = "shapeWeight: " + shapeWeight;
                 skinnedMeshRenderer.SetBlendShapeWeight(0, shapeWeight);
                 shapeWeight++;
                 Debug.Log("This code ran.");
