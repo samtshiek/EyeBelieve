@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         rawImageObject = GameObject.Find("RawImage");
         rawImage = rawImageObject.GetComponent<RawImage>();
-        //rawImageObject.SetActive(false);
+        rawImageObject.SetActive(false);
        //  pee = GameObject.Find("DogPee");
        //  pee.GetComponent<Renderer>().enabled = false;
 

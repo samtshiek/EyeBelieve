@@ -31,7 +31,7 @@ public class MeetFriendScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        storyScript.text2.text = "Moving? " + friendAnimator.GetBool("moving") + " D: " + friendAgent.remainingDistance;
+      //  storyScript.text2.text = "Moving? " + friendAnimator.GetBool("moving") + " D: " + friendAgent.remainingDistance;
 
         DayOneMeetingFriend();
     }

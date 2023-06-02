@@ -161,19 +161,16 @@ public class StoryScript : MonoBehaviour
         if (dayIncrement == 2)
         {
             rawImageObject.SetActive(true);
-            rawImage.material = Resources.Load<Material>("LHONmat2");
+            rawImage.material = Resources.Load<Material>("LHONmat1");
             pee.GetComponent<Renderer>().enabled = false;
 
-            //  adultDog.transform.position = dog.transform.position;
             
-            //playerController.setGrownUp();
 
         }
 
         if (dayIncrement == 3)
         {
-            rawImageObject.SetActive(true);
-            rawImage.material = Resources.Load<Material>("LHONmat3");
+           
             //  adultDog.transform.position = dog.transform.position;
             // dog.SetActive(false);
 
@@ -194,6 +191,9 @@ public class StoryScript : MonoBehaviour
             feedController.dog = adultDog;
             feedController.dogAnimator = adultDogAnimator;
             dog.SetActive(true);
+
+            rawImage.material = Resources.Load<Material>("LHONmat2");
+            rawImageObject.SetActive(true);
         }
     }
 }
