@@ -6,8 +6,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    GameObject dog;
-    NavMeshAgent dogAgent;
+    public GameObject dog;
+    public NavMeshAgent dogAgent;
     GameObject canvasObject;
     GameObject oVRCameraRig;
     GameObject centerEyeAnchor;

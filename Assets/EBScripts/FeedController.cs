@@ -12,11 +12,11 @@ public class FeedController : MonoBehaviour
     GameObject textobject2;
     Text text2;
     Animator animator;
-    GameObject dog;
-    NavMeshAgent dogAgent;
+    public GameObject dog;
+    public NavMeshAgent dogAgent;
     GameObject dogFood;
     GameObject dogBowl;
-    Animator dogAnimator;
+    public Animator dogAnimator;
     bool closeToBowl;
     GameObject bedObject;
     StoryScript storyScript;

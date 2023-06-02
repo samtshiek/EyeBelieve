@@ -16,7 +16,7 @@ public class DogController : MonoBehaviour
     bool walking = false;
     bool trotting = false;
     bool running = false;
-    public AudioSource audioSource;
+    AudioSource audioSource;
     int runningCount = 0;
     GameObject pee;
     public float rotationSpeed;
@@ -43,8 +43,7 @@ public class DogController : MonoBehaviour
         text2 = (Text)textobject2.GetComponent("Text");
         animator = dog.GetComponent<Animator>();
         animator.enabled = true;
-
-
+        audioSource = dog.GetComponent<AudioSource>();
 
     }
 
@@ -173,6 +172,8 @@ public class DogController : MonoBehaviour
 
         if (other.gameObject.name == "Pee_Cube")
         {
+            audioSource.clip = Resources.Load<AudioClip>("whining-dog");
+            audioSource.Play();
             text.text = "Dog Entered Entered!";
             text2.text = "Dog Pee TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");
