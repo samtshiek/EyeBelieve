@@ -120,16 +120,31 @@ public class StoryScript : MonoBehaviour
         text2.text = "Fetched: " + fetch;
     }
 
+    public bool getFetch()
+    {
+        return fetch;
+    }
+
     public void setFeed(bool fed)
     {
         feed = fed;
         text2.text = "Fed: " + feed;
     }
 
+    public bool getFeed()
+    {
+        return feed;
+    }
+
     public void setPet(bool petted)
     {
         pet = petted;
         text2.text = "Petted: " + pet;
+    }
+
+    public bool getPet()
+    {
+        return pet;
     }
 
     public void switchToCutsceneCamera()
