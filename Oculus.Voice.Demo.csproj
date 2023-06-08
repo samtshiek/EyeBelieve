@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{115CB22F-8FD9-349D-9971-3B7AC2DC832F}</ProjectGuid>
+    <ProjectGuid>{5EAE3CAB-9662-32E6-AC83-29768A2CEAFA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Oculus.Voice.Demo</AssemblyName>
@@ -742,19 +742,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Meta.WitAi.csproj">
-      <Project>{EB15F495-D19F-693B-8201-CC97E53CD443}</Project>
+      <Project>{791DFD4E-C1DC-FC46-01F9-E1A451B6D36F}</Project>
       <Name>Meta.WitAi</Name>
     </ProjectReference>
     <ProjectReference Include="VoiceSDK.Runtime.csproj">
-      <Project>{8296F45A-9E42-DA5B-8CE0-A352AFFBA0C9}</Project>
+      <Project>{6F215D8E-9FCA-F044-4B1C-D9D4B5A2FC8B}</Project>
       <Name>VoiceSDK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Conduit.csproj">
-      <Project>{3352C86A-7984-132B-3FA9-F856942A7B18}</Project>
+      <Project>{BAE6B9DB-6ECE-4248-8328-0B4C267EACA5}</Project>
       <Name>Meta.WitAi.Conduit</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Lib.csproj">
-      <Project>{93E882CA-3FDF-6597-1BA5-7A451A88EB01}</Project>
+      <Project>{62546A26-D5BA-6F35-4259-EA7BA57A518C}</Project>
       <Name>Meta.WitAi.Lib</Name>
     </ProjectReference>
   </ItemGroup>

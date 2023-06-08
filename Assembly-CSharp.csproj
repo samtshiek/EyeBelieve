@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6C4D6F9F-1B24-A0B8-F84D-0C493BB9CF3C}</ProjectGuid>
+    <ProjectGuid>{AF030011-3156-86BB-46BF-9B8AE579D8D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,174 +56,106 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimHandlerParabolic.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\IntersectionHelper.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Firebase\StartCrashlytics.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\IFileFormat.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughProjectionSurface.cs" />
     <Compile Include="Assets\UAP\Examples\UI Navigation Example\Scripts\DemoHelper.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\HandMeshUI.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\RegionPointer.cs" />
-    <Compile Include="Assets\NatureManufactureAssets\NatureManufacture Wind\NM_Wind.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\InteractableTool.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\ConstraintOptions.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\NativeVideoPlayer.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Iterators\VertexCirculator.cs" />
     <Compile Include="Assets\EBScripts\FriendScript.cs" />
     <Compile Include="Assets\UAP\Plugins\iOS\iOSTTS.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiAxis1dInspector.cs" />
-    <Compile Include="Assets\Oculus\Voice\Lib\Wit.ai\AssemblyInfo.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportDestination.cs" />
     <Compile Include="Assets\EBScripts\HikeChController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiBoolInspector.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\GrabObject.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\IConstraintMesher.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Mountain Environment\Particles\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\AugmentedObject.cs" />
     <Compile Include="Assets\EBScripts\Guide.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\InteractableRegistry.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\PassthroughPlayInEditor.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Algorithm\Dwyer.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\LakePolygon.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Smoothing\VoronoiFactory.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportInputHandler.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\StandardVoronoi.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\SubSegment.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\AnchorSession.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Point.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\SpatialAnchorSession.cs" />
     <Compile Include="Assets\EBScripts\MeetFriendScript.cs" />
     <Compile Include="Assets\FurnishedCabin\Scripts\Player\PlayerLook.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Mesh.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\IPolygon.cs" />
     <Compile Include="Assets\UAP\Scripts\Utility\UAP_ScrollControl.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\PauseOnInputLoss.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Properties\AssemblyInfo.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DebugUI\Scripts\DebugUIBuilder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\RamSpline.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\Statistic.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportSupport.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\ButtonController.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Algorithm\Incremental.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\CustomHands\Scripts\Hand.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\CuthillMcKee.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\Flashlight.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\BoundedVoronoi.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\AnchorSpawner.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Locomotion\Scripts\CharacterCapsule.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\LocomotionController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTargetHandlerPhysical.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrainTrack.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\DistanceGrabber.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiVectorInspector.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Edge.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleLabel.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughSurface.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportPoint.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\ExtensionMethods.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleDropdown.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiDeviceInspector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\TriangleReader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleButton.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiAxis2dInspector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\AppDeeplink\UI\CustomDebugUI.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Data\BadTriQueue.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleUIGroupRoot.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\DCEL\Vertex.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughController.cs" />
+    <Compile Include="Assets\NatureManufactureAssets\NatureManufacture Wind\NM_Wind.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Rectangle.cs" />
     <Compile Include="Assets\PuppyController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\WindmillController.cs" />
     <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTransition.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\SelectionCylinder.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\PanelHMDFollower.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\VoronoiBase.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\DebugUI\DebugUISample.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_BaseElement_3D.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\BrushController.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\SplineProfile.cs" />
     <Compile Include="Assets\EBScripts\FeedController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\TrianglePool.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Firebase\AnalyticsUI.cs" />
     <Compile Include="Assets\EBScripts\DogController.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\Legacy\VoronoiRegion.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Log.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\Otri.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Scripts\DistanceGrabberSample.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Ui\UiSceneMenu.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\HandsManager.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\StylusTip\StylusTip.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\LakePolygonProfile.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\pausemenu.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\SceneSampler.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTargetHandlerNode.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\MeshColoringRam.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Iterators\EdgeIterator.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrainLocomotive.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportOrientationHandlerThumbstick.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrainCrossingController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\HandMeshMask.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\IMesh.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTransitionBlink.cs" />
     <Compile Include="Assets\UAP\Plugins\Android\AndroidTTS.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\QualityMeasure.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\AdjacencyMatrix.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\BouncingBallLogic.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\ITriangulator.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Logging\ILog.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTransitionInstant.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_AudioQueue.cs" />
     <Compile Include="Assets\EBScripts\dogPController.cs" />
-    <Compile Include="Assets\BoxScript.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleButton_3D.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\OverlayPassthrough.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Contour.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IPredicates.cs" />
     <Compile Include="Assets\UAP\Plugins\MacOS\MacOSTTS.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\FlashlightController.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\IVoronoiFactory.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\AnchorHelpers.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\RayToolView.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\Legacy\IVoronoi.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrainCarBase.cs" />
     <Compile Include="Assets\UAP\Scripts\Utility\UAP_CustomTTS.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\RayTool.cs" />
     <Compile Include="Assets\EBScripts\StoryScript.cs" />
     <Compile Include="Assets\UAP\Scripts\Utility\UAP_BackCloseEventListener.cs" />
     <Compile Include="Assets\FurnishedCabin\Scripts\MoveObjectController.cs" />
     <Compile Include="Assets\UAP\Plugins\x86_64\WindowsTTS.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\VertexSorter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\SelectivePassthroughExperience.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrackSegment.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\FileProcessor.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportOrientationHandlerHMD.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\HandsActiveChecker.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\Triangle.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Data\BadTriangle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\BouncingBallMgr.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Smoothing\ISmoother.cs" />
     <Compile Include="Assets\UAP\Plugins\CustomTTS\Custom_TTS_Template.cs" />
@@ -233,55 +165,34 @@
     <Compile Include="Assets\EBScripts\PlayerController.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\QualityMesher.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Logging\ILogItem.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\CowController.cs" />
     <Compile Include="Assets\UAP\Scripts\Utility\UAP_SelectionGroup.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Data\BadSubseg.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\VolumeAndPlaneSwitcher.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\CustomHands\Scripts\HandPose.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\NewLocation.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\gameplay.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\EnableUnpremultipliedAlpha.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Logging\LogItem.cs" />
     <Compile Include="Assets\DoorBellScript.cs" />
     <Compile Include="Assets\UAP\Examples\UI Navigation Example\Scripts\PlatformTextSwitcher.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\instructions.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimVisualLaser.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\ISegment.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\DCEL\DcelMesh.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleLabel_3D.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Vertex.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Scripts\MoviePlayerSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\Haptics\LocalizedHaptics.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrainButtonVisualController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\SimpleCapsuleWithStickMovement.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\QualityOptions.cs" />
     <Compile Include="Assets\UAP\Plugins\CustomTTS\WebSpeechAPI_TTS.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DebugUI\Scripts\HandedInputSelector.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\DistanceGrabbable.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\Utils\Pose.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Smoothing\SimpleSmoother.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportInputHandlerHMD.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\GrabManager.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\mainmenu.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\CharacterCameraConstraint.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\SimpleResizer\SimpleResizable.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\FurnishedCabin\Scripts\MoveableObject.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\accessibilitysettings.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTransitionWarp.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Scripts\VectorUtil.cs" />
     <Compile Include="Assets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\ConstraintMesher.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\InteractableToolsCreator.cs" />
+    <Compile Include="Assets\HikePlayerController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Firebase\SampleUI.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\TriangleLocator.cs" />
     <Compile Include="Assets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportOrientationHandler.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\RamSwitch.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\TriangleQuadTree.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Locomotion\Scripts\LocomotionSampleSupport.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleSlider.cs" />
     <Compile Include="Assets\UAP\Plugins\iOS\iOSGestures.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\ITriangle.cs" />
@@ -289,254 +200,168 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\TriangleFormat.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Behavior.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\SpatialAnchorLoader.cs" />
     <Compile Include="Assets\DoorTrigger.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\IQualityMesher.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\RobustPredicates.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Interactable.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\TouchControllers\TouchController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrainCar.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\FingerTipPokeTool.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\IPolygonFormat.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTargetHandlerNavMesh.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\ControllerBoxController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\Spawnable.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Scripts\ButtonDownListener.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimHandlerLaser.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessiblePluginToggle.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\Osub.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughBrush.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\MeshValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\ColliderZone.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Scripts\MoviePlayerSampleControls.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\InputTriangle.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\SPPquad.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DebugUI\Scripts\LaserPointer.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\AppDeeplink\AppDeeplinkUI.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\Interpolation.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\MyCustomSceneModelLoader.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Enums.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Configuration.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\TouchPro\Scripts\SceneSettings.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\ButtonTriggerZone.cs" />
     <Compile Include="Assets\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Polygon.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\DefaultVoronoiFactory.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\BoneCapsuleTriggerLogic.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\Legacy\SimpleVoronoi.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\ColorGrabbable.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Video\Scripts\MediaPlayerImage.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Algorithm\SweepLine.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\RamBuoyancy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\UAP\Plugins\CustomTTS\Google_TTS.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\DistanceGrab\Scripts\GrabbableCrosshair.cs" />
     <Compile Include="Assets\UAP\Scripts\Utility\UAP_GameObjectEnabler.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\TriangleSampler.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\DCEL\Face.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\StartScene\Scripts\StartMenu.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\FurnitureSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Segment.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleToggle.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\PinchStateModule.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\WindmillBladesController.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Voronoi\Legacy\BoundedVoronoiLegacy.cs" />
     <Compile Include="Assets\EBScripts\AdultDogController.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportInputHandlerTouch.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_BaseElement.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\RequestCaptureFlow.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\IMeshFormat.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\Anchor.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Scripts\SimpleResizer\SimpleResizer.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\InteractableToolView.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\LakePolygonSwitch.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\InteractableToolsInputRouter.cs" />
     <Compile Include="Assets\ChangeScene.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\ObjectManipulator.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\TriangleWriter.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\gameover.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\LocomotionTeleport.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_VirtualKeyboard.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Scripts\OVROverlayCanvas.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportOrientationHandler360.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportAimHandler.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\IEdge.cs" />
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\GenericMesher.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_AccessibilityManager.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleTextEdit.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\Tools\FingerTipPokeToolView.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\UAP\Examples\3D Objects Example\Scripts\uGUI3DExampleGameLogic.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\DebugWriter.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Converter.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\OVROverlay\Scripts\OVROverlaySample.cs" />
     <Compile Include="Assets\FurnishedCabin\Scripts\Player\PlayerMove.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportTargetHandler.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Scripts\PassthroughStyler.cs" />
-    <Compile Include="Assets\Oculus\SampleFramework\Usage\SpatialAnchor\Scripts\AnchorUIManager.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\gridpanel.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Tools\PolygonValidator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\Hidden.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\Wall.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage_VSPro_Indirect.cginc" />
     <None Include="Assets\Red_Deer\Dogs\Labrador\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\ButtonGlow.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWindTouchRect.cginc" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Triplanar_Cover_Specular.shader" />
     <None Include="Assets\UAP\Plugins\x86\WindowsTTS.dll" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWindNoShiver.cginc" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Materials\SelectivePassthrough.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Specular.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Specular_Snow.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Materials\SelectivePassthroughSoft.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\OverwriteAlpha.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Specular.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Light.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Bark_Snow.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Particles.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
     <None Include="Assets\NatureManufactureAssets\Additional Tools\Debug\Debug Shaders\Debug Vertex Colors.shader" />
-    <None Include="Assets\Assets\Puddles Set\Shaders\PuddleShader.shader" />
     <None Include="Assets\UAP\Resources\UAP_InternalLocalization.txt" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\GradientSkybox.shader" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\HD and URP Support Packs\HD RP 12.1 IMPORT STEPS README.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Layered_Full_Triplanar.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Materials\PassthroughLine.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Materials\BackgroundColor.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water River Tesseled Vertex Color Flow.shader" />
-    <None Include="Assets\NatureManufactureAssets\Mountain Environment\HD and URP Support Packs\About SRP import.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_indirect.cginc" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Materials\FatFingers.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Standard.shader" />
-    <None Include="Assets\NatureManufactureAssets\Mountain Environment\HD and URP Support Packs\README - 12.1 HD RP Mountain IMPORT.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Layered.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Layered_Top_Cover.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Particles.shader" />
     <None Include="Assets\NatureManufactureAssets\Additional Tools\Debug\Debug Shaders\Debug Terrain Carve.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Stylized Tesseled Vertex Color Flow.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Light.shader" />
+    <None Include="Assets\NatureManufactureAssets\River Auto Material\Third Party Assets Support Files\OverCloud Support file.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Cross_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metalic_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Third-Party Notices 2.txt" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\InvisibleOccluder.shader" />
-    <None Include="Assets\NatureManufactureAssets\Mountain Environment\HD and URP Support Packs\README -12.1 URP RP Mountain IMPORT AND TIPS.txt" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Bark_Snow.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\OculusSampleTrainPropsShader.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\ToyCubeWithOutline.shader" />
     <None Include="Assets\NatureManufactureAssets\Mountain Environment\README - Mountain content and setup.txt" />
-    <None Include="Assets\Oculus\SampleFramework\Core\Locomotion\Materials\ColumnGlow.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage_VSPro_Indirect.cginc" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Full_Triplanar_Cover.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Specular_Snow.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Metalic_Snow.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Cross.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Standard.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Top_Cover_Specular.shader" />
-    <None Include="Assets\NatureManufactureAssets\Third-Party Notices.txt" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\Third Party Assets Support Files\Enviro Support file.txt" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\WaterDistortionCheck.hlsl" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Cross_Model_Shader.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage_Snow.shader" />
-    <None Include="Assets\NatureManufactureAssets\Dynamic Nature - Mountain Tree Pack\HD and URP Support Packs Mountain Trees\README - 12.1 HD RP Import.txt" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWindNoShiver.cginc" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWind.cginc" />
+    <None Include="Assets\NatureManufactureAssets\Third-Party Notices.txt" />
+    <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\WaterDistortionCheck.hlsl" />
+    <None Include="Assets\NatureManufactureAssets\Dynamic Nature - Mountain Tree Pack\HD and URP Support Packs Mountain Trees\README - 12.1 HD RP Import.txt" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water River Mobile Flow.shader" />
     <None Include="Assets\Realistic\Puppy\Puppy_Labrador\Readme.txt" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Particles.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Core\Video\Shaders\Multiview Stereo.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Core\DebugUI\Fonts\Montserrat\OFL.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metalic_UV_Free_Faces.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Default Correct.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Specular.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_01.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_indirect.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Triplanar_Cover.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Metalic.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Specular_Cover_Wet.shader" />
     <None Include="Assets\license.txt" />
+    <None Include="Assets\NatureManufactureAssets\River Auto Material\Third Party Assets Support Files\Enviro Support file.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metallic_Wet.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metalic_Snow CutOut.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Metalic.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Specular_Wet.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\Third Party Assets Support Files\Aura 2Support file.txt" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Cross_Model_Shader_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Swamp Vertex Color Flow Mobile.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Layered_Full_Triplanar_Cover.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Specular.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Metalic.shader" />
+    <None Include="Assets\NatureManufactureAssets\River Auto Material\Third Party Assets Support Files\Aura 2Support file.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metalic_Cover_Wet.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Transp_Road.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Bark.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Shaders\OculusSampleAlphaHandOutline.shader" />
     <None Include="Assets\NatureManufactureAssets\Additional Tools\Debug\Debug Shaders\Debug Flowmap Direction.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Swamp Tesseled Vertex Color Flow.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWindTouchRect.cginc" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Swamp Offset Vertex Color Flow.shader" />
     <None Include="Assets\NatureManufactureAssets\River Valley - Scene\README - River Valley content and setup.txt" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Metalic_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_indirect.cginc" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Cross.shader" />
     <None Include="Assets\UAP\Plugins\x86_64\WindowsTTS.dll" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\Passthrough\Materials\GlowEffect.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Top_Cover.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Specular_Snow.shader" />
+    <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water River Offset Vertex Color Flow.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\NM_indirect.cginc" />
+    <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Swamp Offset Vertex Color Flow.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Stylized Offset Vertex Color Flow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\OculusSampleTrainSmokeShader.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered Opaque.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Metalic_Snow.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Cross_Model_Shader.shader" />
     <None Include="Assets\NatureManufactureAssets\Dynamic Nature - Mountain Tree Pack\HD and URP Support Packs Mountain Trees\Readme about rendering piplines support.txt" />
-    <None Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\Audio360\NOTICE.txt" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\PassthroughShadow.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metallic_Road_Transparent.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\Locomotion\Shaders\TriPlanarWorld.shader" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\Third Party Assets Support Files\OverCloud Support file.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Layered_Triplanar_Top_Cover.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Stylized Mobile Vertex Color Flow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\UAP\Plugins\x86_64\nvdaControllerClient.dll" />
-    <None Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\Audio360\ThirdPartyNotices.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\SceneObjectPreview.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Bark.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Object_VSPro_Indirect.cginc" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Specular_Snow CutOut.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_Transparent.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\StylizedOcclusions.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Cross_Snow.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Metalic_Snow.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Specular.shader" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Specular_Snow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_02.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Usage\SceneManager\Shaders\GlassMask.shader" />
-    <None Include="Assets\Assets\Puddles Set\Shaders\PuddleShader_Unity5.shader" />
-    <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_DiffBump.shader" />
     <None Include="Assets\UAP\Plugins\x86\nvdaControllerClient.dll" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Metalic.shader" />
     <None Include="Assets\NatureManufactureAssets\Dynamic Nature - Mountain Tree Pack\Readme about resolution.txt" />
+    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Specular.shader" />
     <None Include="Assets\NatureManufactureAssets\Additional Tools\Debug\Debug Shaders\Debug Flowmap UV4.shader" />
-    <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Cross_Model_Shader_Snow.shader" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water River Offset Vertex Color Flow.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Particles Foam.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\NatureManufactureAssets\River Auto Material\HD and URP Support Packs\URP RP 12.1 IMPORT STEPS README.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
-    <None Include="Assets\Oculus\SampleFramework\license.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1193,6 +1018,9 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -1204,9 +1032,6 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
@@ -1342,160 +1167,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AssistantCoreSDKEditor.csproj">
-      <Project>{F2F88DEC-E321-E321-C0CE-1100A570308D}</Project>
-      <Name>AssistantCoreSDKEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.Voice.Demo.csproj">
-      <Project>{115CB22F-8FD9-349D-9971-3B7AC2DC832F}</Project>
-      <Name>Oculus.Voice.Demo</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.AudioManager.csproj">
-      <Project>{31AAADE3-E8A0-4999-9AA0-A7485058C345}</Project>
+      <Project>{B9AA344F-AD84-402B-3769-82A745669942}</Project>
       <Name>Oculus.AudioManager</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.VoiceSDK.Mic.Common.csproj">
-      <Project>{6AF76E9E-CCE2-4C58-7741-8FCBC247CEB4}</Project>
-      <Name>Meta.VoiceSDK.Mic.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.csproj">
-      <Project>{8C24B222-F092-F0E5-74D6-65A1E772CE15}</Project>
+      <Project>{762C5D8C-BA1B-0635-E59C-7BA7DE6B6F4D}</Project>
       <Name>Oculus.Interaction</Name>
     </ProjectReference>
-    <ProjectReference Include="AssistantCoreSDKRuntime.csproj">
-      <Project>{3A2E1106-AB45-866D-DD12-8B5FD65FC547}</Project>
-      <Name>AssistantCoreSDKRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.Conduit.csproj">
-      <Project>{3352C86A-7984-132B-3FA9-F856942A7B18}</Project>
-      <Name>Meta.WitAi.Conduit</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.OVR.csproj">
-      <Project>{47D67064-E52A-EFB1-8EBE-468A0BD90657}</Project>
+      <Project>{217E620B-9187-0C82-3A61-C27099C705E3}</Project>
       <Name>Oculus.Interaction.OVR</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.AudioManager.Utils.Editor.csproj">
-      <Project>{E760EBE1-086F-BB0A-6C16-E1F808E90E04}</Project>
+      <Project>{BC39A35C-76F2-09E2-4354-69BF14B4540C}</Project>
       <Name>Oculus.AudioManager.Utils.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.csproj">
-      <Project>{EB15F495-D19F-693B-8201-CC97E53CD443}</Project>
-      <Name>Meta.WitAi</Name>
-    </ProjectReference>
-    <ProjectReference Include="Facebook.Wit.Dictation.Editor.csproj">
-      <Project>{4B1380AC-0D9A-CF17-4AE1-AF3E51B5A6AB}</Project>
-      <Name>Facebook.Wit.Dictation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Facebook.Wit.Dictation.csproj">
-      <Project>{B5ABB5F3-BA0A-BF16-9F2D-CD522F8F6925}</Project>
-      <Name>Facebook.Wit.Dictation</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{4166A653-1E65-0382-CA7C-5757FBB44697}</Project>
+      <Project>{27F7477D-7517-4CE7-83F6-88622B9257E1}</Project>
       <Name>Oculus.VR</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.AudioManager.Audio.Editor.csproj">
-      <Project>{0BB85601-6BB6-9B9B-B26E-20D4257A3915}</Project>
+      <Project>{70B7BE64-894D-025B-7317-97E621B289BC}</Project>
       <Name>Oculus.AudioManager.Audio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.WitAI.Lib.Editor.csproj">
-      <Project>{C2E69467-BD6D-9E8F-A64E-3D2511235AB8}</Project>
-      <Name>Meta.WitAI.Lib.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Spatializer.Editor.csproj">
-      <Project>{9544ECC7-EDF5-8EAA-0A6E-6F8505C45099}</Project>
+      <Project>{9461E724-FFEC-12F8-FFA8-8FEFC2F737AD}</Project>
       <Name>Oculus.Spatializer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.TTS.csproj">
-      <Project>{B857DA92-21F0-FADC-0B2D-6CB9CDEA23A1}</Project>
-      <Name>Meta.WitAi.TTS</Name>
-    </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.TTS.Editor.csproj">
-      <Project>{01F68C62-794B-74C7-AA87-E18F78E4087F}</Project>
-      <Name>Meta.WitAi.TTS.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.OVR.Samples.csproj">
-      <Project>{78077FF5-AA1F-4CBF-B73A-BFB81FC81BF6}</Project>
+      <Project>{007EB5E4-3361-7FB6-48A4-40D6967E3702}</Project>
       <Name>Oculus.Interaction.OVR.Samples</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{E2293500-3FF9-511F-9BD6-05B734A6DB6D}</Project>
+      <Project>{2814158F-7F33-A89E-70A0-D5B1F9645EF3}</Project>
       <Name>Oculus.VR.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.Samples.Editor.csproj">
-      <Project>{9FFB5A1C-7A30-822B-70F6-10D8C5DC3F36}</Project>
+      <Project>{846BB6B0-0562-2A51-B25C-7C85B4DD502F}</Project>
       <Name>Oculus.Interaction.Samples.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.Editor.csproj">
-      <Project>{B2164034-171B-5A8D-8360-05933516400D}</Project>
+      <Project>{C97C0C84-1029-D92F-6A60-B7F9D7B095EF}</Project>
       <Name>Oculus.Interaction.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.VoiceSDK.Mic.Other.csproj">
-      <Project>{A4B01935-D123-0FDB-BAA0-7D1C2C5BC2A7}</Project>
-      <Name>Meta.VoiceSDK.Mic.Other</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{319D722D-9586-4813-237B-CDB840387028}</Project>
+      <Project>{2E8AA924-8673-9E27-701F-4036AABF37E0}</Project>
       <Name>Oculus.VR.Scripts.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Spatializer.csproj">
-      <Project>{FCE8608E-E344-2C58-FD12-8AC41300A5F7}</Project>
+      <Project>{0EF0FD98-202C-0690-9B4A-1821EEC91C16}</Project>
       <Name>Oculus.Spatializer</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.Conduit.Editor.csproj">
-      <Project>{EFAEBE21-BABB-E7E7-3761-B25CF0E81990}</Project>
-      <Name>Meta.WitAi.Conduit.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="VoiceSDK.Editor.csproj">
-      <Project>{A15041D0-EDBC-CD6B-ADEE-1D2741FBF45C}</Project>
-      <Name>VoiceSDK.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.InterfaceSupport.csproj">
-      <Project>{D2F6C4CF-638D-944C-21A7-79C8658E8EBF}</Project>
+      <Project>{AC07DAB4-2EF3-B674-2E3F-9BE61C8BFD29}</Project>
       <Name>Oculus.Interaction.InterfaceSupport</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.Interaction.OVR.Editor.csproj">
-      <Project>{0F46EA21-B85E-971F-F746-97E56087AA4E}</Project>
+      <Project>{DAD0BD17-352F-D59A-921E-63F493F07B21}</Project>
       <Name>Oculus.Interaction.OVR.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.Editor.csproj">
-      <Project>{0E3E2A1B-FF33-6754-3A91-A4BB123DF291}</Project>
-      <Name>Meta.WitAi.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="VoiceSDK.Dictation.Editor.csproj">
-      <Project>{485E6BCA-49AA-0A3F-EFCC-BE5157A63869}</Project>
-      <Name>VoiceSDK.Dictation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="VoiceSDK.Dictation.Runtime.csproj">
-      <Project>{FD232002-B5AE-B9B9-9B01-A4522DE79BD7}</Project>
-      <Name>VoiceSDK.Dictation.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.LipSync.Editor.csproj">
-      <Project>{3D87A21A-7FBB-91A4-3032-EB1C163A760E}</Project>
-      <Name>Oculus.LipSync.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Platform.csproj">
-      <Project>{45FA7429-19DB-0183-A642-A005525F7330}</Project>
+      <Project>{DF525235-830C-4178-D614-9F2311B99947}</Project>
       <Name>Oculus.Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.TTS.Samples.csproj">
-      <Project>{B6B32885-AD48-B15F-0A4B-062E86C4B931}</Project>
-      <Name>Meta.WitAi.TTS.Samples</Name>
-    </ProjectReference>
-    <ProjectReference Include="Oculus.LipSync.csproj">
-      <Project>{3274B2D1-101E-3CCA-008B-9E06FF99A36C}</Project>
-      <Name>Oculus.LipSync</Name>
-    </ProjectReference>
-    <ProjectReference Include="VoiceSDK.Runtime.csproj">
-      <Project>{8296F45A-9E42-DA5B-8CE0-A352AFFBA0C9}</Project>
-      <Name>VoiceSDK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Meta.WitAi.Lib.csproj">
-      <Project>{93E882CA-3FDF-6597-1BA5-7A451A88EB01}</Project>
-      <Name>Meta.WitAi.Lib</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.Platform.Editor.csproj">
-      <Project>{E98372C6-7367-5783-AC56-56D5F47DA423}</Project>
+      <Project>{774425A4-A4FD-4C36-E0BD-0339F99DD8CD}</Project>
       <Name>Oculus.Platform.Editor</Name>
     </ProjectReference>
   </ItemGroup>

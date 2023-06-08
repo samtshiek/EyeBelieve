@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EFAEBE21-BABB-E7E7-3761-B25CF0E81990}</ProjectGuid>
+    <ProjectGuid>{7813BF69-0C22-08B3-8621-8262571CD05E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Meta.WitAi.Conduit.Editor</AssemblyName>
@@ -781,15 +781,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Meta.WitAi.Lib.csproj">
-      <Project>{93E882CA-3FDF-6597-1BA5-7A451A88EB01}</Project>
+      <Project>{62546A26-D5BA-6F35-4259-EA7BA57A518C}</Project>
       <Name>Meta.WitAi.Lib</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Conduit.csproj">
-      <Project>{3352C86A-7984-132B-3FA9-F856942A7B18}</Project>
+      <Project>{BAE6B9DB-6ECE-4248-8328-0B4C267EACA5}</Project>
       <Name>Meta.WitAi.Conduit</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAI.Lib.Editor.csproj">
-      <Project>{C2E69467-BD6D-9E8F-A64E-3D2511235AB8}</Project>
+      <Project>{16614432-0FBA-66C5-2D4D-C0869B379FD9}</Project>
       <Name>Meta.WitAI.Lib.Editor</Name>
     </ProjectReference>
   </ItemGroup>

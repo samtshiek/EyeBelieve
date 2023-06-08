@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8C24B222-F092-F0E5-74D6-65A1E772CE15}</ProjectGuid>
+    <ProjectGuid>{762C5D8C-BA1B-0635-E59C-7BA7DE6B6F4D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Oculus.Interaction</AssemblyName>
@@ -414,8 +414,8 @@
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Pointable\PointableElement.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Input\Controllers\Controller.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Core\InteractableGroupView.cs" />
-    <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\PoseDetection\FeatureStateProvider.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Models\Ray\Visuals\RayInteractorDebugGizmos.cs" />
+    <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\PoseDetection\FeatureStateProvider.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\DistanceGrab\DistantPointDetector.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Input\Hands\HandJointsCache.cs" />
     <Compile Include="Assets\Oculus\Interaction\Runtime\Scripts\Interaction\Surfaces\BoundsClipper.cs" />
@@ -1138,7 +1138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{4166A653-1E65-0382-CA7C-5757FBB44697}</Project>
+      <Project>{27F7477D-7517-4CE7-83F6-88622B9257E1}</Project>
       <Name>Oculus.VR</Name>
     </ProjectReference>
   </ItemGroup>

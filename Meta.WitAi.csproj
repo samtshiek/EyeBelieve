@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EB15F495-D19F-693B-8201-CC97E53CD443}</ProjectGuid>
+    <ProjectGuid>{791DFD4E-C1DC-FC46-01F9-E1A451B6D36F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Meta.WitAi</AssemblyName>
@@ -809,19 +809,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Meta.WitAi.Lib.csproj">
-      <Project>{93E882CA-3FDF-6597-1BA5-7A451A88EB01}</Project>
+      <Project>{62546A26-D5BA-6F35-4259-EA7BA57A518C}</Project>
       <Name>Meta.WitAi.Lib</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.WitAi.Conduit.csproj">
-      <Project>{3352C86A-7984-132B-3FA9-F856942A7B18}</Project>
+      <Project>{BAE6B9DB-6ECE-4248-8328-0B4C267EACA5}</Project>
       <Name>Meta.WitAi.Conduit</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.VoiceSDK.Mic.Common.csproj">
-      <Project>{6AF76E9E-CCE2-4C58-7741-8FCBC247CEB4}</Project>
+      <Project>{0D75BB93-C32D-F3D6-1F5A-CC7F5EFB54DA}</Project>
       <Name>Meta.VoiceSDK.Mic.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Meta.VoiceSDK.Mic.Other.csproj">
-      <Project>{A4B01935-D123-0FDB-BAA0-7D1C2C5BC2A7}</Project>
+      <Project>{5CFF96F1-1B9D-1D34-9F4D-E59FE77DADDA}</Project>
       <Name>Meta.VoiceSDK.Mic.Other</Name>
     </ProjectReference>
   </ItemGroup>
