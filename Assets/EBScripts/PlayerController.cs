@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     bool startedNavigating = false;
     int handEmptyR = 0;
     int overlayCount = 0;
-    
+    GameObject dogFoodBag;
 
     AccessibleUIGroupRoot accessibleUIGroupRoot;
    // AccessibleTextEdit accessibleTextEdit;
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         bedObject = GameObject.Find("PFB_Bed");
         storyScript = bedObject.GetComponent<StoryScript>();
         handGrab = GameObject.Find("HandGrabInteractorR");
+        dogFoodBag = GameObject.Find("dog_food_02");
         handGrabInteractor = handGrab.GetComponent<HandGrabInteractor>();
         dog = GameObject.Find("Puppy_Labrador_IP");
         dogAgent = dog.GetComponent<NavMeshAgent>();
@@ -237,11 +238,13 @@ public class PlayerController : MonoBehaviour
         {
             handEmptyR = 0;
             grabbedObjectR = handGrabInteractor.SelectedInteractable;
+           // Debug.Log("Object? :" + grabbedObjectR.name);
         }
         
-        if (grabbedObjectR != null && handGrabInteractor.SelectedInteractable == null)
+        if (grabbedObjectR != null && handGrabInteractor.SelectedInteractable == null && grabbedObjectR.name != dogFoodBag.name)
         {
-            if(handEmptyR == 0)
+           // Debug.Log("Object? :" + grabbedObjectR);
+            if (handEmptyR == 0)
             {
                 shouldFetch = true;
             }
