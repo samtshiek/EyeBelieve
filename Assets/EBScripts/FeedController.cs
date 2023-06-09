@@ -21,6 +21,7 @@ public class FeedController : MonoBehaviour
     GameObject bedObject;
     StoryScript storyScript;
     AudioSource audioSource;
+    bool timeToEat = false;
 
 
     // Start is called before the first frame update
@@ -49,11 +50,13 @@ public class FeedController : MonoBehaviour
     void Update()
     {
         //text.text = "D: " + dogAgent.remainingDistance;
-        dogAgent.stoppingDistance = 0.5f;
-        if (dogAgent.remainingDistance < 0.5)
+        //dogAgent.stoppingDistance = 0.5f;
+        if (Vector3.Distance(dog.transform.position, dogBowl.transform.position) < 0.5 && timeToEat)
         {
             closeToBowl = true;          
         }
+
+        dogEat();
     }
 
     private void dogEat()
@@ -67,6 +70,8 @@ public class FeedController : MonoBehaviour
             else
             {
                 dogAnimator.SetBool("dogEating", true);
+                closeToBowl = false;
+                timeToEat = false;
                 Invoke("doneEating", 5);
             }
             
@@ -79,7 +84,7 @@ public class FeedController : MonoBehaviour
         dogFood.GetComponent<Renderer>().enabled = false;
         dogAnimator.SetBool("dogEating", false);
         storyScript.setFeed(true);
-        dogAgent.stoppingDistance = 2f;
+        dogAgent.stoppingDistance = 1f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -97,12 +102,15 @@ public class FeedController : MonoBehaviour
 
         if (other.gameObject.name == "Bowl_2_food_1" /*"RightHandAnchor"*/)
         {
-          //  text.text = "Entered Food Trigger!";
-          //  text2.text = "TRG: " + other.gameObject.name;
+            //  text.text = "Entered Food Trigger!";
+            //  text2.text = "TRG: " + other.gameObject.name;
+
+            timeToEat = true;
             Debug.Log("An object entered.");
             dogFood.GetComponent<Renderer>().enabled = true;
-            dogAgent.SetDestination(dogBowl.transform.position + new Vector3(0,0,0.26f));
-            Invoke("dogEat", 4);
+            dogAgent.stoppingDistance = 1.59f;
+            dogAgent.SetDestination(dogBowl.transform.position); //dogAgent.SetDestination(dogBowl.transform.position + new Vector3(0,0,0.26f));
+            //Invoke("dogEat", 4);
         }
 
         /* Dog pee trigger with delay
