@@ -378,7 +378,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Walk to sofa
   - m_Version: 1
-    m_Start: 21.84533333333335
+    m_Start: 20.624486204236746
     m_ClipIn: 0
     m_Asset: {fileID: -4717967676313377466}
     m_Duration: 8.042666666666667

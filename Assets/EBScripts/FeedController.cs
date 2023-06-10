@@ -113,6 +113,11 @@ public class FeedController : MonoBehaviour
             Debug.Log("An object entered.");
             dogFood.GetComponent<Renderer>().enabled = true;
             dogAgent.stoppingDistance = 1.55f;
+
+            if(gameObject.name == "Labrador_Adult")
+            {
+                dogAgent.stoppingDistance = 0.1f;
+            }
             dogAgent.SetDestination(dogBowl.transform.position); //dogAgent.SetDestination(dogBowl.transform.position + new Vector3(0,0,0.26f));
             if (!ovrAudioSource.isPlaying)
             {
