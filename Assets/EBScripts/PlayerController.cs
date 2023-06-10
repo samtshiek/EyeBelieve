@@ -208,8 +208,12 @@ public class PlayerController : MonoBehaviour
         //Right hand trigger pushed
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > 0.0)
         {
-           // text.text = "Dog Moving: " + dogAgent.transform.position;
-            dogAgent.SetDestination(charController.transform.position);
+            // text.text = "Dog Moving: " + dogAgent.transform.position;
+            if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(Resources.Load<AudioClip>("Joe Recs/Joe 2 come boy"));
+                Invoke("CallDog", 1f);
+            }
         }
 
         //Left hand trigger pushed
@@ -258,6 +262,10 @@ public class PlayerController : MonoBehaviour
         returnToThrower();
     }
 
+    void CallDog()
+    {
+        dogAgent.SetDestination(charController.transform.position);
+    }
     void dogFetch()
     {
         if (shouldFetch)
@@ -278,7 +286,8 @@ public class PlayerController : MonoBehaviour
             {
                 if (handEmptyR == 1)
                 {
-                    Invoke("goToThrownObject", 0.5f);
+                    audioSource.PlayOneShot(Resources.Load<AudioClip>("Joe Recs/Joe 3 fetch"));
+                    Invoke("goToThrownObject", 2f);
                 }
             }
         }
@@ -286,8 +295,8 @@ public class PlayerController : MonoBehaviour
 
     public void goToThrownObject()
     {
-        dogAgent.SetDestination(grabbedObjectR.transform.position);
         dogAgent.stoppingDistance = 0.0f;
+        dogAgent.SetDestination(grabbedObjectR.transform.position);
         startedNavigating = true;
     }
 

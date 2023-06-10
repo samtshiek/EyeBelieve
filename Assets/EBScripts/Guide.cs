@@ -8,6 +8,7 @@ public class Guide : MonoBehaviour
     GameObject bedObject;
     GameObject friend;
     AudioSource audioSource;
+    GameObject outroCutscene;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,8 @@ public class Guide : MonoBehaviour
         friend = GameObject.Find("Friend");
         audioSource = friend.GetComponent<AudioSource>();
         storyScript = bedObject.GetComponent<StoryScript>();
+        outroCutscene = GameObject.Find("OutroCutscene");
+        outroCutscene.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,17 +34,22 @@ public class Guide : MonoBehaviour
             Debug.Log("Entering GUIDE!!!");
             if (!storyScript.getFetch())
             {
-                audioSource.PlayOneShot(Resources.Load<AudioClip>("Play Fetch"));
+                audioSource.PlayOneShot(Resources.Load<AudioClip>("Sam Recs/Play Fetch"));
             }
 
             else if (!storyScript.getFeed())
             {
-                audioSource.PlayOneShot(Resources.Load<AudioClip>("Try Feeding"));
+                audioSource.PlayOneShot(Resources.Load<AudioClip>("Sam Recs/Try Feeding"));
             }
 
             else if (!storyScript.getPet())
             {
-                audioSource.PlayOneShot(Resources.Load<AudioClip>("Petting time"));
+                audioSource.PlayOneShot(Resources.Load<AudioClip>("Sam Recs/Petting Time"));
+            }
+
+            else if (storyScript.dayIncrement == 3)
+            {
+                outroCutscene.SetActive(true);
             }
         }
     }

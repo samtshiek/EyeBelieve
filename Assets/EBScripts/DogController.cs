@@ -27,6 +27,8 @@ public class DogController : MonoBehaviour
     bool hasPeed = false;
     int count = 0;
     bool renderthePee = false;
+    GameObject oVRAudioSourceObject;
+    AudioSource ovrAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -44,13 +46,15 @@ public class DogController : MonoBehaviour
         animator = dog.GetComponent<Animator>();
         animator.enabled = true;
         audioSource = dog.GetComponent<AudioSource>();
+        oVRAudioSourceObject = GameObject.Find("OVRAudioSource");
+        ovrAudioSource = oVRAudioSourceObject.GetComponent<AudioSource>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
+        /*float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
@@ -62,7 +66,7 @@ public class DogController : MonoBehaviour
         {
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-        }
+        }*/
 
         if(renderthePee)
         {
@@ -167,13 +171,13 @@ public class DogController : MonoBehaviour
             Debug.Log("An object entered.");
             // audioSource.PlayOneShot(Resources.Load<AudioClip>("dogBark"));
             animator.SetBool("handIsOver", true);
+            
         }
 
 
         if (other.gameObject.name == "Pee_Cube")
         {
-            audioSource.clip = Resources.Load<AudioClip>("whining-dog");
-            audioSource.Play();
+            audioSource.PlayOneShot(Resources.Load<AudioClip>("Special Sounds/whining-dog"));
          //   text.text = "Dog Entered Entered!";
           //  text2.text = "Dog Pee TRG: " + other.gameObject.name;
             Debug.Log("An object entered.");

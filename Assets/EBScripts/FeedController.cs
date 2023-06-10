@@ -22,7 +22,8 @@ public class FeedController : MonoBehaviour
     StoryScript storyScript;
     AudioSource audioSource;
     bool timeToEat = false;
-
+    GameObject oVRAudioSourceObject;
+    AudioSource ovrAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -43,11 +44,14 @@ public class FeedController : MonoBehaviour
         animator = dog.GetComponent<Animator>();
         animator.enabled = true;
         audioSource = dogBowl.GetComponent<AudioSource>();
+        oVRAudioSourceObject = GameObject.Find("OVRAudioSource");
+        ovrAudioSource = oVRAudioSourceObject.GetComponent<AudioSource>();
     }
 
 
     // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
         //text.text = "D: " + dogAgent.remainingDistance;
         //dogAgent.stoppingDistance = 0.5f;
@@ -108,8 +112,12 @@ public class FeedController : MonoBehaviour
             timeToEat = true;
             Debug.Log("An object entered.");
             dogFood.GetComponent<Renderer>().enabled = true;
-            dogAgent.stoppingDistance = 1.59f;
+            dogAgent.stoppingDistance = 1.55f;
             dogAgent.SetDestination(dogBowl.transform.position); //dogAgent.SetDestination(dogBowl.transform.position + new Vector3(0,0,0.26f));
+            if (!ovrAudioSource.isPlaying)
+            {
+                ovrAudioSource.PlayOneShot(Resources.Load<AudioClip>("Joe Recs/Joe 4 time"));
+            }
             //Invoke("dogEat", 4);
         }
 
