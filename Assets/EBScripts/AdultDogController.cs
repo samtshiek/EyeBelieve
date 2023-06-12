@@ -33,7 +33,7 @@ public class AdultDogController : MonoBehaviour
         dog = gameObject;
         pee = GameObject.Find("DogPee");
        pee.GetComponent<Renderer>().enabled = false;
-        dogAgent = GetComponent<NavMeshAgent>();
+        dogAgent = gameObject.GetComponent<NavMeshAgent>();
        // textobject = GameObject.Find("MyText");
       //  text = (Text)textobject.GetComponent("Text");
        // textobject2 = GameObject.Find("MyText2");

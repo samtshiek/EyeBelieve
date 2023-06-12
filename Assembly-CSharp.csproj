@@ -63,6 +63,7 @@
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\ConstraintOptions.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\Iterators\VertexCirculator.cs" />
     <Compile Include="Assets\EBScripts\FriendScript.cs" />
+    <Compile Include="Assets\keyAnimation.cs" />
     <Compile Include="Assets\UAP\Plugins\iOS\iOSTTS.cs" />
     <Compile Include="Assets\EBScripts\HikeChController.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Meshing\IConstraintMesher.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\SubSegment.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Point.cs" />
+    <Compile Include="Assets\EBScripts\AdultDogHikeController.cs" />
     <Compile Include="Assets\EBScripts\MeetFriendScript.cs" />
     <Compile Include="Assets\FurnishedCabin\Scripts\Player\PlayerLook.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Mesh.cs" />
@@ -106,6 +108,7 @@
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\DCEL\Vertex.cs" />
     <Compile Include="Assets\NatureManufactureAssets\NatureManufacture Wind\NM_Wind.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Rectangle.cs" />
+    <Compile Include="Assets\fileOfAnts.cs" />
     <Compile Include="Assets\PuppyController.cs" />
     <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
@@ -205,6 +208,7 @@
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\RobustPredicates.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\IPolygonFormat.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\keyAnimation2.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessiblePluginToggle.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\Osub.cs" />
@@ -228,6 +232,7 @@
     <Compile Include="Assets\UAP\Scripts\Utility\UAP_GameObjectEnabler.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\TriangleSampler.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Topology\DCEL\Face.cs" />
+    <Compile Include="Assets\EasyOne.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\Segment.cs" />
     <Compile Include="Assets\UAP\Scripts\UI Components\AccessibleToggle.cs" />
@@ -240,6 +245,7 @@
     <Compile Include="Assets\ChangeScene.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\IO\TriangleWriter.cs" />
     <Compile Include="Assets\UAP\Examples\Match 3 Game Example\Scripts\gameover.cs" />
+    <Compile Include="Assets\KeyNearby1.cs" />
     <Compile Include="Assets\UAP\Scripts\Core\UAP_VirtualKeyboard.cs" />
     <Compile Include="Assets\NatureManufactureAssets\Spline System\Scripts\LakePolygon\Triangulation\TriangleDotNet\Triangle\Geometry\IEdge.cs" />
     <Compile Include="Assets\MainMenu.cs" />
@@ -257,16 +263,21 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage_VSPro_Indirect.cginc" />
+    <None Include="Assets\EasyRoads3D\lib\DelaunayER.dll" />
     <None Include="Assets\Red_Deer\Dogs\Labrador\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWindTouchRect.cginc" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Triplanar_Cover_Specular.shader" />
     <None Include="Assets\UAP\Plugins\x86\WindowsTTS.dll" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
+    <None Include="Assets\EasyRoads3D\SRP Support Packages\_Readme.txt" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Specular.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Light.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Bark_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Particles.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\EasyRoads3D\Resources\custom prefabs\_custom prefabs.txt" />
+    <None Include="Assets\EasyRoads3D\prefab meshes\_custom prefabs.txt" />
     <None Include="Assets\NatureManufactureAssets\Additional Tools\Debug\Debug Shaders\Debug Vertex Colors.shader" />
     <None Include="Assets\UAP\Resources\UAP_InternalLocalization.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
@@ -283,15 +294,19 @@
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Cross_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metalic_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Third-Party Notices 2.txt" />
+    <None Include="Assets\EasyRoads3D\Quick Start.txt" />
     <None Include="Assets\NatureManufactureAssets\Mountain Environment\README - Mountain content and setup.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Full_Triplanar_Cover.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Specular_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Foliage.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NM_Cross.shader" />
+    <None Include="Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll" />
+    <None Include="Assets\EasyRoads3D\_readme .txt" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Advanced Grass Standard.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Top_Cover_Specular.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWindNoShiver.cginc" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Road-Edit-Mode.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\NMWind.cginc" />
     <None Include="Assets\NatureManufactureAssets\Third-Party Notices.txt" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\WaterDistortionCheck.hlsl" />
@@ -321,6 +336,7 @@
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Swamp Vertex Color Flow Mobile.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Layered_Full_Triplanar_Cover.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\EasyRoads3D\shaders\ER Road Transparency.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\Third Party Assets Support Files\Aura 2Support file.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metalic_Cover_Wet.shader" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Transp_Road.shader" />
@@ -332,6 +348,7 @@
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_indirect.cginc" />
     <None Include="Assets\UAP\Plugins\x86_64\WindowsTTS.dll" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Lit_Top_Cover.shader" />
+    <None Include="Assets\EasyRoads3D\Resources\dynamic prefabs\dynamic prefabs.txt" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Specular_Snow.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water River Offset Vertex Color Flow.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\NM_indirect.cginc" />
@@ -339,6 +356,7 @@
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Stylized Offset Vertex Color Flow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Metalic_Snow.shader" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Cross_Model_Shader.shader" />
     <None Include="Assets\NatureManufactureAssets\Dynamic Nature - Mountain Tree Pack\HD and URP Support Packs Mountain Trees\Readme about rendering piplines support.txt" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Metallic_Road_Transparent.shader" />
@@ -351,16 +369,20 @@
     <None Include="Assets\NatureManufactureAssets\Object Shaders\NM_Object_VSPro_Indirect.cginc" />
     <None Include="Assets\NatureManufactureAssets\Object Shaders\Standard_Specular_Snow CutOut.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D - Unity Standard 2018+.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Specular.shader" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Specular_Snow.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Hovl Studio\Procedural fire\Demo scene\Readme.txt" />
     <None Include="Assets\UAP\Plugins\x86\nvdaControllerClient.dll" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Leaves_Metalic.shader" />
     <None Include="Assets\NatureManufactureAssets\Dynamic Nature - Mountain Tree Pack\Readme about resolution.txt" />
     <None Include="Assets\NatureManufactureAssets\Foliage Shaders\Tree_Bark_Specular.shader" />
+    <None Include="Assets\EasyRoads3D\prefab sources\_custom prefabs.txt" />
     <None Include="Assets\NatureManufactureAssets\Additional Tools\Debug\Debug Shaders\Debug Flowmap UV4.shader" />
     <None Include="Assets\NatureManufactureAssets\River Auto Material\River\Shaders\Water Particles Foam.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\EasyRoads3D\_Release Notes.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -606,6 +628,12 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyRoads3Dv3">
+      <HintPath>Assets\EasyRoads3D\lib\EasyRoads3Dv3.dll</HintPath>
+    </Reference>
+    <Reference Include="DelaunayER">
+      <HintPath>Assets\EasyRoads3D\lib\DelaunayER.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
